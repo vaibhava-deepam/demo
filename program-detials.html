@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>అఖండ దివ్య వైభవ జ్యోతి</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Ponnala&family=Mallanna&family=Noto+Serif+Telugu:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+  rel="stylesheet" />
+
+
+  <style>
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       CUSTOM FONTS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @font-face {
+      font-family: 'Potti Sreeramulu';
+      src: url('fonts/potti-sreeramulu-regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── BACKGROUND — rich gold gradient matching home ── */
+    body {
+      min-height: 100vh;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      overflow-x: hidden;
+      background-color: #F0DFA8;
+      background-image:
+        radial-gradient(ellipse 130% 50% at 50%   0%,  rgba(255,160,0,0.22)  0%, transparent 60%),
+        radial-gradient(ellipse  80% 55% at   0%  55%, rgba(139,69,19,0.12)  0%, transparent 60%),
+        radial-gradient(ellipse  80% 55% at 100%  45%, rgba(139,69,19,0.10)  0%, transparent 60%),
+        radial-gradient(ellipse 120% 45% at  50% 100%, rgba(201,152,10,0.20) 0%, transparent 60%),
+        radial-gradient(ellipse  60% 40% at  25%  30%, rgba(255,120,0,0.08)  0%, transparent 55%),
+        radial-gradient(ellipse  60% 40% at  75%  70%, rgba(255,120,0,0.07)  0%, transparent 55%),
+        linear-gradient(170deg,
+          #FBE8B8 0%, #FFF6DC 14%, #F6E4B0 28%, #FFFBEA 42%,
+          #F2DBA0 56%, #FBF2D0 70%, #EDD596 84%, #F8ECC0 100%
+        );
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── DARK BAND (header + footer) ── */
+    .dark-band {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(90,20,5,0.6) 0%, transparent 70%),
+        linear-gradient(135deg, #0A0100 0%, #2C0700 20%, #4E1204 40%, #5A1606 50%, #4E1204 60%, #2C0700 80%, #0A0100 100%);
+    }
+
+    /* ── SHIMMER GOLD LINE ── */
+    @keyframes shimmer { 0%{background-position:-300% center} 100%{background-position:300% center} }
+    .gline {
+      height: 2px;
+      background: linear-gradient(90deg, #3A1000, #C9980A 20%, #FFD700 50%, #C9980A 80%, #3A1000);
+      background-size: 300% auto;
+      animation: shimmer 4s linear infinite;
+    }
+
+    /* ── GOLD DIVIDER (inside content card) ── */
+    .gdiv {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,152,10,0.5) 20%, #C9980A 50%, rgba(201,152,10,0.5) 80%, transparent);
+    }
+
+    /* ── OM GLOW ── */
+    @keyframes omGlow {
+      0%,100% { text-shadow: 0 0 10px #FFD700, 0 0 22px rgba(255,200,0,0.5); }
+      50%      { text-shadow: 0 0 24px #FFD700, 0 0 50px rgba(255,180,0,0.75), 0 0 80px rgba(255,140,0,0.3); }
+    }
+    .om { animation: omGlow 3.5s ease-in-out infinite; color: #FFD700; font-family: serif; }
+
+    /* ── LAMP FLICKER ── */
+    @keyframes flicker {
+      0%,100%{opacity:1} 20%{opacity:0.78} 50%{opacity:0.95} 75%{opacity:0.72}
+    }
+    .lamp  { animation: flicker 2.2s ease-in-out infinite; }
+    .lamp2 { animation: flicker 2.5s ease-in-out infinite 0.45s; }
+
+    /* ── TORAN BOB ── */
+    @keyframes toranBob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+    .toran { animation: toranBob 3.8s ease-in-out infinite; overflow: hidden; line-height: 0; }
+
+    /* ── STAR PULSE ── */
+    @keyframes starP { 0%,100%{transform:scale(1);opacity:0.7} 50%{transform:scale(1.22);opacity:1} }
+    .sp  { animation: starP 2.6s ease-in-out infinite; }
+    .sp2 { animation: starP 2.6s ease-in-out infinite 0.35s; }
+    .sp3 { animation: starP 2.6s ease-in-out infinite 0.7s; }
+
+    /* ── LANG SHOW/HIDE ── */
+    [data-lang="te"] .len { display: none; }
+    [data-lang="en"] .lte { display: none; }
+
+    /* ── FONT HELPERS ── */
+.te-font {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-weight: 400 !important;
+}
+    .cin-font { font-family: 'Cinzel', serif; }
+    .cor-font { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    /* ── MAIN CONTENT WRAPPER ── */
+    .main-wrap {
+      flex: 1;
+      padding: clamp(24px,5vw,40px) clamp(14px,5vw,40px) clamp(24px,5vw,40px);
+    }
+    .inner { max-width: 760px; margin: 0 auto; }
+
+    /* ── CONTENT CARD ── */
+    .content-card {
+      background: linear-gradient(145deg, #4a140b 0%, #2b0904);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 10px;
+      padding: clamp(20px,5vw,36px);
+      box-shadow: 0 2px 10px rgba(90,20,5,0.1), inset 0 1px 0 rgba(255,215,0,0.12), 0 0 0 1px rgba(255,200,0,0.1);
+      color: #f7ead2
+    }
+
+    /* ── VIDEO ── */
+    .video-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid rgba(201,152,10,0.4);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 4px 20px rgba(90,20,5,0.15);
+    }
+    .video-wrap video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      background: #000;
+    }
+    .video-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a07830;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(12px,2.5vw,15px);
+      letter-spacing: 0.05em;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ── NAKSHATRA DISPLAY ── */
+    .nakshatra-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(22px,5.5vw,36px);
+      font-weight: 600;
+      line-height: 1.4;
+      text-shadow: 0 0 0px rgba(255,200,0,0.05);
+    }
+.nakshatra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(24px,6vw,40px);
+  color: #d4af37;
+  font-weight: 400 !important;
+  line-height: 1.7;
+}
+
+    /* ── SECTION LABELS ── */
+    .label-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(9px,1.8vw,11px);
+      letter-spacing: 0.28em;
+      color: #C9980A;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+.label-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(15px,3vw,19px);
+  color: #C9980A;
+  font-weight: 400 !important;
+  margin-bottom: 8px;
+}
+
+    /* ── MANTRA TEXT ── */
+    .mantra-en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(17px,3.2vw,24px);
+      line-height: 2;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+.mantra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(22px,4.8vw,32px);
+  color: #f5e6cc;
+  font-weight: 400 !important;
+  line-height: 2.4;
+}
+
+@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+
+  body {
+    font-size: 105%;
+  }
+
+  header .om {
+    font-size: clamp(42px, 11vw, 66px) !important;
+  }
+
+  header h1 {
+    font-size: clamp(22px, 5.6vw, 38px) !important;
+  }
+
+  header p {
+    font-size: clamp(16px, 3.4vw, 24px) !important;
+  }
+
+  button {
+    font-size: clamp(13px, 2.4vw, 16px) !important;
+    padding: 8px 20px !important;
+  }
+
+  .main-wrap {
+    padding-top: clamp(28px, 6vw, 44px) !important;
+    padding-bottom: clamp(28px, 6vw, 44px) !important;
+  }
+
+  .content-card,
+  .rc,
+  .nc {
+    transform: scale(1.02);
+    transform-origin: center top;
+  }
+
+  .nakshatra-en {
+    font-size: clamp(24px, 6vw, 40px) !important;
+  }
+
+  .nakshatra-te {
+    font-size: clamp(28px, 7vw, 44px) !important;
+  }
+
+  .label-en {
+    font-size: clamp(10px, 2.2vw, 13px) !important;
+  }
+
+  .label-te {
+    font-size: clamp(17px, 3.5vw, 22px) !important;
+  }
+
+  .mantra-en {
+    font-size: clamp(19px, 3.8vw, 27px) !important;
+    line-height: 2.1 !important;
+  }
+
+  .mantra-te {
+    font-size: clamp(24px, 5.5vw, 35px) !important;
+    line-height: 2.45 !important;
+  }
+
+  #grid {
+    gap: clamp(14px, 3.5vw, 22px) !important;
+  }
+
+  .nc {
+    min-height: clamp(140px, 31vw, 195px) !important;
+    padding: clamp(20px, 4.5vw, 32px) clamp(14px, 3.5vw, 22px) !important;
+  }
+
+  .nc p:first-of-type {
+    font-size: clamp(16px, 3.2vw, 20px) !important;
+  }
+
+  .nc p:last-of-type {
+    font-size: clamp(13px, 2.7vw, 16px) !important;
+  }
+
+  footer p {
+    font-size: clamp(16px, 3.2vw, 22px) !important;
+  }
+
+  footer .te-font {
+    font-size: clamp(20px, 4.6vw, 28px) !important;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HEADER TITLE — SAME AS INDEX.HTML
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  letter-spacing: 0.01em !important;
+}
+
+header h1.te-font.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFD700 !important;
+
+  font-size: clamp(20px, 5vw, 34px) !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em !important;
+
+  /* soft glow */
+  text-shadow:
+    0 0 6px rgba(255, 200, 0, 0.25) !important;
+}
+
+/* Same title style in Telugu and English mode */
+body[data-lang="te"] header h1.te-font.telugu-heading,
+body[data-lang="en"] header h1.te-font.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFD700 !important;
+}
+
+/* Mobile header title */
+@media only screen and (max-width: 768px) {
+  header h1.te-font.telugu-heading {
+    font-size: 28px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.01em !important;
+    text-shadow:
+      0 0 6px rgba(255, 200, 0, 0.25) !important;
+  }
+}
+
+/* Smaller language toggle button like index.html */
+.lang-btn {
+  padding: 4px 12px !important;
+  gap: 5px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+.lang-btn span,
+.lang-btn .len,
+.lang-btn .lte,
+.lang-btn .te-font {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+}
+
+.lang-btn svg {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+/* Prevent Telugu mobile font enlargement inside button */
+body[data-lang="te"] .lang-btn .lte,
+body[data-lang="te"] .lang-btn .lte.te-font,
+body[data-lang="te"] .lang-btn .te-font {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   NAKSHATRA.HTML — TELUGU TEXT SIZE SAME AS INDEX.HTML
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Telugu font consistency */
+body[data-lang="te"] .lte,
+body[data-lang="te"] .lte.te-font,
+body[data-lang="te"] .te-font {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Header title same as index.html */
+body[data-lang="te"] header h1.te-font,
+body[data-lang="en"] header h1.te-font {
+  font-size: clamp(20px, 5vw, 34px) !important;
+  line-height: 1.6 !important;
+}
+
+/* Header Telugu subtitle same as index.html */
+body[data-lang="te"] header p .lte.te-font {
+  font-size: clamp(15px, 3vw, 22px) !important;
+  line-height: 1.7 !important;
+}
+
+/* Footer Telugu text same style */
+body[data-lang="te"] footer .lte.te-font,
+body[data-lang="te"] footer .te-font {
+  font-size: clamp(16px, 3.5vw, 24px) !important;
+  line-height: 1.6 !important;
+}
+
+/* Nakshatra [lunar mansion] Telugu label */
+body[data-lang="te"] .label-te {
+  font-size: clamp(17px, 3.5vw, 22px) !important;
+  line-height: 1.5 !important;
+}
+
+/* Nakshatra Telugu name */
+body[data-lang="te"] .nakshatra-te {
+  font-size: clamp(28px, 7vw, 44px) !important;
+  line-height: 1.7 !important;
+}
+
+/* Mantra Telugu text */
+body[data-lang="te"] .mantra-te {
+  font-size: clamp(24px, 5.5vw, 35px) !important;
+  line-height: 2.45 !important;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   MOBILE — SAME TELUGU TEXT SIZE AS INDEX.HTML
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media only screen and (max-width: 768px) {
+
+  /* General Telugu text */
+  body[data-lang="te"] .lte,
+  body[data-lang="te"] .lte.te-font,
+  body[data-lang="te"] .te-font {
+    font-size: 21px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Header title */
+  body[data-lang="te"] header h1.te-font,
+  body[data-lang="en"] header h1.te-font {
+    font-size: 28px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Header subtitle */
+  body[data-lang="te"] header p .lte.te-font {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Nakshatra label */
+  body[data-lang="te"] .label-te {
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Nakshatra name */
+  body[data-lang="te"] .nakshatra-te {
+    font-size: 44px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Telugu mantra */
+  body[data-lang="te"] .mantra-te {
+    font-size: 35px !important;
+    line-height: 2.45 !important;
+  }
+
+  /* Footer Telugu */
+  body[data-lang="te"] footer .lte.te-font,
+  body[data-lang="te"] footer .te-font {
+    font-size: 22px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Keep language button small */
+  body[data-lang="te"] .lang-btn .lte,
+  body[data-lang="te"] .lang-btn .lte.te-font,
+  body[data-lang="te"] .lang-btn .te-font {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* =========================================================
+   FINAL OVERRIDES — MATCH INDEX.HTML HEADER / FOOTER / TEXT
+   Put this at the VERY END of nakshatra.html CSS
+========================================================= */
+
+/* Prevent browser random Telugu font inflation differences */
+html,
+body {
+  -webkit-text-size-adjust: 120% !important;
+  text-size-adjust: 120% !important;
+}
+
+/* Telugu font consistency */
+body[data-lang="te"] .lte,
+body[data-lang="te"] .lte.te-font,
+body[data-lang="te"] .te-font {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Header wrapper same as index.html */
+header > div[style*="max-width:900px"] {
+  padding: clamp(16px, 4vw, 26px) clamp(12px, 4vw, 28px) !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Header OM same as index.html */
+header .om {
+  display: block !important;
+  font-size: clamp(38px, 10vw, 60px) !important;
+  line-height: 1 !important;
+  margin-bottom: 8px !important;
+}
+
+/* Header title same as index.html */
+header h1.te-font.telugu-heading,
+body[data-lang="te"] header h1.te-font.telugu-heading,
+body[data-lang="en"] header h1.te-font.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFD700 !important;
+  font-size: clamp(20px, 5vw, 34px) !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 400 !important;
+  text-shadow: 0 0 6px rgba(255, 200, 0, 0.25) !important;
+}
+
+/* Header subtitle same as index.html */
+header p.cor-font {
+  color: rgba(255, 215, 0, 0.75) !important;
+  font-style: italic !important;
+  font-size: clamp(15px, 3vw, 22px) !important;
+  line-height: 1.7 !important;
+  margin-top: 8px !important;
+}
+
+header p.cor-font span,
+header p.cor-font .lte.te-font {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Header shimmer spacing same as index.html */
+header .gline[style*="margin"] {
+  margin: clamp(10px, 2.5vw, 16px) 0 !important;
+}
+
+/* Language button must stay small and never inherit Telugu large sizes */
+.lang-btn {
+  padding: 4px 12px !important;
+  gap: 5px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+.lang-btn span,
+.lang-btn .len,
+.lang-btn .lte,
+.lang-btn .te-font,
+body[data-lang="te"] .lang-btn span,
+body[data-lang="te"] .lang-btn .lte,
+body[data-lang="te"] .lang-btn .lte.te-font,
+body[data-lang="te"] .lang-btn .te-font {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+}
+
+.lang-btn svg {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+/* Main content same spacing behavior as index.html */
+.main-wrap {
+  flex: 1 !important;
+  padding: clamp(24px, 5vw, 40px) clamp(14px, 5vw, 40px) clamp(24px, 5vw, 40px) !important;
+}
+
+.inner {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+}
+
+/* Content card text styles must win over broad .te-font/.lte rules */
+.label-en {
+  font-family: 'Cinzel', serif !important;
+  font-size: clamp(9px, 1.8vw, 11px) !important;
+  letter-spacing: 0.28em !important;
+  color: #C9980A !important;
+  text-transform: uppercase !important;
+  line-height: 1.4 !important;
+}
+
+.label-te,
+body[data-lang="te"] .label-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(15px, 3vw, 19px) !important;
+  color: #C9980A !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+.nakshatra-en {
+  font-family: 'Cinzel', serif !important;
+  font-size: clamp(22px, 5.5vw, 36px) !important;
+  color: #3D0E00 !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+}
+
+.nakshatra-te,
+body[data-lang="te"] .nakshatra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(24px, 6vw, 40px) !important;
+  color: #d4af37 !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+}
+
+.mantra-en {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(17px, 3.2vw, 24px) !important;
+  color: #3a1a00 !important;
+  line-height: 2 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.mantra-te,
+body[data-lang="te"] .mantra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(22px, 4.8vw, 32px) !important;
+  color: #f5e6cc !important;
+  font-weight: 400 !important;
+  line-height: 2.4 !important;
+}
+
+/* Footer same as index.html */
+footer.dark-band {
+  padding: clamp(28px, 6vw, 44px) clamp(12px, 4vw, 28px) !important;
+}
+
+footer p.cor-font {
+  font-style: italic !important;
+  color: rgba(255, 215, 0, 0.6) !important;
+  font-size: clamp(14px, 2.8vw, 20px) !important;
+  line-height: 1.75 !important;
+  margin-bottom: 10px !important;
+}
+
+footer p.cor-font span,
+footer p.cor-font .lte.te-font {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+footer p.te-font {
+  color: #FFD700 !important;
+  font-weight: 700 !important;
+  font-size: clamp(16px, 3.5vw, 24px) !important;
+  line-height: 1.5 !important;
+  text-shadow: 0 0 14px rgba(255, 200, 0, 0.4) !important;
+}
+
+/* =========================================================
+   MOBILE — EXACT CONTROL, NO OVERRIDE LEAKS
+========================================================= */
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 16px !important;
+    -webkit-text-size-adjust: 120% !important;
+    text-size-adjust: 120% !important;
+  }
+
+  .main-wrap {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    padding-top: 26px !important;
+    padding-bottom: 26px !important;
+  }
+
+  .inner {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  header .om {
+    font-size: 44px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 10px !important;
+  }
+
+  header h1.te-font.telugu-heading,
+  body[data-lang="te"] header h1.te-font.telugu-heading,
+  body[data-lang="en"] header h1.te-font.telugu-heading {
+    font-size: 28px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.01em !important;
+    text-shadow: 0 0 6px rgba(255, 200, 0, 0.25) !important;
+  }
+
+  header p.cor-font,
+  header p.cor-font span,
+  header p.cor-font .lte.te-font {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+  }
+
+  .content-card {
+    transform: none !important;
+    padding: clamp(20px, 5vw, 36px) !important;
+  }
+
+  .label-en {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  .label-te,
+  body[data-lang="te"] .label-te {
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+  }
+
+  .nakshatra-en {
+    font-size: 40px !important;
+    line-height: 1.35 !important;
+  }
+
+  .nakshatra-te,
+  body[data-lang="te"] .nakshatra-te {
+    font-size: 44px !important;
+    line-height: 1.5 !important;
+  }
+
+  .mantra-en {
+    font-size: 27px !important;
+    line-height: 2.1 !important;
+  }
+
+  .mantra-te,
+  body[data-lang="te"] .mantra-te {
+    font-size: 35px !important;
+    line-height: 2.45 !important;
+  }
+
+  footer p.cor-font,
+  footer p.cor-font span,
+  footer p.cor-font .lte.te-font {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+  }
+
+  footer p.te-font,
+  body[data-lang="te"] footer p.te-font,
+  body[data-lang="te"] footer .te-font {
+    font-size: 23px !important;
+    line-height: 1.5 !important;
+    font-weight: 700 !important;
+  }
+
+  footer svg {
+    width: 34px !important;
+    height: auto !important;
+  }
+
+  /* Keep language button small even on Telugu mobile */
+  .lang-btn,
+  .lang-btn span,
+  .lang-btn .len,
+  .lang-btn .lte,
+  .lang-btn .te-font,
+  body[data-lang="te"] .lang-btn span,
+  body[data-lang="te"] .lang-btn .lte,
+  body[data-lang="te"] .lang-btn .lte.te-font,
+  body[data-lang="te"] .lang-btn .te-font {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    padding: 4px 12px !important;
+  }
+
+  .lang-btn svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+}
+
+/* =========================================================
+   CONTENT CARD TEXT — TELUGU GLOW + ENGLISH SAME STYLE SMALLER
+   Paste this at the VERY END of nakshatra.html CSS
+========================================================= */
+
+/* Telugu labels inside card — slight golden glow */
+.content-card .label-te,
+body[data-lang="te"] .content-card .label-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #E6C878 !important;
+  font-size: clamp(15px, 3vw, 19px) !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 8px !important;
+
+  text-shadow:
+    0 0 4px rgba(255, 215, 120, 0.28),
+    0 0 9px rgba(212, 175, 55, 0.16) !important;
+}
+
+/* Telugu Nakshatra [lunar mansion] name — soft glow */
+.content-card .nakshatra-te,
+body[data-lang="te"] .content-card .nakshatra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #F3D37A !important;
+  font-size: clamp(24px, 6vw, 40px) !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+
+  text-shadow:
+    0 0 4px rgba(255, 230, 150, 0.32),
+    0 0 12px rgba(212, 175, 55, 0.22),
+    0 0 22px rgba(255, 180, 0, 0.10) !important;
+}
+
+/* Telugu mantra — readable with gentle glow */
+.content-card .mantra-te,
+body[data-lang="te"] .content-card .mantra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFF0D2 !important;
+  font-size: clamp(22px, 4.8vw, 32px) !important;
+  font-weight: 400 !important;
+  line-height: 2.4 !important;
+
+text-shadow:
+  0 0 2px rgba(255, 245, 210, 0.34),
+  0 0 8px rgba(212, 175, 55, 0.26),
+  0 0 14px rgba(255, 180, 0, 0.14),
+  0 0 22px rgba(255, 200, 80, 0.08) !important;
+}
+
+/* English labels — same color/glow style as Telugu, but smaller */
+.content-card .label-en,
+body[data-lang="en"] .content-card .label-en {
+  font-family: 'Cinzel', serif !important;
+  color: #E6C878 !important;
+  font-size: clamp(10px, 1.7vw, 13px) !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 8px !important;
+
+  text-shadow:
+    0 0 4px rgba(255, 215, 120, 0.25),
+    0 0 9px rgba(212, 175, 55, 0.14) !important;
+}
+
+/* English Nakshatra [lunar mansion] name — same Telugu style, smaller */
+.content-card .nakshatra-en,
+body[data-lang="en"] .content-card .nakshatra-en {
+  font-family: 'Cinzel', serif !important;
+  color: #F3D37A !important;
+  font-size: clamp(20px, 4.8vw, 32px) !important;
+  font-weight: 600 !important;
+  line-height: 1.55 !important;
+
+  text-shadow:
+    0 0 4px rgba(255, 230, 150, 0.28),
+    0 0 12px rgba(212, 175, 55, 0.18),
+    0 0 20px rgba(255, 180, 0, 0.08) !important;
+}
+
+/* English mantra — same Telugu color/glow style, smaller */
+.content-card .mantra-en,
+body[data-lang="en"] .content-card .mantra-en {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  color: #FFF0D2 !important;
+  font-size: clamp(18px, 3.6vw, 26px) !important;
+  font-weight: 600 !important;
+  line-height: 2.15 !important;
+  letter-spacing: 0.01em !important;
+
+  text-shadow:
+    0 0 3px rgba(255, 245, 210, 0.20),
+    0 0 9px rgba(212, 175, 55, 0.14),
+    0 0 16px rgba(255, 180, 0, 0.07) !important;
+}
+
+/* =========================================================
+   MOBILE CARD TEXT
+========================================================= */
+@media only screen and (max-width: 768px) {
+
+  .content-card .label-te,
+  body[data-lang="te"] .content-card .label-te {
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+  }
+
+  .content-card .nakshatra-te,
+  body[data-lang="te"] .content-card .nakshatra-te {
+    font-size: 44px !important;
+    line-height: 1.5 !important;
+  }
+
+  .content-card .mantra-te,
+  body[data-lang="te"] .content-card .mantra-te {
+    font-size: 29px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* English mobile: same style, smaller than Telugu */
+  .content-card .label-en,
+  body[data-lang="en"] .content-card .label-en {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  .content-card .nakshatra-en,
+  body[data-lang="en"] .content-card .nakshatra-en {
+    font-size: 34px !important;
+    line-height: 1.4 !important;
+  }
+
+  .content-card .mantra-en,
+  body[data-lang="en"] .content-card .mantra-en {
+    font-size: 20px !important;
+    line-height: 2.15 !important;
+  }
+}
+
+/* =========================================================
+   FOOTER TITLE — SAME AS INDEX.HTML
+   Put at VERY END of nakshatra.html CSS
+========================================================= */
+
+footer p.te-font.telugu-heading,
+body[data-lang="te"] footer p.te-font.telugu-heading,
+body[data-lang="en"] footer p.te-font.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFD700 !important;
+
+  font-size: clamp(20px, 5vw, 34px) !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 400 !important;
+
+  margin-top: 14px !important;
+
+  text-shadow:
+    0 0 28px rgba(255, 200, 0, 0.5),
+    0 0 16px rgba(255, 180, 0, 0.3) !important;
+}
+
+/* Mobile footer title same as index.html */
+@media only screen and (max-width: 768px) {
+  footer p.te-font.telugu-heading,
+  body[data-lang="te"] footer p.te-font.telugu-heading,
+  body[data-lang="en"] footer p.te-font.telugu-heading {
+    font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+    font-size: 28px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.01em !important;
+    font-weight: 400 !important;
+
+    margin-top: 14px !important;
+
+    text-shadow:
+      0 0 28px rgba(255, 200, 0, 0.5),
+      0 0 16px rgba(255, 180, 0, 0.3) !important;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HEADER HEIGHT + NAMALU IMAGE — ALL DEVICES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.site-header {
+  min-height: clamp(300px, 38vw, 470px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.site-header .toran svg {
+  height: clamp(44px, 6vw, 70px) !important;
+}
+
+.header-inner {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(34px, 7vw, 72px) clamp(14px, 4vw, 32px) clamp(28px, 6vw, 58px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.namalu-img {
+  display: block;
+  width: auto;
+  height: clamp(78px, 15vw, 135px);
+  max-width: min(260px, 72vw);
+  object-fit: contain;
+  margin: 0 auto clamp(12px, 2.5vw, 20px);
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.28));
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .site-header {
+    min-height: clamp(330px, 72vw, 430px);
+  }
+
+  .header-inner {
+    padding-top: clamp(42px, 10vw, 64px);
+    padding-bottom: clamp(34px, 8vw, 54px);
+  }
+
+  .namalu-img {
+    height: clamp(82px, 22vw, 120px) !important;
+    max-width: min(240px, 76vw);
+    margin-bottom: 14px;
+  }
+}
+
+/* Small mobile */
+@media only screen and (max-width: 420px) {
+  .site-header {
+    min-height: 360px;
+  }
+
+  .header-inner {
+    padding-top: 46px;
+    padding-bottom: 38px;
+  }
+
+  .namalu-img {
+    height: 92px !important;
+    max-width: 210px;
+  }
+}
+  </style>
+</head>
+<body data-lang="te">
+
+  <!-- ── HIDDEN SVG GRADIENT DEFS ── -->
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <defs>
+      <linearGradient id="gFlame" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%"   stop-color="#FF3300"/>
+        <stop offset="40%"  stop-color="#FFB200"/>
+        <stop offset="100%" stop-color="#FFFBE0"/>
+      </linearGradient>
+      <linearGradient id="gBrass" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#A87800"/>
+        <stop offset="45%"  stop-color="#FFD700"/>
+        <stop offset="100%" stop-color="#8B6800"/>
+      </linearGradient>
+      <linearGradient id="gLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#3CB371"/>
+        <stop offset="100%" stop-color="#004D00"/>
+      </linearGradient>
+      <linearGradient id="gMarigold" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#FFA800"/>
+        <stop offset="60%"  stop-color="#FF7000"/>
+        <stop offset="100%" stop-color="#FF3300"/>
+      </linearGradient>
+      <linearGradient id="gTrunk" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"   stop-color="#705238"/>
+        <stop offset="50%"  stop-color="#A08B60"/>
+        <stop offset="100%" stop-color="#705238"/>
+      </linearGradient>
+      <linearGradient id="gBLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#44CC55"/>
+        <stop offset="50%"  stop-color="#1C8020"/>
+        <stop offset="100%" stop-color="#003C04"/>
+      </linearGradient>
+      <linearGradient id="gGarland" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#FFA800"/>
+        <stop offset="100%" stop-color="#FF3300"/>
+      </linearGradient>
+            <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="#FFEE88" stop-opacity="0.55" />
+  <stop offset="100%" stop-color="#FF8800" stop-opacity="0" />
+</radialGradient>
+
+    </defs>
+  </svg>
+
+  <!-- petals removed -->
+
+  <!-- ══════════════════════════════════════
+       DARK HEADER
+  ══════════════════════════════════════ -->
+  <header class="dark-band site-header">
+
+    <!-- Mango leaf toran hanging from header -->
+    <div class="toran">
+      <svg viewBox="0 0 1200 58" style="width:100%;height:clamp(34px,5.5vw,58px)" preserveAspectRatio="xMidYMid slice">
+        <path d="M0,8 Q300,26 600,8 Q900,26 1200,8" stroke="#7A5A14" stroke-width="2.5" fill="none" />
+        <g id="tu">
+          <path d="M-8,8 Q-2,26 -2,52 Q8,30 4,8 Z" fill="url(#gLeaf)" transform="rotate(-18 -2 8)" />
+          <path d="M14,8 Q20,30 20,52 Q30,26 26,8 Z" fill="url(#gLeaf)" transform="rotate(16 20 8)" />
+          <circle cx="8" cy="45" r="8" fill="url(#gMarigold)" />
+          <circle cx="8" cy="45" r="4.5" fill="#FFE000" />
+          <circle cx="28" cy="43" r="5.5" fill="url(#gMarigold)" />
+          <circle cx="28" cy="43" r="3" fill="#FFE000" />
+        </g>
+        <use href="#tu" x="0" />
+        <use href="#tu" x="50" />
+        <use href="#tu" x="100" />
+        <use href="#tu" x="150" />
+        <use href="#tu" x="200" />
+        <use href="#tu" x="250" />
+        <use href="#tu" x="300" />
+        <use href="#tu" x="350" />
+        <use href="#tu" x="400" />
+        <use href="#tu" x="450" />
+        <use href="#tu" x="500" />
+        <use href="#tu" x="550" />
+        <use href="#tu" x="600" />
+        <use href="#tu" x="650" />
+        <use href="#tu" x="700" />
+        <use href="#tu" x="750" />
+        <use href="#tu" x="800" />
+        <use href="#tu" x="850" />
+        <use href="#tu" x="900" />
+        <use href="#tu" x="950" />
+        <use href="#tu" x="1000" />
+        <use href="#tu" x="1050" />
+        <use href="#tu" x="1100" />
+        <use href="#tu" x="1150" />
+      </svg>
+    </div>
+
+    <!-- Header main content -->
+    <div class="header-inner">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+
+        <!-- Center -->
+        <div style="flex:1;text-align:center">
+          <img src="assets/namalu.png"
+            alt="Namalu"
+            class="namalu-img" />
+          <h1 class="te-font telugu-heading"
+            style="color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3)">
+            అఖండ దివ్య వైభవ జ్యోతి
+          </h1>
+          <p class="cor-font"
+            style="color:rgba(255,215,0,0.75);font-style:italic;font-size:clamp(15px,3vw,22px);margin-top:8px;line-height:1.7">
+            <span class="len">Ghrutayajna, Namayajna Sahita Sapta Pradakshina</span>
+            <span class="lte te-font">ఘృతయజ్ఞ, నామయజ్ఞ సహిత సప్త ప్రదక్షిణం</span>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Gold shimmer line -->
+      <div class="gline" style="margin:clamp(10px,2.5vw,16px) 0"></div>
+
+      <!-- Language toggle -->
+      <div style="text-align:center">
+        <button class="lang-btn" onclick="toggleLang()" style="background:rgba(255,215,0,0.07);border:1px solid rgba(201,152,10,0.45);color:#FFD700;
+                 border-radius:999px;cursor:pointer;
+                 font-family:'Cormorant Garamond',serif;
+                 display:inline-flex;align-items:center;transition:background 0.2s"
+          onmouseover="this.style.background='rgba(255,215,0,0.14)'"
+          onmouseout="this.style.background='rgba(255,215,0,0.07)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path
+              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          <span class="len">తెలుగు లో చూడండి</span>
+          <span class="lte te-font">View in English</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Header bottom shimmer -->
+    <div class="gline"></div>
+  </header>
+
+
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════ -->
+  <main class="main-wrap">
+    <div class="inner">
+
+      <div class="content-card">
+
+        <!-- VIDEO -->
+        <div class="video-wrap" id="video-wrap">
+          <div class="video-placeholder">Loading…</div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div style="display:flex;align-items:center;gap:10px;margin:clamp(18px,4vw,26px) 0">
+          <div class="gdiv" style="flex:1"></div>
+          <svg class="sp2" viewBox="0 0 100 100" style="color:#C9980A;width:16px;height:16px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <div class="gdiv" style="flex:1"></div>
+        </div>
+
+        <!-- NAKSHATRA -->
+        <div style="margin-bottom:clamp(18px,4vw,26px)">
+          <div class="label-en len">Nakshatra</div>
+          <div class="label-te lte">నక్షత్రం</div>
+          <div class="nakshatra-en len" id="nakshatra-en">—</div>
+          <div class="nakshatra-te lte" id="nakshatra-te">—</div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:clamp(18px,4vw,26px)">
+          <div class="gdiv" style="flex:1"></div>
+          <svg class="sp" viewBox="0 0 100 100" style="color:#C9980A;width:13px;height:13px;flex-shrink:0">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <svg class="sp2" viewBox="0 0 100 100" style="color:#C9980A;width:18px;height:18px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <svg class="sp3" viewBox="0 0 100 100" style="color:#C9980A;width:13px;height:13px;flex-shrink:0">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <div class="gdiv" style="flex:1"></div>
+        </div>
+
+        <!-- MANTRA -->
+        <div>
+          <div class="label-en len">Mantra</div>
+          <div class="label-te lte">మంత్రం</div>
+          <div class="mantra-en len" id="mantra-en">—</div>
+          <div class="mantra-te lte" id="mantra-te">—</div>
+        </div>
+
+      </div><!-- /.content-card -->
+    </div><!-- /.inner -->
+  </main>
+
+
+  <!-- ── FLOWER GARLAND ── -->
+  <div style="overflow:hidden;line-height:0; padding-top:90px;">
+    <svg viewBox="0 0 1200 44" style="width:100%;height:clamp(28px,5vw,44px)" preserveAspectRatio="xMidYMid slice">
+      <path d="M0,22 Q150,38 300,22 Q450,6 600,22 Q750,38 900,22 Q1050,6 1200,22" stroke="#1A6A1A" stroke-width="4" fill="none"/>
+      <g id="gf"><circle r="7.5" fill="url(#gGarland)"/><circle r="3.8" fill="#FFE200"/></g>
+      <use href="#gf" x="0"    y="22"/> <use href="#gf" x="50"   y="29"/>
+      <use href="#gf" x="100"  y="23"/> <use href="#gf" x="150"  y="35"/>
+      <use href="#gf" x="200"  y="27"/> <use href="#gf" x="250"  y="18"/>
+      <use href="#gf" x="300"  y="22"/> <use href="#gf" x="350"  y="14"/>
+      <use href="#gf" x="400"  y="11"/> <use href="#gf" x="450"  y="7"/>
+      <use href="#gf" x="500"  y="11"/> <use href="#gf" x="550"  y="18"/>
+      <use href="#gf" x="600"  y="22"/> <use href="#gf" x="650"  y="29"/>
+      <use href="#gf" x="700"  y="35"/> <use href="#gf" x="750"  y="37"/>
+      <use href="#gf" x="800"  y="31"/> <use href="#gf" x="850"  y="23"/>
+      <use href="#gf" x="900"  y="22"/> <use href="#gf" x="950"  y="15"/>
+      <use href="#gf" x="1000" y="10"/> <use href="#gf" x="1050" y="7"/>
+      <use href="#gf" x="1100" y="12"/> <use href="#gf" x="1150" y="19"/>
+    </svg>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       DARK FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="dark-band" style="padding:clamp(28px,6vw,44px) clamp(12px,4vw,28px)">
+    <div style="max-width:720px;margin:0 auto;text-align:center">
+
+      <div class="gline" style="margin-bottom:clamp(16px,4vw,26px)"></div>
+
+      <!-- Lamps + name -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,24px);margin-bottom:12px">
+        <!-- <div class="lamp">
+          <svg viewBox="0 0 90 120" style="width:clamp(22px,4vw,36px);height:auto">
+            <g stroke="#FFD84D" stroke-linecap="round" opacity="0.9">
+              <line x1="45" y1="6"  x2="45" y2="1"  stroke-width="2.5"/>
+              <line x1="55" y1="9"  x2="58" y2="5"  stroke-width="2"/>
+              <line x1="63" y1="16" x2="67" y2="13" stroke-width="2"/>
+              <line x1="67" y1="26" x2="72" y2="25" stroke-width="2"/>
+              <line x1="35" y1="9"  x2="32" y2="5"  stroke-width="2"/>
+              <line x1="27" y1="16" x2="23" y2="13" stroke-width="2"/>
+              <line x1="23" y1="26" x2="18" y2="25" stroke-width="2"/>
+            </g>
+            <ellipse cx="45" cy="30" rx="22" ry="26" fill="url(#halo)"/>
+            <path d="M45,8 Q54,22 52,40 Q50,54 45,60 Q40,54 38,40 Q36,22 45,8" fill="url(#gFlame)"/>
+            <path d="M45,18 Q50,30 49,44 Q47,54 45,58 Q43,54 41,44 Q40,30 45,18" fill="#FFF5C0" opacity="0.5"/>
+            <ellipse cx="45" cy="60" rx="3" ry="2" fill="#CC3300"/>
+            <path d="M18,68 Q45,62 72,68" stroke="#E8A800" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M18,68 Q10,78 22,90 Q33,98 45,99 Q57,98 68,90 Q80,78 72,68 Q45,74 18,68Z" fill="url(#gBrass)"/>
+            <path d="M18,68 Q8,70 6,76 Q10,72 18,70Z" fill="url(#gBrass)"/>
+            <path d="M22,72 Q16,80 20,88 Q18,82 22,76Z" fill="rgba(255,235,120,0.3)"/>
+            <ellipse cx="45" cy="99" rx="12" ry="3.5" fill="#C08000" opacity="0.6"/>
+          </svg>
+        </div> -->
+        <p class="te-font telugu-heading"
+          style="margin-top:14px;color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3)">
+          అఖండ దివ్య వైభవ జ్యోతి
+        </p>
+        <!-- <div class="lamp2">
+          <svg viewBox="0 0 90 120" style="width:clamp(22px,4vw,36px);height:auto">
+            <g stroke="#FFD84D" stroke-linecap="round" opacity="0.9">
+              <line x1="45" y1="6"  x2="45" y2="1"  stroke-width="2.5"/>
+              <line x1="55" y1="9"  x2="58" y2="5"  stroke-width="2"/>
+              <line x1="63" y1="16" x2="67" y2="13" stroke-width="2"/>
+              <line x1="67" y1="26" x2="72" y2="25" stroke-width="2"/>
+              <line x1="35" y1="9"  x2="32" y2="5"  stroke-width="2"/>
+              <line x1="27" y1="16" x2="23" y2="13" stroke-width="2"/>
+              <line x1="23" y1="26" x2="18" y2="25" stroke-width="2"/>
+            </g>
+            <ellipse cx="45" cy="30" rx="22" ry="26" fill="url(#halo)"/>
+            <path d="M45,8 Q54,22 52,40 Q50,54 45,60 Q40,54 38,40 Q36,22 45,8" fill="url(#gFlame)"/>
+            <path d="M45,18 Q50,30 49,44 Q47,54 45,58 Q43,54 41,44 Q40,30 45,18" fill="#FFF5C0" opacity="0.5"/>
+            <ellipse cx="45" cy="60" rx="3" ry="2" fill="#CC3300"/>
+            <path d="M18,68 Q45,62 72,68" stroke="#E8A800" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M18,68 Q10,78 22,90 Q33,98 45,99 Q57,98 68,90 Q80,78 72,68 Q45,74 18,68Z" fill="url(#gBrass)"/>
+            <path d="M18,68 Q8,70 6,76 Q10,72 18,70Z" fill="url(#gBrass)"/>
+            <path d="M22,72 Q16,80 20,88 Q18,82 22,76Z" fill="rgba(255,235,120,0.3)"/>
+            <ellipse cx="45" cy="99" rx="12" ry="3.5" fill="#C08000" opacity="0.6"/>
+          </svg>
+        </div> -->
+      </div>
+
+       <p class="cor-font"
+        style="font-style:italic;color:rgba(255,215,0,0.6);font-size:clamp(14px,2.8vw,20px);margin-bottom:10px;line-height:1.75">
+        <span class="len">శ్లో" దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి : జానార్ధన: <br>  దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!</span>
+        <span class="lte te-font">శ్లో" దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి : జానార్ధన: <br>  దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!</span>
+      </p>
+
+      <div class="gline" style="margin-top:clamp(16px,4vw,26px)"></div>
+    </div>
+  </footer>
+
+  <script>
+
+
+    // ── Load video based on ?video= in URL ──────────────
+    var params = new URLSearchParams(window.location.search);
+    var id     = params.get("id") || "1";
+    var data   = videos[id];
+    var wrap   = document.getElementById("video-wrap");
+
+    if (data) {
+      // loop attribute added — video repeats until user pauses
+      wrap.innerHTML =
+        '<video loop playsinline controls preload="metadata">' +
+          '<source src="' + data.videoUrl + '#t=0.1" type="video/mp4" />' +
+          'Your browser does not support video playback.' +
+        '</video>';
+
+      document.getElementById("nakshatra-en").textContent = data.nakshatraEn;
+      document.getElementById("nakshatra-te").textContent = data.nakshatraTe;
+      document.getElementById("mantra-en").innerHTML = data.mantraEn.split("\n").join("<br>");
+      document.getElementById("mantra-te").innerHTML = data.mantraTe.split("\n").join("<br>");
+    } else {
+      wrap.innerHTML =
+        '<div class="video-placeholder">Video not found. Please reload again.</div>';
+    }
+
+    // ── Language toggle ──────────────────────────────────
+    function toggleLang() {
+      var body = document.body;
+      body.setAttribute("data-lang",
+        body.getAttribute("data-lang") === "en" ? "te" : "en");
+    }
+  </script>
+
+</body>
+</html>

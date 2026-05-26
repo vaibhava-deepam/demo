@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>నియమములు & ఫలితములు – అఖండ దివ్య వైభవ జ్యోతి</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ponnala&family=Mallanna&family=Noto+Serif+Telugu:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    @font-face {
+      font-family: 'Potti Sreeramulu';
+      src: url('fonts/potti-sreeramulu-regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      overflow-x: hidden;
+      background-color: #F0DFA8;
+      background-image:
+        radial-gradient(ellipse 130% 50% at 50% 0%,   rgba(255,160,0,0.22)  0%, transparent 60%),
+        radial-gradient(ellipse  80% 55% at   0% 55%, rgba(139,69,19,0.12)  0%, transparent 60%),
+        radial-gradient(ellipse  80% 55% at 100% 45%, rgba(139,69,19,0.10)  0%, transparent 60%),
+        radial-gradient(ellipse 120% 45% at  50% 100%,rgba(201,152,10,0.20) 0%, transparent 60%),
+        radial-gradient(ellipse  60% 40% at  25% 30%, rgba(255,120,0,0.08)  0%, transparent 55%),
+        radial-gradient(ellipse  60% 40% at  75% 70%, rgba(255,120,0,0.07)  0%, transparent 55%),
+        linear-gradient(170deg,
+          #FBE8B8 0%, #FFF6DC 14%, #F6E4B0 28%, #FFFBEA 42%,
+          #F2DBA0 56%, #FBF2D0 70%, #EDD596 84%, #F8ECC0 100%
+        );
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dark-band {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(90,20,5,0.6) 0%, transparent 70%),
+        linear-gradient(135deg, #0A0100 0%, #2C0700 20%, #4E1204 40%, #5A1606 50%, #4E1204 60%, #2C0700 80%, #0A0100 100%);
+    }
+
+    @keyframes shimmer { 0%{background-position:-300% center} 100%{background-position:300% center} }
+    .gline {
+      height: 2px;
+      background: linear-gradient(90deg, #3A1000, #C9980A 20%, #FFD700 50%, #C9980A 80%, #3A1000);
+      background-size: 300% auto;
+      animation: shimmer 4s linear infinite;
+    }
+    .gdiv {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,152,10,0.5) 20%, #C9980A 50%, rgba(201,152,10,0.5) 80%, transparent);
+    }
+
+    @keyframes toranBob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+    .toran { animation: toranBob 3.8s ease-in-out infinite; overflow: hidden; line-height: 0; }
+
+    @keyframes starP { 0%,100%{transform:scale(1);opacity:0.7} 50%{transform:scale(1.22);opacity:1} }
+    .sp  { animation: starP 2.6s ease-in-out infinite; }
+    .sp2 { animation: starP 2.6s ease-in-out infinite 0.35s; }
+    .sp3 { animation: starP 2.6s ease-in-out infinite 0.7s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.65s ease both; }
+    .fade-up:nth-child(2) { animation-delay: 0.10s; }
+    .fade-up:nth-child(3) { animation-delay: 0.20s; }
+    .fade-up:nth-child(4) { animation-delay: 0.30s; }
+    .fade-up:nth-child(5) { animation-delay: 0.40s; }
+    .fade-up:nth-child(6) { animation-delay: 0.50s; }
+
+    [data-lang="te"] .len { display: none; }
+    [data-lang="en"] .lte { display: none; }
+
+    .te-font {
+      font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      font-weight: 400 !important;
+    }
+    .cor-font { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .telugu-heading {
+      font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      letter-spacing: 0.01em !important;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      min-height: clamp(300px,38vw,470px);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .header-inner {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(34px,7vw,72px) clamp(14px,4vw,32px) clamp(28px,6vw,58px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .namalu-img {
+      display: block;
+      width: auto;
+      height: clamp(78px,15vw,135px);
+      max-width: min(260px,72vw);
+      object-fit: contain;
+      margin: 0 auto clamp(12px,2.5vw,20px);
+      filter: drop-shadow(0 0 10px rgba(255,215,0,0.28));
+    }
+    header h1.te-font.telugu-heading {
+      font-family: 'Ponnala','Mallanna','Noto Serif Telugu',sans-serif !important;
+      color: #FFD700 !important;
+      font-size: clamp(20px,5vw,34px) !important;
+      line-height: 1.6 !important;
+      font-weight: 400 !important;
+      text-shadow: 0 0 6px rgba(255,200,0,0.25) !important;
+    }
+    header p.cor-font {
+      color: rgba(255,215,0,0.75) !important;
+      font-style: italic !important;
+      font-size: clamp(15px,3vw,22px) !important;
+      line-height: 1.7 !important;
+      margin-top: 8px !important;
+    }
+    .lang-btn {
+      padding: 4px 12px !important;
+      gap: 5px !important;
+      font-size: 12px !important;
+      line-height: 1.2 !important;
+    }
+    .lang-btn span, .lang-btn .len, .lang-btn .lte, .lang-btn .te-font,
+    body[data-lang="te"] .lang-btn .lte, body[data-lang="te"] .lang-btn .te-font {
+      font-size: 12px !important;
+      line-height: 1.2 !important;
+      font-weight: 400 !important;
+    }
+    .lang-btn svg { width: 12px !important; height: 12px !important; }
+
+    /* ── MAIN ── */
+    .main-wrap { flex: 1; padding: clamp(24px,5vw,40px) clamp(14px,5vw,40px); }
+    .inner { max-width: 780px; margin: 0 auto; }
+
+    /* ── CONTENT CARD ── */
+    .content-card {
+      background: linear-gradient(145deg, #4a140b 0%, #2b0904);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 10px;
+      padding: clamp(20px,5vw,36px);
+      box-shadow: 0 2px 10px rgba(90,20,5,0.1), inset 0 1px 0 rgba(255,215,0,0.12), 0 0 0 1px rgba(255,200,0,0.1);
+      color: #f7ead2;
+    }
+
+    /* ── PAGE TITLE ── */
+    .page-title-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(18px,4vw,28px);
+      font-weight: 700;
+      color: #FFD700;
+      letter-spacing: 0.06em;
+      text-align: center;
+      text-shadow: 0 0 18px rgba(255,200,0,0.4), 0 0 8px rgba(255,180,0,0.2);
+    }
+    .page-title-te {
+      font-family: 'Ponnala','Mallanna','Noto Serif Telugu',sans-serif !important;
+      font-size: clamp(22px,5vw,34px);
+      font-weight: 400 !important;
+      color: #FFD700;
+      text-align: center;
+      text-shadow: 0 0 18px rgba(255,200,0,0.4), 0 0 8px rgba(255,180,0,0.2);
+      line-height: 1.6;
+    }
+
+    /* ── SECTION HEADING ── */
+    .sec-head-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(12px,2vw,15px);
+      font-weight: 700;
+      color: #E6C878;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-shadow: 0 0 6px rgba(255,215,0,0.25);
+      margin-bottom: 14px;
+    }
+    .sec-head-te {
+      font-family: 'Ponnala','Mallanna','Noto Serif Telugu',sans-serif !important;
+      font-size: clamp(20px,3.8vw,26px);
+      color: #E6C878;
+      font-weight: 400 !important;
+      text-shadow: 0 0 6px rgba(255,215,0,0.25);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    /* ── BODY TEXT ── */
+    .body-en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(15px,2.5vw,19px);
+      line-height: 1.95;
+      color: #f0e0c0;
+    }
+    .body-te {
+      font-family: 'Mallanna','Noto Serif Telugu',sans-serif !important;
+      font-size: clamp(17px,3.2vw,22px);
+      line-height: 2.1;
+      color: #f5e6cc;
+      font-weight: 400 !important;
+      text-shadow: 0 0 2px rgba(255,245,210,0.12);
+    }
+
+    /* ── STEP ITEM (numbered rules) ── */
+    .step-list { display: flex; flex-direction: column; gap: clamp(14px,2.5vw,20px); }
+
+    .step-item {
+      display: flex;
+      gap: clamp(12px,2.5vw,18px);
+      align-items: flex-start;
+      background: rgba(255,215,0,0.05);
+      border: 1px solid rgba(201,152,10,0.2);
+      border-radius: 8px;
+      padding: clamp(12px,2.5vw,18px) clamp(14px,3vw,20px);
+      transition: background 0.2s;
+    }
+    .step-item:hover { background: rgba(255,215,0,0.09); }
+
+    .step-num {
+      flex-shrink: 0;
+      width: clamp(28px,4vw,36px);
+      height: clamp(28px,4vw,36px);
+      border-radius: 50%;
+      background: linear-gradient(135deg, #C9980A, #FFD700);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(11px,1.8vw,14px);
+      font-weight: 700;
+      color: #2b0904;
+      box-shadow: 0 0 8px rgba(255,200,0,0.3);
+      margin-top: 3px;
+    }
+
+    .step-content { flex: 1; }
+
+    .step-title-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(12px,2vw,15px);
+      font-weight: 700;
+      color: #FFD700;
+      letter-spacing: 0.08em;
+      margin-bottom: 5px;
+      text-shadow: 0 0 6px rgba(255,200,0,0.2);
+    }
+    .step-title-te {
+      font-family: 'Ponnala','Mallanna','Noto Serif Telugu',sans-serif !important;
+      font-size: clamp(17px,3vw,21px);
+      color: #FFD700;
+      font-weight: 400 !important;
+      margin-bottom: 5px;
+      line-height: 1.5;
+      text-shadow: 0 0 6px rgba(255,200,0,0.2);
+    }
+
+    /* ── BENEFIT ITEM ── */
+    .benefit-list { display: flex; flex-direction: column; gap: clamp(12px,2vw,18px); }
+
+    .benefit-item {
+      display: flex;
+      gap: clamp(12px,2.5vw,18px);
+      align-items: flex-start;
+      background: rgba(255,215,0,0.05);
+      border: 1px solid rgba(201,152,10,0.2);
+      border-left: 3px solid #C9980A;
+      border-radius: 8px;
+      padding: clamp(12px,2.5vw,18px) clamp(14px,3vw,20px);
+      transition: background 0.2s;
+    }
+    .benefit-item:hover { background: rgba(255,215,0,0.09); }
+
+    .benefit-icon {
+      flex-shrink: 0;
+      font-size: clamp(20px,3.5vw,28px);
+      line-height: 1;
+      margin-top: 2px;
+      filter: drop-shadow(0 0 4px rgba(255,200,0,0.4));
+    }
+
+    .benefit-title-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(12px,2vw,15px);
+      font-weight: 700;
+      color: #FFD700;
+      letter-spacing: 0.08em;
+      margin-bottom: 5px;
+      text-shadow: 0 0 6px rgba(255,200,0,0.2);
+    }
+    .benefit-title-te {
+      font-family: 'Ponnala','Mallanna','Noto Serif Telugu',sans-serif !important;
+      font-size: clamp(17px,3vw,21px);
+      color: #FFD700;
+      font-weight: 400 !important;
+      margin-bottom: 5px;
+      line-height: 1.5;
+      text-shadow: 0 0 6px rgba(255,200,0,0.2);
+    }
+
+    /* ── SHLOKA BOX ── */
+    .shloka-box {
+      background: rgba(255,215,0,0.07);
+      border: 1px solid rgba(201,152,10,0.45);
+      border-radius: 8px;
+      padding: clamp(18px,4vw,28px) clamp(16px,4vw,28px);
+      text-align: center;
+    }
+    .shloka-en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(16px,3vw,22px);
+      line-height: 2;
+      color: #FFE8A0;
+      font-weight: 600;
+      text-shadow: 0 0 8px rgba(255,200,0,0.18);
+    }
+    .shloka-te {
+      font-family: 'Mallanna','Noto Serif Telugu',sans-serif !important;
+      font-size: clamp(18px,3.5vw,24px);
+      line-height: 2.2;
+      color: #FFE8A0;
+      font-weight: 400 !important;
+      text-shadow: 0 0 8px rgba(255,200,0,0.18);
+    }
+    .shloka-hands {
+      font-size: clamp(22px,4vw,30px);
+      margin-top: 10px;
+      display: block;
+    }
+
+    /* ── DIVINE QUOTE ── */
+    .quote-box {
+      background: rgba(255,215,0,0.06);
+      border: 1px solid rgba(201,152,10,0.3);
+      border-radius: 8px;
+      padding: clamp(14px,3vw,22px) clamp(16px,3vw,22px);
+      text-align: center;
+    }
+    .quote-en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(15px,2.5vw,19px);
+      line-height: 1.9;
+      color: #f0e0c0;
+    }
+    .quote-te {
+      font-family: 'Mallanna','Noto Serif Telugu',sans-serif !important;
+      font-size: clamp(17px,3vw,21px);
+      line-height: 2.0;
+      color: #f0e0c0;
+      font-weight: 400 !important;
+    }
+    .quote-attr {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(10px,1.6vw,12px);
+      letter-spacing: 0.2em;
+      color: #C9980A;
+      text-transform: uppercase;
+      margin-top: 10px;
+      display: block;
+    }
+    .quote-attr-te {
+      font-family: 'Mallanna','Noto Serif Telugu',sans-serif !important;
+      font-size: clamp(13px,2.2vw,16px);
+      color: #C9980A;
+      font-weight: 400 !important;
+      margin-top: 10px;
+      display: block;
+      line-height: 1.5;
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .sec-divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: clamp(18px,4vw,28px) 0;
+    }
+    .sec-divider .gdiv { flex: 1; }
+
+    /* ── FOOTER ── */
+    footer.dark-band { padding: clamp(28px,6vw,44px) clamp(12px,4vw,28px); }
+    footer p.te-font.telugu-heading {
+      font-family: 'Ponnala','Mallanna','Noto Serif Telugu',sans-serif !important;
+      color: #FFD700 !important;
+      font-size: clamp(20px,5vw,34px) !important;
+      line-height: 1.6 !important;
+      font-weight: 400 !important;
+      margin-top: 14px !important;
+      text-shadow: 0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3) !important;
+    }
+    footer p.cor-font {
+      font-style: italic !important;
+      color: rgba(255,215,0,0.6) !important;
+      font-size: clamp(14px,2.8vw,20px) !important;
+      line-height: 1.75 !important;
+      margin-bottom: 10px !important;
+    }
+
+    /* ── MOBILE ── */
+    @media only screen and (max-width: 768px) {
+      html, body { -webkit-text-size-adjust: 120% !important; text-size-adjust: 120% !important; }
+      .site-header { min-height: clamp(330px,72vw,430px); }
+      .header-inner { padding-top: clamp(42px,10vw,64px); padding-bottom: clamp(34px,8vw,54px); }
+      .namalu-img { height: clamp(82px,22vw,120px) !important; max-width: min(240px,76vw); margin-bottom: 14px; }
+      header h1.te-font.telugu-heading { font-size: 28px !important; line-height: 1.45 !important; }
+      .main-wrap { padding-left: 14px !important; padding-right: 14px !important; }
+      .body-te { font-size: 20px !important; }
+      .step-title-te, .benefit-title-te { font-size: 19px !important; }
+      .sec-head-te { font-size: 22px !important; }
+      .shloka-te { font-size: 20px !important; }
+      .quote-te { font-size: 19px !important; }
+      footer p.te-font.telugu-heading { font-size: 28px !important; }
+      footer svg { width: 34px !important; height: auto !important; }
+      .lang-btn, .lang-btn span, .lang-btn .lte, .lang-btn .te-font,
+      body[data-lang="te"] .lang-btn .lte, body[data-lang="te"] .lang-btn .te-font {
+        font-size: 12px !important; line-height: 1.2 !important;
+      }
+    }
+    @media only screen and (max-width: 420px) {
+      .site-header { min-height: 360px; }
+      .namalu-img { height: 92px !important; max-width: 210px; }
+    }
+
+    /* FINAL OVERRIDE — bigger language toggle */
+button.lang-btn {
+  padding: 8px 18px !important;
+  gap: 8px !important;
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+}
+
+button.lang-btn span,
+button.lang-btn .len,
+button.lang-btn .lte,
+button.lang-btn .te-font,
+body[data-lang="te"] button.lang-btn .lte,
+body[data-lang="te"] button.lang-btn .te-font {
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+}
+
+button.lang-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  button.lang-btn {
+    padding: 9px 20px !important;
+    gap: 8px !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+
+  button.lang-btn span,
+  button.lang-btn .len,
+  button.lang-btn .lte,
+  button.lang-btn .te-font,
+  body[data-lang="te"] button.lang-btn .lte,
+  body[data-lang="te"] button.lang-btn .te-font {
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+  }
+
+  button.lang-btn svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   COMMON BACK HOME NAVIGATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.home-nav-wrap {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.home-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 8px 18px;
+  border-radius: 999px;
+
+  background: rgba(255, 215, 0, 0.07);
+  border: 1px solid rgba(201, 152, 10, 0.45);
+  color: #FFD700;
+
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.home-nav-link:hover {
+  background: rgba(255, 215, 0, 0.14);
+  transform: translateY(-1px);
+}
+
+.home-nav-link span,
+.home-nav-link .len,
+.home-nav-link .lte,
+.home-nav-link .te-font {
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+}
+
+.home-nav-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .home-nav-wrap {
+    margin-top: 12px;
+  }
+
+  .home-nav-link {
+    padding: 9px 20px;
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  .home-nav-link span,
+  .home-nav-link .len,
+  .home-nav-link .lte,
+  .home-nav-link .te-font {
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+  }
+
+  .home-nav-link svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+  </style>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dcffe6a87cd4112a67452301a457d98"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body data-lang="te">
+
+  <!-- SVG DEFS -->
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <defs>
+      <linearGradient id="gLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#3CB371"/><stop offset="100%" stop-color="#004D00"/>
+      </linearGradient>
+      <linearGradient id="gMarigold" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFA800"/><stop offset="60%" stop-color="#FF7000"/><stop offset="100%" stop-color="#FF3300"/>
+      </linearGradient>
+      <linearGradient id="gGarland" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFA800"/><stop offset="100%" stop-color="#FF3300"/>
+      </linearGradient>
+      <radialGradient id="skinL" cx="50%" cy="40%" r="60%">
+        <stop offset="0%" stop-color="#FFD98A"/><stop offset="100%" stop-color="#C8860A"/>
+      </radialGradient>
+      <radialGradient id="skinR" cx="50%" cy="40%" r="60%">
+        <stop offset="0%" stop-color="#FFD98A"/><stop offset="100%" stop-color="#C8860A"/>
+      </radialGradient>
+      <filter id="glowL"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <filter id="glowR"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+  </svg>
+
+  <!-- ══ HEADER ══ -->
+  <header class="dark-band site-header">
+    <div class="toran">
+      <svg viewBox="0 0 1200 58" style="width:100%;height:clamp(34px,5.5vw,58px)" preserveAspectRatio="xMidYMid slice">
+        <path d="M0,8 Q300,26 600,8 Q900,26 1200,8" stroke="#7A5A14" stroke-width="2.5" fill="none"/>
+        <g id="tu">
+          <path d="M-8,8 Q-2,26 -2,52 Q8,30 4,8 Z" fill="url(#gLeaf)" transform="rotate(-18 -2 8)"/>
+          <path d="M14,8 Q20,30 20,52 Q30,26 26,8 Z" fill="url(#gLeaf)" transform="rotate(16 20 8)"/>
+          <circle cx="8" cy="45" r="8" fill="url(#gMarigold)"/>
+          <circle cx="8" cy="45" r="4.5" fill="#FFE000"/>
+          <circle cx="28" cy="43" r="5.5" fill="url(#gMarigold)"/>
+          <circle cx="28" cy="43" r="3" fill="#FFE000"/>
+        </g>
+        <use href="#tu" x="0"/><use href="#tu" x="50"/><use href="#tu" x="100"/>
+        <use href="#tu" x="150"/><use href="#tu" x="200"/><use href="#tu" x="250"/>
+        <use href="#tu" x="300"/><use href="#tu" x="350"/><use href="#tu" x="400"/>
+        <use href="#tu" x="450"/><use href="#tu" x="500"/><use href="#tu" x="550"/>
+        <use href="#tu" x="600"/><use href="#tu" x="650"/><use href="#tu" x="700"/>
+        <use href="#tu" x="750"/><use href="#tu" x="800"/><use href="#tu" x="850"/>
+        <use href="#tu" x="900"/><use href="#tu" x="950"/><use href="#tu" x="1000"/>
+        <use href="#tu" x="1050"/><use href="#tu" x="1100"/><use href="#tu" x="1150"/>
+      </svg>
+    </div>
+
+    <div class="header-inner">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div style="flex:1;text-align:center">
+          <img src="assets/namalu.png" alt="Namalu" class="namalu-img"/>
+          <h1 class="te-font telugu-heading"
+            style="color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5),0 0 16px rgba(255,180,0,0.3)">
+            అఖండ దివ్య వైభవ జ్యోతి
+          </h1>
+          <p class="cor-font"
+            style="color:rgba(255,215,0,0.75);font-style:italic;font-size:clamp(15px,3vw,22px);margin-top:8px;line-height:1.7">
+            <span class="len">Ghrutayajna, Namayajna Sahita Sapta Pradakshina</span>
+            <span class="lte te-font">ఘృతయజ్ఞ, నామయజ్ఞ సహిత సప్త ప్రదక్షిణం</span>
+          </p>
+        </div>
+      </div>
+      <div class="gline" style="margin:clamp(10px,2.5vw,16px) 0"></div>
+      <div style="text-align:center">
+        <button class="lang-btn" onclick="toggleLang()"
+          style="background:rgba(255,215,0,0.07);border:1px solid rgba(201,152,10,0.45);color:#FFD700;
+                 border-radius:999px;cursor:pointer;font-family:'Cormorant Garamond',serif;
+                 display:inline-flex;align-items:center;transition:background 0.2s"
+          onmouseover="this.style.background='rgba(255,215,0,0.14)'"
+          onmouseout="this.style.background='rgba(255,215,0,0.07)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span class="len">తెలుగు లో చూడండి</span>
+          <span class="lte te-font">View in English</span>
+        </button>
+      </div>
+      <!-- Back to Home Navigation -->
+<div class="home-nav-wrap">
+  <a href="index.html" class="home-nav-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 11L12 3l9 8" />
+      <path d="M5 10v10h14V10" />
+      <path d="M9 20v-6h6v6" />
+    </svg>
+
+    <span class="len">Back to Home</span>
+    <span class="lte te-font">హోమ్‌కు వెళ్ళండి</span>
+  </a>
+</div>
+    </div>
+    <div class="gline"></div>
+  </header>
+
+
+  <!-- ══ MAIN ══ -->
+  <main class="main-wrap">
+    <div class="inner">
+      <div class="content-card">
+
+        <!-- PAGE TITLE -->
+        <div class="fade-up" style="text-align:center;margin-bottom:clamp(16px,3vw,24px)">
+          <div class="page-title-en len">Rules, Guidelines &amp; Divine Benefits</div>
+          <div class="page-title-te lte">నియమములు, సూచనలు మరియు ఫలితములు</div>
+        </div>
+
+        <div class="gdiv"></div>
+
+        <!-- ══ SECTION 1: RULES ══ -->
+        <div class="sec-divider fade-up">
+          <div class="gdiv"></div>
+          <svg class="sp2" viewBox="0 0 100 100" style="color:#C9980A;width:14px;height:14px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <div class="gdiv"></div>
+        </div>
+
+        <div class="fade-up" style="margin-bottom: clamp(18px,4vw,28px)">
+          <div class="sec-head-en len">Rules &amp; Guidelines for Devotees</div>
+          <div class="sec-head-te lte">నియమములు, సూచనలు</div>
+
+          <div class="step-list">
+
+            <!-- Step 1 -->
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <div class="step-title-en len">Akhanda Jyothi Darshanam</div>
+                <div class="step-title-te lte">అఖండ జ్యోతి దర్శన నియమం</div>
+                <p class="body-en len">Bow with utmost devotion before the divine Eternal Flame that burns continuously throughout the year. Silently pray and submit your inner wishes or vows (Sankalpa) to the Almighty.</p>
+                <p class="body-te lte">సంవత్సరం పొడవునా నిరంతరాయంగా వెలిగే ఈ దివ్యజ్యోతికి సద్భక్తితో నమస్కరించి, మీ మనసులోని కోరికను లేదా సంకల్పాన్ని భగవంతునికి విన్నవించుకోవాలి.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <div class="step-title-en len">Goghrita Yagnam — Offering Cow Ghee</div>
+                <div class="step-title-te lte">గోఘృత యజ్ఞము (ఆవు నెయ్యి సమర్పణ)</div>
+                <p class="body-en len">Devotees are requested to bring pure cow ghee according to their capacity and offer it to the eternal lamp. The <strong style="color:#FFD700">minimum recommended offering is 50 grams</strong> or more.</p>
+                <p class="body-te lte">భక్తులు తమ శక్తిని అనుసరించి తాము తీసుకువచ్చిన స్వచ్ఛమైన ఆవు నెయ్యిని అందులో వేయాలి (<strong style="color:#FFD700">కనీసం 50 గ్రాములు</strong> ఆ పైన ఎంతైనా సమర్పించవచ్చు).</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <div class="step-title-en len">Nama Yagnam Method</div>
+                <div class="step-title-te lte">నామ యజ్ఞ విధానం</div>
+                <p class="body-en len">Proceed to the <strong style="color:#FFD700">Temple Office</strong>, provide your birth star (Janma Nakshatra) details, and collect your specific Nakshatra Sloka Card. You must chant these specific slokas continuously while performing the circumambulations (Pradakshinas).</p>
+                <p class="body-te lte">మీ జన్మ నక్షత్రమును అనుసరించి <strong style="color:#FFD700">ఆలయ కార్యాలయం (OFFICE)</strong> వద్ద వివరములు తెలిపి, దానికి సంబంధించిన శ్లోకాల కార్డును తీసుకోవాలి. అటుపై అందులో ఇవ్వబడిన శ్లోకాలను పఠిస్తూ మాత్రమే ప్రదక్షిణలు ప్రారంభించాలి.</p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <div class="step-title-en len">7 Divine Circumambulations (Pradakshinas)</div>
+                <div class="step-title-te lte">7 దివ్య ప్రదక్షిణలు</div>
+                <p class="body-en len">Walk around the inner sanctum of Lord Sri Vaibhava Venkateswara Swamy exactly <strong style="color:#FFD700">7 times</strong>. While doing so, chant your star's specific slokas with unwavering faith. <strong style="color:#FFD700">Strictly avoid talking about any materialistic or worldly matters</strong> during the Pradakshinas.</p>
+                <p class="body-te lte">మీ నక్షత్ర శ్లోకాలను పఠిస్తూ, దివ్యమైన భగవన్నామస్మరణ చేస్తూ, <strong style="color:#FFD700">ఎలాంటి బాహ్య లేదా లౌకిక విషయాలను మాట్లాడకుండా</strong>, అచంచల విశ్వాసముతో, శ్రద్ధతో శ్రీవారి ఆలయం చుట్టూ <strong style="color:#FFD700">7 సార్లు</strong> ప్రదక్షిణలు చేయాలి.</p>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-item">
+              <div class="step-num">5</div>
+              <div class="step-content">
+                <div class="step-title-en len">Recommended Duration</div>
+                <div class="step-title-te lte">ఆచరించాల్సిన కాల వ్యవధి</div>
+                <p class="body-en len">To reap the complete spiritual benefits, devotees should ideally perform this ritual for <strong style="color:#FFD700">7 consecutive Saturdays</strong> or on <strong style="color:#FFD700">every Saturday</strong> throughout the festive year.</p>
+                <p class="body-te lte">భక్తులు ఈ దివ్య క్రతువును కనీసం <strong style="color:#FFD700">7 శనివారముల</strong> పాటు గానీ, లేదా సంవత్సరం పొడవునా వచ్చే <strong style="color:#FFD700">ప్రతీ శనివారమున</strong> గానీ ఆలయానికి వచ్చి ఆచరించవలెను.</p>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-item">
+              <div class="step-num">6</div>
+              <div class="step-content">
+                <div class="step-title-en len">Code of Conduct &amp; Dress Code</div>
+                <div class="step-title-te lte">ఆలయ ప్రవేశ నియమాలు</div>
+                <p class="body-en len">Devotees must take a holy bath and clean themselves thoroughly before visiting the temple. Apply the traditional tilak/kumkum on your forehead. You must wear <strong style="color:#FFD700">traditional Indian attire</strong> to enter the premises. Maintain absolute silence, focus your mind entirely on the deity, and collect the Teertham and Prasadam after the main deity's Darshanam.</p>
+                <p class="body-te lte">భక్తులు శుచిగా, శుభ్రంగా స్నానాదులు ముగించుకున్న తరువాత, తమ తమ సంప్రదాయాలను అనుసరించి నుదుట తిలకధారణ చేసుకోవాలి. తప్పనిసరిగా <strong style="color:#FFD700">సాంప్రదాయ వస్త్రాలను ధరించి</strong> మాత్రమే దేవాలయమునందు ప్రవేశించాలి. స్వామియందు అచంచల భక్తితో నామస్మరణ చేస్తూ, ప్రదక్షిణల అనంతరం స్వామివారి దివ్య మంగళ విగ్రహాన్ని దర్శించి, తీర్థ ప్రసాదములను స్వీకరించాలి.</p>
+              </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step-item">
+              <div class="step-num">7</div>
+              <div class="step-content">
+                <div class="step-title-en len">Seva Kainkaryas</div>
+                <div class="step-title-te lte">సేవా కైంకర్యాలు</div>
+                <p class="body-en len">Participate in various divine service activities (Seva Kainkaryas) at the temple according to your ability and capacity, and be blessed.</p>
+                <p class="body-te lte">వివిధ సేవా కైంకర్యాలలో మీ శక్త్యానుసారం పాల్గొని, తరించగలరు.</p>
+              </div>
+            </div>
+
+          </div><!-- /.step-list -->
+        </div>
+
+        <!-- ══ DIVIDER ══ -->
+        <div class="sec-divider fade-up">
+          <div class="gdiv"></div>
+          <svg class="sp" viewBox="0 0 100 100" style="color:#C9980A;width:11px;height:11px;flex-shrink:0">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <svg class="sp2" viewBox="0 0 100 100" style="color:#C9980A;width:16px;height:16px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <svg class="sp3" viewBox="0 0 100 100" style="color:#C9980A;width:11px;height:11px;flex-shrink:0">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <div class="gdiv"></div>
+        </div>
+
+        <!-- ══ SECTION 2: BENEFITS ══ -->
+        <div class="fade-up" style="margin-bottom: clamp(18px,4vw,28px)">
+          <div class="sec-head-en len">Divine Benefits</div>
+          <div class="sec-head-te lte">ఫలితములు</div>
+
+          <p class="body-en len" style="margin-bottom:clamp(14px,2.5vw,20px)">By participating in this sacred Nama Yagnam, devotees are bestowed with the following blessings:</p>
+          <p class="body-te lte" style="margin-bottom:clamp(14px,2.5vw,20px)">పరమ పవిత్రమైన ఈ భగవన్నామస్మరణం చేయడం వలన భక్తులకు అనేక శుభ ఫలితాలు కలుగుతాయి:</p>
+
+          <div class="benefit-list">
+
+            <div class="benefit-item">
+              <div class="benefit-icon">🪐</div>
+              <div style="flex:1">
+                <div class="benefit-title-en len">Removal of Planetary Afflictions</div>
+                <div class="benefit-title-te lte">గ్రహ దోష నివారణ</div>
+                <p class="body-en len">All astrological flaws, birth star defects, and negative planetary transits (Graha Doshas) are completely pacified, leading to ultimate peace of mind. చిన్న పిల్లలకు బాలారిష్ఠాది దోష నివారణ జరిగి, ఆయుర్వృధ్ధి కలుగుతుంది.</p>
+                <p class="body-te lte">నక్షత్ర రీత్యా, జాతక రీత్యా ఉన్న సమస్త గ్రహదోషాలు పరిహరింపబడి, జీవితంలో ప్రశాంతత చేకూరుతుంది. చిన్న పిల్లలకు బాలారిష్ఠాది దోష నివారణ జరిగి, ఆయుర్వృధ్ధి కలుగుతుంది.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">🌿</div>
+              <div style="flex:1">
+                <div class="benefit-title-en len">Holistic Health and Vitality</div>
+                <div class="benefit-title-te lte">ఆరోగ్య సిద్ధి</div>
+                <p class="body-en len">The divine energy from the Pradakshinas cures chronic physical ailments and mental anxieties, granting physical strength, mental clarity, and longevity.</p>
+                <p class="body-te lte">శ్రీవారి దివ్య అనుగ్రహంతో పాటు శారీరక, మానసిక రుగ్మతలు (అనారోగ్యాలు) తొలగి, శరీరానికి దృఢత్వము, మనస్సుకు వికాసము మరియు ఆరోగ్యం చేకూరుతాయి.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">🔦</div>
+              <div style="flex:1">
+                <div class="benefit-title-en len">Dispelling Ignorance</div>
+                <div class="benefit-title-te lte">అజ్ఞాన నాశనం</div>
+                <p class="body-en len">Offering prayers to the year-long Eternal Flame burns away the darkness of spiritual ignorance and clearly illuminates the path of righteousness (Dharma).</p>
+                <p class="body-te lte">సంవత్సరం పాటు వెలిగే దివ్యజ్యోతిని నమస్కరించుట ద్వారా అజ్ఞానాంధకారం నశించి, భగవత్ ధర్మ మార్గము స్ఫుటంగా గోచరిస్తుంది.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">💰</div>
+              <div style="flex:1">
+                <div class="benefit-title-en len">Prosperity and Success</div>
+                <div class="benefit-title-te lte">ఐశ్వర్య వృద్ధి</div>
+                <p class="body-en len">Delays in personal growth are removed, your noble desires are fulfilled, and the household is blessed with an abundance of wealth and food grains (Dhana Dhanya Samriddhi).</p>
+                <p class="body-te lte">మనోసంకల్పములు విజయవంతమై, ధన ధాన్య సమృద్ధి కలుగుతుంది.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">🏠</div>
+              <div style="flex:1">
+                <div class="benefit-title-en len">Harmonious Family Life</div>
+                <div class="benefit-title-te lte">కుటుంబ సౌఖ్యం</div>
+                <p class="body-en len">It fosters a peaceful family atmosphere, bestows virtuous children (Satsantana Prapti), and ensures excellent academic growth and wisdom (Vidya) for youngsters.</p>
+                <p class="body-te lte">ఆరోగ్యకరమైన కుటుంబ వాతావరణం, సత్సంతాన ప్రాప్తి, పిల్లలకు విద్యాభివృద్ధి వంటి అనేక శుభ ఫలితాలు లభిస్తాయి.</p>
+              </div>
+            </div>
+
+          </div><!-- /.benefit-list -->
+        </div>
+
+        <!-- ══ DIVIDER ══ -->
+        <div class="sec-divider fade-up">
+          <div class="gdiv"></div>
+          <svg class="sp2" viewBox="0 0 100 100" style="color:#C9980A;width:14px;height:14px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <div class="gdiv"></div>
+        </div>
+
+        <!-- ══ SHLOKA ══ -->
+        <div class="fade-up" style="margin-bottom:clamp(16px,3vw,24px)">
+          <div class="shloka-box">
+            <div class="shloka-en len">
+              Deepajyothi Paramabrahma, Deepajyothi Janardanah<br>
+              Deepo Haratu Me Paapam, Deepajyothi Namostute!
+            </div>
+            <div class="shloka-te lte">
+              దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి: జనార్ధన:<br>
+              దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!
+            </div>
+            <span class="shloka-hands">🙏🙏🙏</span>
+          </div>
+        </div>
+
+        <!-- ══ DIVINE QUOTE ══ -->
+        <div class="fade-up">
+          <div class="quote-box">
+            <p class="quote-en len">
+              "To show them special mercy, I, dwelling in their hearts, destroy the darkness born of ignorance with the luminous lamp of divine knowledge."
+            </p>
+            <p class="quote-te lte">
+              "నాపై అనన్య భక్తి కలవారిని అనుగ్రహించడానికి, నేను వారి అంతరాత్మలో ఉండి, ప్రకాశవంతమైన జ్ఞాన దీపంతో అజ్ఞానం వల్ల కలిగే అంధకారాన్ని నశింపజేసి, వారిని సంరక్షిస్తాను."
+            </p>
+            <span class="quote-attr len">— Bhagavan Sri Krishna</span>
+            <span class="quote-attr-te lte">— భగవానుడు శ్రీ కృష్ణ పరమాత్మ</span>
+          </div>
+        </div>
+
+      </div><!-- /.content-card -->
+    </div><!-- /.inner -->
+  </main>
+
+
+  <!-- FLOWER GARLAND -->
+  <div style="overflow:hidden;line-height:0;padding-top:90px">
+    <svg viewBox="0 0 1200 44" style="width:100%;height:clamp(28px,5vw,44px)" preserveAspectRatio="xMidYMid slice">
+      <path d="M0,22 Q150,38 300,22 Q450,6 600,22 Q750,38 900,22 Q1050,6 1200,22" stroke="#1A6A1A" stroke-width="4" fill="none"/>
+      <g id="gf"><circle r="7.5" fill="url(#gGarland)"/><circle r="3.8" fill="#FFE200"/></g>
+      <use href="#gf" x="0" y="22"/> <use href="#gf" x="50" y="29"/>
+      <use href="#gf" x="100" y="23"/> <use href="#gf" x="150" y="35"/>
+      <use href="#gf" x="200" y="27"/> <use href="#gf" x="250" y="18"/>
+      <use href="#gf" x="300" y="22"/> <use href="#gf" x="350" y="14"/>
+      <use href="#gf" x="400" y="11"/> <use href="#gf" x="450" y="7"/>
+      <use href="#gf" x="500" y="11"/> <use href="#gf" x="550" y="18"/>
+      <use href="#gf" x="600" y="22"/> <use href="#gf" x="650" y="29"/>
+      <use href="#gf" x="700" y="35"/> <use href="#gf" x="750" y="37"/>
+      <use href="#gf" x="800" y="31"/> <use href="#gf" x="850" y="23"/>
+      <use href="#gf" x="900" y="22"/> <use href="#gf" x="950" y="15"/>
+      <use href="#gf" x="1000" y="10"/> <use href="#gf" x="1050" y="7"/>
+      <use href="#gf" x="1100" y="12"/> <use href="#gf" x="1150" y="19"/>
+    </svg>
+  </div>
+
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="dark-band" style="padding:clamp(28px,6vw,44px) clamp(12px,4vw,28px)">
+    <div style="max-width:720px;margin:0 auto;text-align:center">
+      <div class="gline" style="margin-bottom:clamp(16px,4vw,26px)"></div>
+
+      <div style="display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,24px);margin-bottom:12px">
+
+        <!-- Namaste Left -->
+
+
+        <p class="te-font telugu-heading"
+          style="margin-top:14px;color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5),0 0 16px rgba(255,180,0,0.3)">
+          అఖండ దివ్య వైభవ జ్యోతి
+        </p>
+
+        <!-- Namaste Right (mirrored) -->
+ 
+
+      </div>
+
+      <p class="cor-font"
+        style="font-style:italic;color:rgba(255,215,0,0.6);font-size:clamp(14px,2.8vw,20px);margin-bottom:10px;line-height:1.75">
+        <span class="len">శ్లో" దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి : జానార్ధన: <br>దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!</span>
+        <span class="lte te-font">శ్లో" దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి : జానార్ధన: <br>దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!</span>
+      </p>
+
+      <div class="gline" style="margin-top:clamp(16px,4vw,26px)"></div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleLang() {
+      var body = document.body;
+      body.setAttribute("data-lang",
+        body.getAttribute("data-lang") === "en" ? "te" : "en");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>కార్యక్రమ వివరములు – అఖండ దివ్య వైభవ జ్యోతి</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ponnala&family=Mallanna&family=Noto+Serif+Telugu:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    @font-face {
+      font-family: 'Potti Sreeramulu';
+      src: url('fonts/potti-sreeramulu-regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      overflow-x: hidden;
+      background-color: #F0DFA8;
+      background-image:
+        radial-gradient(ellipse 130% 50% at 50% 0%,   rgba(255,160,0,0.22)  0%, transparent 60%),
+        radial-gradient(ellipse  80% 55% at   0% 55%, rgba(139,69,19,0.12)  0%, transparent 60%),
+        radial-gradient(ellipse  80% 55% at 100% 45%, rgba(139,69,19,0.10)  0%, transparent 60%),
+        radial-gradient(ellipse 120% 45% at  50% 100%,rgba(201,152,10,0.20) 0%, transparent 60%),
+        radial-gradient(ellipse  60% 40% at  25% 30%, rgba(255,120,0,0.08)  0%, transparent 55%),
+        radial-gradient(ellipse  60% 40% at  75% 70%, rgba(255,120,0,0.07)  0%, transparent 55%),
+        linear-gradient(170deg,
+          #FBE8B8 0%, #FFF6DC 14%, #F6E4B0 28%, #FFFBEA 42%,
+          #F2DBA0 56%, #FBF2D0 70%, #EDD596 84%, #F8ECC0 100%
+        );
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dark-band {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(90,20,5,0.6) 0%, transparent 70%),
+        linear-gradient(135deg, #0A0100 0%, #2C0700 20%, #4E1204 40%, #5A1606 50%, #4E1204 60%, #2C0700 80%, #0A0100 100%);
+    }
+
+    @keyframes shimmer { 0%{background-position:-300% center} 100%{background-position:300% center} }
+    .gline {
+      height: 2px;
+      background: linear-gradient(90deg, #3A1000, #C9980A 20%, #FFD700 50%, #C9980A 80%, #3A1000);
+      background-size: 300% auto;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .gdiv {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,152,10,0.5) 20%, #C9980A 50%, rgba(201,152,10,0.5) 80%, transparent);
+    }
+
+    @keyframes omGlow {
+      0%,100% { text-shadow: 0 0 10px #FFD700, 0 0 22px rgba(255,200,0,0.5); }
+      50%      { text-shadow: 0 0 24px #FFD700, 0 0 50px rgba(255,180,0,0.75), 0 0 80px rgba(255,140,0,0.3); }
+    }
+    .om { animation: omGlow 3.5s ease-in-out infinite; color: #FFD700; font-family: serif; }
+
+    @keyframes toranBob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+    .toran { animation: toranBob 3.8s ease-in-out infinite; overflow: hidden; line-height: 0; }
+
+    @keyframes starP { 0%,100%{transform:scale(1);opacity:0.7} 50%{transform:scale(1.22);opacity:1} }
+    .sp  { animation: starP 2.6s ease-in-out infinite; }
+    .sp2 { animation: starP 2.6s ease-in-out infinite 0.35s; }
+    .sp3 { animation: starP 2.6s ease-in-out infinite 0.7s; }
+
+    /* fade-in for content sections */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.7s ease both; }
+    .fade-up:nth-child(2) { animation-delay: 0.12s; }
+    .fade-up:nth-child(3) { animation-delay: 0.22s; }
+    .fade-up:nth-child(4) { animation-delay: 0.32s; }
+    .fade-up:nth-child(5) { animation-delay: 0.42s; }
+    .fade-up:nth-child(6) { animation-delay: 0.52s; }
+
+    [data-lang="te"] .len { display: none; }
+    [data-lang="en"] .lte { display: none; }
+
+    .te-font {
+      font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      font-weight: 400 !important;
+    }
+    .cin-font { font-family: 'Cinzel', serif; }
+    .cor-font { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .telugu-heading {
+      font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      letter-spacing: 0.01em !important;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      min-height: clamp(300px, 38vw, 470px);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .header-inner {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(34px,7vw,72px) clamp(14px,4vw,32px) clamp(28px,6vw,58px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .namalu-img {
+      display: block;
+      width: auto;
+      height: clamp(78px,15vw,135px);
+      max-width: min(260px,72vw);
+      object-fit: contain;
+      margin: 0 auto clamp(12px,2.5vw,20px);
+      filter: drop-shadow(0 0 10px rgba(255,215,0,0.28));
+    }
+    header h1.te-font.telugu-heading {
+      font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      color: #FFD700 !important;
+      font-size: clamp(20px,5vw,34px) !important;
+      line-height: 1.6 !important;
+      font-weight: 400 !important;
+      text-shadow: 0 0 6px rgba(255,200,0,0.25) !important;
+    }
+    header p.cor-font {
+      color: rgba(255,215,0,0.75) !important;
+      font-style: italic !important;
+      font-size: clamp(15px,3vw,22px) !important;
+      line-height: 1.7 !important;
+      margin-top: 8px !important;
+    }
+    .lang-btn {
+      padding: 4px 12px !important;
+      gap: 5px !important;
+      font-size: 12px !important;
+      line-height: 1.2 !important;
+    }
+    .lang-btn span, .lang-btn .len, .lang-btn .lte, .lang-btn .te-font,
+    body[data-lang="te"] .lang-btn .lte, body[data-lang="te"] .lang-btn .te-font {
+      font-size: 12px !important;
+      line-height: 1.2 !important;
+      font-weight: 400 !important;
+    }
+    .lang-btn svg { width: 12px !important; height: 12px !important; }
+
+    /* ── MAIN ── */
+    .main-wrap {
+      flex: 1;
+      padding: clamp(24px,5vw,40px) clamp(14px,5vw,40px);
+    }
+    .inner { max-width: 780px; margin: 0 auto; }
+
+    /* ── CONTENT CARD ── */
+    .content-card {
+      background: linear-gradient(145deg, #4a140b 0%, #2b0904);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 10px;
+      padding: clamp(20px,5vw,36px);
+      box-shadow: 0 2px 10px rgba(90,20,5,0.1), inset 0 1px 0 rgba(255,215,0,0.12), 0 0 0 1px rgba(255,200,0,0.1);
+      color: #f7ead2;
+    }
+
+    /* ── PAGE TITLE inside card ── */
+    .page-title-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(18px,4vw,28px);
+      font-weight: 700;
+      color: #FFD700;
+      letter-spacing: 0.06em;
+      text-align: center;
+      text-shadow: 0 0 18px rgba(255,200,0,0.4), 0 0 8px rgba(255,180,0,0.2);
+      margin-bottom: 4px;
+    }
+    .page-title-te {
+      font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      font-size: clamp(22px,5vw,34px);
+      font-weight: 400 !important;
+      color: #FFD700;
+      text-align: center;
+      text-shadow: 0 0 18px rgba(255,200,0,0.4), 0 0 8px rgba(255,180,0,0.2);
+      margin-bottom: 4px;
+      line-height: 1.6;
+    }
+    .page-subtitle-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(13px,2.2vw,17px);
+      color: rgba(255,215,0,0.65);
+      text-align: center;
+      margin-bottom: 2px;
+    }
+    .page-subtitle-te {
+      font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      font-size: clamp(14px,2.5vw,18px);
+      color: rgba(255,215,0,0.65);
+      text-align: center;
+      font-weight: 400 !important;
+      line-height: 1.6;
+    }
+
+    /* ── SECTION HEADING ── */
+    .sec-head-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(12px,2vw,15px);
+      font-weight: 700;
+      color: #E6C878;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-shadow: 0 0 6px rgba(255,215,0,0.25);
+      margin-bottom: 10px;
+    }
+    .sec-head-te {
+      font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      font-size: clamp(18px,3.5vw,24px);
+      color: #E6C878;
+      font-weight: 400 !important;
+      text-shadow: 0 0 6px rgba(255,215,0,0.25);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    /* ── BODY TEXT ── */
+    .body-en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(15px,2.5vw,19px);
+      line-height: 1.95;
+      color: #f0e0c0;
+      font-weight: 400;
+    }
+    .body-te {
+      font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      font-size: clamp(17px,3.2vw,22px);
+      line-height: 2.1;
+      color: #f5e6cc;
+      font-weight: 400 !important;
+      text-shadow: 0 0 2px rgba(255,245,210,0.15);
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: rgba(255,215,0,0.07);
+      border: 1px solid rgba(201,152,10,0.35);
+      border-left: 3px solid #C9980A;
+      border-radius: 6px;
+      padding: clamp(14px,3vw,20px) clamp(16px,3vw,22px);
+    }
+    .highlight-box .body-en,
+    .highlight-box .body-te {
+      color: #FFE8A0;
+    }
+
+    /* ── INFO BADGE row ── */
+    .info-row {
+      display: flex;
+      gap: clamp(10px,2vw,16px);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .info-badge {
+      background: rgba(255,215,0,0.09);
+      border: 1px solid rgba(201,152,10,0.4);
+      border-radius: 6px;
+      padding: 10px 18px;
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+    }
+    .badge-label-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(9px,1.5vw,11px);
+      letter-spacing: 0.22em;
+      color: #C9980A;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .badge-label-te {
+      font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      font-size: clamp(13px,2.5vw,16px);
+      color: #C9980A;
+      font-weight: 400 !important;
+      display: block;
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+    .badge-val-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(14px,2.3vw,17px);
+      font-weight: 600;
+      color: #FFE8A0;
+    }
+    .badge-val-te {
+      font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      font-size: clamp(16px,3vw,20px);
+      color: #FFE8A0;
+      font-weight: 400 !important;
+      line-height: 1.5;
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .sec-divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: clamp(18px,4vw,28px) 0;
+    }
+    .sec-divider .gdiv { flex: 1; }
+
+    /* ── FOOTER ── */
+    footer.dark-band { padding: clamp(28px,6vw,44px) clamp(12px,4vw,28px); }
+    footer p.te-font.telugu-heading {
+      font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      color: #FFD700 !important;
+      font-size: clamp(20px,5vw,34px) !important;
+      line-height: 1.6 !important;
+      font-weight: 400 !important;
+      margin-top: 14px !important;
+      text-shadow: 0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3) !important;
+    }
+    footer p.cor-font {
+      font-style: italic !important;
+      color: rgba(255,215,0,0.6) !important;
+      font-size: clamp(14px,2.8vw,20px) !important;
+      line-height: 1.75 !important;
+      margin-bottom: 10px !important;
+    }
+
+    /* ── MOBILE ── */
+    @media only screen and (max-width: 768px) {
+      html, body { -webkit-text-size-adjust: 120% !important; text-size-adjust: 120% !important; }
+      .site-header { min-height: clamp(330px,72vw,430px); }
+      .header-inner { padding-top: clamp(42px,10vw,64px); padding-bottom: clamp(34px,8vw,54px); }
+      .namalu-img { height: clamp(82px,22vw,120px) !important; max-width: min(240px,76vw); margin-bottom:14px; }
+      header h1.te-font.telugu-heading { font-size: 28px !important; line-height: 1.45 !important; }
+      .main-wrap { padding-left:14px !important; padding-right:14px !important; }
+      .info-row { flex-direction: column; }
+      .info-badge { min-width: unset; }
+      .lang-btn, .lang-btn span, .lang-btn .lte, .lang-btn .te-font,
+      body[data-lang="te"] .lang-btn .lte, body[data-lang="te"] .lang-btn .te-font {
+        font-size: 12px !important; line-height: 1.2 !important;
+      }
+      .body-te { font-size: 20px !important; line-height: 2.0 !important; }
+      .body-en { font-size: 16px !important; }
+      .sec-head-te { font-size: 20px !important; }
+      footer p.te-font.telugu-heading { font-size: 28px !important; }
+    }
+    @media only screen and (max-width: 420px) {
+      .site-header { min-height: 360px; }
+      .namalu-img { height: 92px !important; max-width: 210px; }
+    }
+
+    /* FINAL OVERRIDE — bigger language toggle */
+button.lang-btn {
+  padding: 8px 18px !important;
+  gap: 8px !important;
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+}
+
+button.lang-btn span,
+button.lang-btn .len,
+button.lang-btn .lte,
+button.lang-btn .te-font,
+body[data-lang="te"] button.lang-btn .lte,
+body[data-lang="te"] button.lang-btn .te-font {
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+}
+
+button.lang-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  button.lang-btn {
+    padding: 9px 20px !important;
+    gap: 8px !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+
+  button.lang-btn span,
+  button.lang-btn .len,
+  button.lang-btn .lte,
+  button.lang-btn .te-font,
+  body[data-lang="te"] button.lang-btn .lte,
+  body[data-lang="te"] button.lang-btn .te-font {
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+  }
+
+  button.lang-btn svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   COMMON BACK HOME NAVIGATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.home-nav-wrap {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.home-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 8px 18px;
+  border-radius: 999px;
+
+  background: rgba(255, 215, 0, 0.07);
+  border: 1px solid rgba(201, 152, 10, 0.45);
+  color: #FFD700;
+
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.home-nav-link:hover {
+  background: rgba(255, 215, 0, 0.14);
+  transform: translateY(-1px);
+}
+
+.home-nav-link span,
+.home-nav-link .len,
+.home-nav-link .lte,
+.home-nav-link .te-font {
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+}
+
+.home-nav-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .home-nav-wrap {
+    margin-top: 12px;
+  }
+
+  .home-nav-link {
+    padding: 9px 20px;
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  .home-nav-link span,
+  .home-nav-link .len,
+  .home-nav-link .lte,
+  .home-nav-link .te-font {
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+  }
+
+  .home-nav-link svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+  </style>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dcffe6a87cd4112a67452301a457d98"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body data-lang="te">
+
+  <!-- ── HIDDEN SVG GRADIENT DEFS ── -->
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <defs>
+      <linearGradient id="gFlame" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%"   stop-color="#FF3300"/>
+        <stop offset="40%"  stop-color="#FFB200"/>
+        <stop offset="100%" stop-color="#FFFBE0"/>
+      </linearGradient>
+      <linearGradient id="gBrass" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#A87800"/>
+        <stop offset="45%"  stop-color="#FFD700"/>
+        <stop offset="100%" stop-color="#8B6800"/>
+      </linearGradient>
+      <linearGradient id="gLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#3CB371"/>
+        <stop offset="100%" stop-color="#004D00"/>
+      </linearGradient>
+      <linearGradient id="gMarigold" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#FFA800"/>
+        <stop offset="60%"  stop-color="#FF7000"/>
+        <stop offset="100%" stop-color="#FF3300"/>
+      </linearGradient>
+      <linearGradient id="gGarland" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#FFA800"/>
+        <stop offset="100%" stop-color="#FF3300"/>
+      </linearGradient>
+      <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"   stop-color="#FFEE88" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#FF8800" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="skinL" cx="50%" cy="40%" r="60%">
+        <stop offset="0%"   stop-color="#FFD98A"/>
+        <stop offset="100%" stop-color="#C8860A"/>
+      </radialGradient>
+      <radialGradient id="skinR" cx="50%" cy="40%" r="60%">
+        <stop offset="0%"   stop-color="#FFD98A"/>
+        <stop offset="100%" stop-color="#C8860A"/>
+      </radialGradient>
+      <filter id="glowL">
+        <feGaussianBlur stdDeviation="2" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="glowR">
+        <feGaussianBlur stdDeviation="2" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ══════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════ -->
+  <header class="dark-band site-header">
+
+    <div class="toran">
+      <svg viewBox="0 0 1200 58" style="width:100%;height:clamp(34px,5.5vw,58px)" preserveAspectRatio="xMidYMid slice">
+        <path d="M0,8 Q300,26 600,8 Q900,26 1200,8" stroke="#7A5A14" stroke-width="2.5" fill="none" />
+        <g id="tu">
+          <path d="M-8,8 Q-2,26 -2,52 Q8,30 4,8 Z" fill="url(#gLeaf)" transform="rotate(-18 -2 8)" />
+          <path d="M14,8 Q20,30 20,52 Q30,26 26,8 Z" fill="url(#gLeaf)" transform="rotate(16 20 8)" />
+          <circle cx="8" cy="45" r="8" fill="url(#gMarigold)" />
+          <circle cx="8" cy="45" r="4.5" fill="#FFE000" />
+          <circle cx="28" cy="43" r="5.5" fill="url(#gMarigold)" />
+          <circle cx="28" cy="43" r="3" fill="#FFE000" />
+        </g>
+        <use href="#tu" x="0"/><use href="#tu" x="50"/><use href="#tu" x="100"/>
+        <use href="#tu" x="150"/><use href="#tu" x="200"/><use href="#tu" x="250"/>
+        <use href="#tu" x="300"/><use href="#tu" x="350"/><use href="#tu" x="400"/>
+        <use href="#tu" x="450"/><use href="#tu" x="500"/><use href="#tu" x="550"/>
+        <use href="#tu" x="600"/><use href="#tu" x="650"/><use href="#tu" x="700"/>
+        <use href="#tu" x="750"/><use href="#tu" x="800"/><use href="#tu" x="850"/>
+        <use href="#tu" x="900"/><use href="#tu" x="950"/><use href="#tu" x="1000"/>
+        <use href="#tu" x="1050"/><use href="#tu" x="1100"/><use href="#tu" x="1150"/>
+      </svg>
+    </div>
+
+    <div class="header-inner">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div style="flex:1;text-align:center">
+          <img src="assets/namalu.png" alt="Namalu" class="namalu-img" />
+          <h1 class="te-font telugu-heading"
+            style="color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3)">
+            అఖండ దివ్య వైభవ జ్యోతి
+          </h1>
+          <p class="cor-font"
+            style="color:rgba(255,215,0,0.75);font-style:italic;font-size:clamp(15px,3vw,22px);margin-top:8px;line-height:1.7">
+            <span class="len">Ghrutayajna, Namayajna Sahita Sapta Pradakshina</span>
+            <span class="lte te-font">ఘృతయజ్ఞ, నామయజ్ఞ సహిత సప్త ప్రదక్షిణం</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="gline" style="margin:clamp(10px,2.5vw,16px) 0"></div>
+
+      <div style="text-align:center">
+        <button class="lang-btn" onclick="toggleLang()"
+          style="background:rgba(255,215,0,0.07);border:1px solid rgba(201,152,10,0.45);color:#FFD700;
+                 border-radius:999px;cursor:pointer;font-family:'Cormorant Garamond',serif;
+                 display:inline-flex;align-items:center;transition:background 0.2s"
+          onmouseover="this.style.background='rgba(255,215,0,0.14)'"
+          onmouseout="this.style.background='rgba(255,215,0,0.07)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span class="len">తెలుగు లో చూడండి</span>
+          <span class="lte te-font">View in English</span>
+        </button>
+      </div>
+
+      <!-- Back to Home Navigation -->
+<div class="home-nav-wrap">
+  <a href="index.html" class="home-nav-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 11L12 3l9 8" />
+      <path d="M5 10v10h14V10" />
+      <path d="M9 20v-6h6v6" />
+    </svg>
+
+    <span class="len">Back to Home</span>
+    <span class="lte te-font">హోమ్‌కు వెళ్ళండి</span>
+  </a>
+</div>
+    </div>
+
+    <div class="gline"></div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════ -->
+  <main class="main-wrap">
+    <div class="inner">
+      <div class="content-card">
+
+        <!-- ── PAGE TITLE ── -->
+        <div class="fade-up" style="text-align:center;margin-bottom:clamp(16px,3vw,24px)">
+          <div class="page-title-en len">Program Details</div>
+          <div class="page-title-te lte">కార్యక్రమ వివరములు</div>
+          <div class="page-subtitle-en len">25th Silver Jubilee — Sri Sri Sri Vaibhava Venkateswara Swamy Vaari Divyakshetram, Muralinagar</div>
+          <div class="page-subtitle-te lte">రజతోత్సవ వసంతాలు — శ్రీశ్రీశ్రీ వైభవ వేంకటేశ్వర స్వామి వారి దివ్యక్షేత్రము, మురళీనగర్</div>
+        </div>
+
+        <div class="gdiv"></div>
+
+        <!-- ── SECTION 1: BACKGROUND ── -->
+        <div class="sec-divider fade-up">
+          <div class="gdiv"></div>
+          <svg class="sp2" viewBox="0 0 100 100" style="color:#C9980A;width:14px;height:14px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <div class="gdiv"></div>
+        </div>
+
+        <div class="fade-up" style="margin-bottom:clamp(14px,3vw,22px)">
+          <div class="sec-head-en len">Background</div>
+          <div class="sec-head-te lte">నేపథ్యం</div>
+
+          <!-- Greeting -->
+          <div style="margin-bottom:clamp(10px,2vw,16px)">
+            <p class="body-en len" style="font-style:italic;color:#FFE8A0;margin-bottom:8px">Dear Devotees,</p>
+            <p class="body-te lte" style="font-style:italic;color:#FFE8A0;margin-bottom:8px">ప్రియ భగవద్బంధువులారా!</p>
+          </div>
+
+          <!-- Para 1 -->
+          <p class="body-en len" style="margin-bottom:14px">
+            By the divine grace of the Almighty, Sri Sri Sri Vaibhava Venkateswara Swamy Vaari Divyakshetram in Muralinagar is stepping into its glorious <strong style="color:#FFD700">25th Year (Silver Jubilee)</strong> after completing 24 years of divine service to devotees. To commemorate this highly auspicious milestone, the temple is initiating the <strong style="color:#FFD700">"Akhanda Deepajyothi Prajwalana"</strong> — the Eternal Lamp Lighting program. This sacred ritual is designed to bestow all-around auspiciousness, eliminate all planetary flaws (doshas), and bring peace and prosperity to all.
+          </p>
+          <p class="body-te lte" style="margin-bottom:14px">
+            మన మురళీనగర్ క్షేత్రంలో వేంచేసియున్న <strong style="color:#FFD700">శ్రీశ్రీశ్రీ వైభవ వేంకటేశ్వర స్వామి వారి దివ్యక్షేత్రము</strong> భక్తులకు సేవలందిస్తూ విజయవంతంగా 24 సంవత్సరాలు పూర్తి చేసుకుని, ప్రస్తుతం <strong style="color:#FFD700">25వ సంవత్సరంలోకి (రజతోత్సవ వసంతాలు)</strong> అడుగుపెడుతోంది. ఈ అత్యంత శుభ సందర్బాన్ని పురస్కరించుకుని, సర్వ మంగళ ప్రదమై, సకల దోషాలను హరించి, సమస్త శుభములను చేకూర్చే <strong style="color:#FFD700">"అఖండ దీపజ్యోతి ప్రజ్యలన"</strong> కార్యక్రమానికి శ్రీకారం చుట్టడం జరిగింది.
+          </p>
+
+          <!-- Para 2 -->
+          <p class="body-en len" style="margin-bottom:14px">
+            Our motherland, India, is a holy land where Vedic knowledge, epics, Puranas, Agamas, Divya Prabandhams, and ancient scriptures have guided humanity toward a righteous way of living while preserving our rich cultural heritage. Among the brilliant sciences born in this sacred land, <strong style="color:#FFD700">Astrology (Jyotishya Shastra)</strong> holds a supreme place — determining the movements of all living beings, guiding Vedic and divine rituals, governing temple consecrations, festivals, and auspicious timings based on cosmic movements.
+          </p>
+          <p class="body-te lte" style="margin-bottom:14px">
+            యావత్ విశ్వంలో వేదములు, ఇతిహాసాలు, పురాణాలు, ఆగమాలు, దివ్యప్రబంధములు, శాస్త్రములు మరియు సనాతన సంప్రదాయముల పరిధిలో సంస్కృతిని కాపాడుతూ సమస్త మానవాళికీ సరళ జీవన విధానాన్ని ప్రబోధిస్తూ, నేటికీ దేదీప్యమానంగా, అఖండంగా ప్రకాశిస్తున్న పుణ్యభూమి మన భారతదేశం. మన భారతదేశంలో ఉద్భవించిన అనేక శాస్త్ర పరిజ్ఞానములలో — <strong style="color:#FFD700">జ్యోతిష్యము</strong> పరమ పవిత్రమైన శాస్త్రము.
+          </p>
+
+          <p class="body-en len">
+            Following the authentic almanac (Panchanga), astrology maps the cosmic transits of planets and stars, and our great sages have provided guidance for remedies against their adverse impacts on human lives.
+          </p>
+          <p class="body-te lte">
+            అట్టి జ్యోతిష్య శాస్త్రమందలి భాగమైన పంచాంగ ప్రమాణాన్ని అనుసరిస్తూ, కాలగమనంలో జరిగే మార్పులను, గోచార, గ్రహసంచార, నక్షత్ర గమనాదుల ద్వారా మానవాళిలో కలిగే అనేక పరిణామాలను గమనించి, వాటి వల్ల సంభవించే దుష్ఫలితాల నిర్దేశాన్ని మన మహర్షులు అందించారు.
+          </p>
+        </div>
+
+        <!-- ── SECTION 2: CORE OBJECTIVE ── -->
+        <div class="sec-divider fade-up">
+          <div class="gdiv"></div>
+          <svg class="sp" viewBox="0 0 100 100" style="color:#C9980A;width:11px;height:11px;flex-shrink:0">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <svg class="sp2" viewBox="0 0 100 100" style="color:#C9980A;width:16px;height:16px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <svg class="sp3" viewBox="0 0 100 100" style="color:#C9980A;width:11px;height:11px;flex-shrink:0">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <div class="gdiv"></div>
+        </div>
+
+        <div class="fade-up" style="margin-bottom:clamp(14px,3vw,22px)">
+          <div class="sec-head-en len">Core Objective</div>
+          <div class="sec-head-te lte">ముఖ్య ఉద్దేశ్యం</div>
+
+          <div class="highlight-box" style="margin-bottom:14px">
+            <p class="body-en len">
+              In this current Sri Parabhava Nama Samvatsaram, across the twelve zodiac signs through yearly, monthly, and weekly results and planetary transits, this divine program is envisioned to <strong style="color:#FFD700">shield visiting devotees from the planetary flaws and adverse stellar effects (Nakshatra Doshas)</strong> associated with their birth stars.
+            </p>
+            <p class="body-te lte">
+              శ్రీ ప్రభవాది సంవత్సరాలలో ద్వాదశ రాశుల ద్వారా, సంవత్సర, మాస, వార ఫలితాలను మరియు గ్రహ సంచారంలో జరిగే మార్పులను గమనించి, <strong style="color:#FFD700">శ్రీవారి సన్నిధికి వచ్చు భక్తులను, తమ తమ నక్షత్ర దోష దుష్ఫలితముల నుండి సంరక్షించడమే</strong> ఈ దివ్య కార్యక్రమం యొక్క ముఖ్య సంకల్పం.
+            </p>
+          </div>
+
+          <p class="body-en len" style="margin-bottom:14px">
+            To provide a powerful spiritual remedy, sacred verses have been meticulously selected from the <strong style="color:#FFD700">Sri Vishnu Sahasranama Stotram</strong> — the ultimate hymn originally sung by Bhishmacharya in the immediate presence of Lord Sri Krishna in the Anushasanika Parva of Sri Mahabharata, to clear the doubts of King Dharmaraja.
+          </p>
+          <p class="body-te lte" style="margin-bottom:14px">
+            వేదవ్యాస ప్రోక్తమైన శ్రీ మహాభారతంలోని "అనుశాసనిక పర్వం"లో ధర్మరాజుకు కలిగిన సంశయాలను విచ్ఛేదనం చేస్తూ భీష్మాచార్యులవారు, సాక్షాత్తు శ్రీకృష్ణ పరమాత్మ సన్నిధిలో కీర్తించిన పరమోత్కృష్టమైన <strong style="color:#FFD700">"శ్రీ విష్ణు సహస్రనామ స్తోత్రము"</strong> లోని శ్లోకాలను ఈ కార్యక్రమం కొరకు సేకరించడం జరిగింది.
+          </p>
+
+          <p class="body-en len">
+            These potent verses have been classified into <strong style="color:#FFD700">27 distinct categories matching the 27 birth stars (Nakshatras)</strong>. Devotees can offer pure cow ghee (Goghritam) to the year-long burning Eternal Flame, receive the specific mantra card matching their birth star, and circumambulate (perform Pradakshinas) around the Lord of the Seven Hills to invoke divine protection.
+          </p>
+          <p class="body-te lte">
+            27 నక్షత్రాల వారిగా, ఏ ఏ నక్షత్ర జాతకులు ఆయా నిర్దేశిత శ్లోకాలను పఠించాలో క్రమబద్ధీకరించి ఈ నామ యజ్ఞాన్ని రూపొందించుట జరిగింది. భక్తులు, ఆలయంలో ప్రజ్వలింపజేసిన అఖండ దివ్యజ్యోతికి ప్రణమిల్లి, తమ యథాశక్తి అనుసారంగా <strong style="color:#FFD700">గోఘృతము (ఆవు నెయ్యి)</strong> సమర్పించి, సప్తగిరీశుడైన శ్రీనివాసుని చుట్టూ తమ నక్షత్ర శ్లోకాలను స్మరిస్తూ ప్రదక్షిణలు చేయడం ద్వారా అభీష్ట సిద్ధిని పొందవచ్చు.
+          </p>
+        </div>
+
+        <!-- ── SECTION 3: PROGRAM INFO BADGES ── -->
+        <div class="sec-divider fade-up">
+          <div class="gdiv"></div>
+          <svg class="sp2" viewBox="0 0 100 100" style="color:#C9980A;width:14px;height:14px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <div class="gdiv"></div>
+        </div>
+
+        <div class="fade-up">
+          <div class="info-row">
+
+            <div class="info-badge">
+              <span class="badge-label-en len">Program Duration</span>
+              <span class="badge-label-te lte">కార్యక్రమ వ్యవధి</span>
+              <div class="badge-val-en len">22 May 2026 (Friday)<br>to<br>22 May 2027 (Saturday)</div>
+              <div class="badge-val-te lte">22-05-2026 (శుక్రవారం)<br>నుండి<br>22-05-2027 (శనివారం)</div>
+            </div>
+
+            <div class="info-badge">
+              <span class="badge-label-en len">Core Ritual</span>
+              <span class="badge-label-te lte">ముఖ్య కార్యక్రమం</span>
+              <div class="badge-val-en len">Akhanda Deepajyothi Darshanam &amp; Nakshatra Dosha Nivarana Pradakshinas</div>
+              <div class="badge-val-te lte">అఖండ దీపజ్యోతి దర్శనం &amp; నక్షత్ర దోష నివారణ ప్రదక్షిణలు</div>
+            </div>
+
+            <div class="info-badge">
+              <span class="badge-label-en len">Location</span>
+              <span class="badge-label-te lte">స్థలం</span>
+              <div class="badge-val-en len">Sri Sri Sri Vaibhava Venkateswara Swamy Vaari Divyakshetram,<br>N.G.G.O.S Colony, Kapparada, Visakhapatnam - 530 007</div>
+              <div class="badge-val-te lte">శ్రీశ్రీశ్రీ వైభవ వేంకటేశ్వర స్వామి వారి దేవస్థానం,<br>ఎన్.జి.ఓ.ఎస్. కోలనీ, కప్పరాడ, విశాఖపట్నం - 530 007</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /.content-card -->
+    </div><!-- /.inner -->
+  </main>
+
+
+  <!-- ── FLOWER GARLAND ── -->
+  <div style="overflow:hidden;line-height:0;padding-top:90px;">
+    <svg viewBox="0 0 1200 44" style="width:100%;height:clamp(28px,5vw,44px)" preserveAspectRatio="xMidYMid slice">
+      <path d="M0,22 Q150,38 300,22 Q450,6 600,22 Q750,38 900,22 Q1050,6 1200,22" stroke="#1A6A1A" stroke-width="4" fill="none"/>
+      <g id="gf"><circle r="7.5" fill="url(#gGarland)"/><circle r="3.8" fill="#FFE200"/></g>
+      <use href="#gf" x="0" y="22"/> <use href="#gf" x="50" y="29"/>
+      <use href="#gf" x="100" y="23"/> <use href="#gf" x="150" y="35"/>
+      <use href="#gf" x="200" y="27"/> <use href="#gf" x="250" y="18"/>
+      <use href="#gf" x="300" y="22"/> <use href="#gf" x="350" y="14"/>
+      <use href="#gf" x="400" y="11"/> <use href="#gf" x="450" y="7"/>
+      <use href="#gf" x="500" y="11"/> <use href="#gf" x="550" y="18"/>
+      <use href="#gf" x="600" y="22"/> <use href="#gf" x="650" y="29"/>
+      <use href="#gf" x="700" y="35"/> <use href="#gf" x="750" y="37"/>
+      <use href="#gf" x="800" y="31"/> <use href="#gf" x="850" y="23"/>
+      <use href="#gf" x="900" y="22"/> <use href="#gf" x="950" y="15"/>
+      <use href="#gf" x="1000" y="10"/> <use href="#gf" x="1050" y="7"/>
+      <use href="#gf" x="1100" y="12"/> <use href="#gf" x="1150" y="19"/>
+    </svg>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="dark-band" style="padding:clamp(28px,6vw,44px) clamp(12px,4vw,28px)">
+    <div style="max-width:720px;margin:0 auto;text-align:center">
+
+      <div class="gline" style="margin-bottom:clamp(16px,4vw,26px)"></div>
+
+      <div style="display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,24px);margin-bottom:12px">
+
+        <!-- Namaste Left -->
+        <!-- <svg viewBox="0 0 80 100" style="width:clamp(28px,5vw,44px);height:auto" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="40" cy="50" rx="34" ry="44" fill="rgba(255,215,0,0.08)" filter="url(#glowL)"/>
+          <ellipse cx="40" cy="82" rx="13" ry="7" fill="url(#skinL)" opacity="0.9"/>
+          <path d="M27,80 Q24,60 26,44 Q28,34 34,30 Q38,28 40,32 Q42,28 46,30 Q52,34 54,44 Q56,60 53,80 Z" fill="url(#skinL)" stroke="#B8740A" stroke-width="0.8"/>
+          <path d="M32,32 Q30,20 31,14 Q32,10 34,12 Q35,10 36,12 Q37,22 36,32" fill="url(#skinL)" stroke="#B8740A" stroke-width="0.6"/>
+          <path d="M36,30 Q35,18 36,12 Q37,9 39,11 Q40,9 41,11 Q42,18 41,30" fill="url(#skinL)" stroke="#B8740A" stroke-width="0.6"/>
+          <path d="M41,30 Q41,18 42,12 Q43,9 45,11 Q46,9 47,11 Q47,20 46,32" fill="url(#skinL)" stroke="#B8740A" stroke-width="0.6"/>
+          <path d="M46,32 Q46,22 47,16 Q48,12 50,14 Q51,12 52,14 Q52,22 50,34" fill="url(#skinL)" stroke="#B8740A" stroke-width="0.6"/>
+          <path d="M27,60 Q20,54 20,48 Q20,42 25,42 Q27,42 27,48 Z" fill="url(#skinL)" stroke="#B8740A" stroke-width="0.6"/>
+          <rect x="27" y="76" width="26" height="5" rx="2.5" fill="none" stroke="#FFD700" stroke-width="2"/>
+          <circle cx="40" cy="6" r="3.5" fill="#FF4400" opacity="0.85"/>
+          <circle cx="40" cy="6" r="1.5" fill="#FFD700"/>
+        </svg> -->
+
+        <p class="te-font telugu-heading"
+          style="margin-top:14px;color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3)">
+          అఖండ దివ్య వైభవ జ్యోతి
+        </p>
+
+        <!-- Namaste Right (mirrored) -->
+        <!-- <svg viewBox="0 0 80 100" style="width:clamp(28px,5vw,44px);height:auto;transform:scaleX(-1)" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="40" cy="50" rx="34" ry="44" fill="rgba(255,215,0,0.08)" filter="url(#glowR)"/>
+          <ellipse cx="40" cy="82" rx="13" ry="7" fill="url(#skinR)" opacity="0.9"/>
+          <path d="M27,80 Q24,60 26,44 Q28,34 34,30 Q38,28 40,32 Q42,28 46,30 Q52,34 54,44 Q56,60 53,80 Z" fill="url(#skinR)" stroke="#B8740A" stroke-width="0.8"/>
+          <path d="M32,32 Q30,20 31,14 Q32,10 34,12 Q35,10 36,12 Q37,22 36,32" fill="url(#skinR)" stroke="#B8740A" stroke-width="0.6"/>
+          <path d="M36,30 Q35,18 36,12 Q37,9 39,11 Q40,9 41,11 Q42,18 41,30" fill="url(#skinR)" stroke="#B8740A" stroke-width="0.6"/>
+          <path d="M41,30 Q41,18 42,12 Q43,9 45,11 Q46,9 47,11 Q47,20 46,32" fill="url(#skinR)" stroke="#B8740A" stroke-width="0.6"/>
+          <path d="M46,32 Q46,22 47,16 Q48,12 50,14 Q51,12 52,14 Q52,22 50,34" fill="url(#skinR)" stroke="#B8740A" stroke-width="0.6"/>
+          <path d="M27,60 Q20,54 20,48 Q20,42 25,42 Q27,42 27,48 Z" fill="url(#skinR)" stroke="#B8740A" stroke-width="0.6"/>
+          <rect x="27" y="76" width="26" height="5" rx="2.5" fill="none" stroke="#FFD700" stroke-width="2"/>
+          <circle cx="40" cy="6" r="3.5" fill="#FF4400" opacity="0.85"/>
+          <circle cx="40" cy="6" r="1.5" fill="#FFD700"/>
+        </svg> -->
+
+      </div>
+
+      <p class="cor-font"
+        style="font-style:italic;color:rgba(255,215,0,0.6);font-size:clamp(14px,2.8vw,20px);margin-bottom:10px;line-height:1.75">
+        <span class="len">శ్లో" దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి : జానార్ధన: <br>దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!</span>
+        <span class="lte te-font">శ్లో" దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి : జానార్ధన: <br>దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!</span>
+      </p>
+
+      <div class="gline" style="margin-top:clamp(16px,4vw,26px)"></div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleLang() {
+      var body = document.body;
+      body.setAttribute("data-lang",
+        body.getAttribute("data-lang") === "en" ? "te" : "en");
+    }
+  </script>
+
+</body>
+</html>

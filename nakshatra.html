@@ -1,0 +1,3567 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>అఖండ దివ్య వైభవ జ్యోతి</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Ponnala&family=Mallanna&family=Noto+Serif+Telugu:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+  rel="stylesheet" />
+
+
+  <style>
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       CUSTOM FONTS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @font-face {
+      font-family: 'Potti Sreeramulu';
+      src: url('fonts/potti-sreeramulu-regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── BACKGROUND — rich gold gradient matching home ── */
+    body {
+      min-height: 100vh;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      overflow-x: hidden;
+      background-color: #F0DFA8;
+      background-image:
+        radial-gradient(ellipse 130% 50% at 50%   0%,  rgba(255,160,0,0.22)  0%, transparent 60%),
+        radial-gradient(ellipse  80% 55% at   0%  55%, rgba(139,69,19,0.12)  0%, transparent 60%),
+        radial-gradient(ellipse  80% 55% at 100%  45%, rgba(139,69,19,0.10)  0%, transparent 60%),
+        radial-gradient(ellipse 120% 45% at  50% 100%, rgba(201,152,10,0.20) 0%, transparent 60%),
+        radial-gradient(ellipse  60% 40% at  25%  30%, rgba(255,120,0,0.08)  0%, transparent 55%),
+        radial-gradient(ellipse  60% 40% at  75%  70%, rgba(255,120,0,0.07)  0%, transparent 55%),
+        linear-gradient(170deg,
+          #FBE8B8 0%, #FFF6DC 14%, #F6E4B0 28%, #FFFBEA 42%,
+          #F2DBA0 56%, #FBF2D0 70%, #EDD596 84%, #F8ECC0 100%
+        );
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── DARK BAND (header + footer) ── */
+    .dark-band {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(90,20,5,0.6) 0%, transparent 70%),
+        linear-gradient(135deg, #0A0100 0%, #2C0700 20%, #4E1204 40%, #5A1606 50%, #4E1204 60%, #2C0700 80%, #0A0100 100%);
+    }
+
+    /* ── SHIMMER GOLD LINE ── */
+    @keyframes shimmer { 0%{background-position:-300% center} 100%{background-position:300% center} }
+    .gline {
+      height: 2px;
+      background: linear-gradient(90deg, #3A1000, #C9980A 20%, #FFD700 50%, #C9980A 80%, #3A1000);
+      background-size: 300% auto;
+      animation: shimmer 4s linear infinite;
+    }
+
+    /* ── GOLD DIVIDER (inside content card) ── */
+    .gdiv {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,152,10,0.5) 20%, #C9980A 50%, rgba(201,152,10,0.5) 80%, transparent);
+    }
+
+    /* ── OM GLOW ── */
+    @keyframes omGlow {
+      0%,100% { text-shadow: 0 0 10px #FFD700, 0 0 22px rgba(255,200,0,0.5); }
+      50%      { text-shadow: 0 0 24px #FFD700, 0 0 50px rgba(255,180,0,0.75), 0 0 80px rgba(255,140,0,0.3); }
+    }
+    .om { animation: omGlow 3.5s ease-in-out infinite; color: #FFD700; font-family: serif; }
+
+    /* ── LAMP FLICKER ── */
+    @keyframes flicker {
+      0%,100%{opacity:1} 20%{opacity:0.78} 50%{opacity:0.95} 75%{opacity:0.72}
+    }
+    .lamp  { animation: flicker 2.2s ease-in-out infinite; }
+    .lamp2 { animation: flicker 2.5s ease-in-out infinite 0.45s; }
+
+    /* ── TORAN BOB ── */
+    @keyframes toranBob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+    .toran { animation: toranBob 3.8s ease-in-out infinite; overflow: hidden; line-height: 0; }
+
+    /* ── STAR PULSE ── */
+    @keyframes starP { 0%,100%{transform:scale(1);opacity:0.7} 50%{transform:scale(1.22);opacity:1} }
+    .sp  { animation: starP 2.6s ease-in-out infinite; }
+    .sp2 { animation: starP 2.6s ease-in-out infinite 0.35s; }
+    .sp3 { animation: starP 2.6s ease-in-out infinite 0.7s; }
+
+    /* ── LANG SHOW/HIDE ── */
+    [data-lang="te"] .len { display: none; }
+    [data-lang="en"] .lte { display: none; }
+
+    /* ── FONT HELPERS ── */
+.te-font {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-weight: 400 !important;
+}
+    .cin-font { font-family: 'Cinzel', serif; }
+    .cor-font { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    /* ── MAIN CONTENT WRAPPER ── */
+    .main-wrap {
+      flex: 1;
+      padding: clamp(24px,5vw,40px) clamp(14px,5vw,40px) clamp(24px,5vw,40px);
+    }
+    .inner { max-width: 760px; margin: 0 auto; }
+
+    /* ── CONTENT CARD ── */
+    .content-card {
+      background: linear-gradient(145deg, #4a140b 0%, #2b0904);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 10px;
+      padding: clamp(20px,5vw,36px);
+      box-shadow: 0 2px 10px rgba(90,20,5,0.1), inset 0 1px 0 rgba(255,215,0,0.12), 0 0 0 1px rgba(255,200,0,0.1);
+      color: #f7ead2
+    }
+
+    /* ── VIDEO ── */
+    .video-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid rgba(201,152,10,0.4);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 4px 20px rgba(90,20,5,0.15);
+    }
+    .video-wrap video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      background: #000;
+    }
+    .video-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a07830;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(12px,2.5vw,15px);
+      letter-spacing: 0.05em;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ── NAKSHATRA DISPLAY ── */
+    .nakshatra-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(22px,5.5vw,36px);
+      font-weight: 600;
+      line-height: 1.4;
+      text-shadow: 0 0 0px rgba(255,200,0,0.05);
+    }
+.nakshatra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(24px,6vw,40px);
+  color: #d4af37;
+  font-weight: 400 !important;
+  line-height: 1.7;
+}
+
+    /* ── SECTION LABELS ── */
+    .label-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(9px,1.8vw,11px);
+      letter-spacing: 0.28em;
+      color: #C9980A;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+.label-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(15px,3vw,19px);
+  color: #C9980A;
+  font-weight: 400 !important;
+  margin-bottom: 8px;
+}
+
+    /* ── MANTRA TEXT ── */
+    .mantra-en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(17px,3.2vw,24px);
+      line-height: 2;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+.mantra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(22px,4.8vw,32px);
+  color: #f5e6cc;
+  font-weight: 400 !important;
+  line-height: 2.4;
+}
+
+@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+
+  body {
+    font-size: 105%;
+  }
+
+  header .om {
+    font-size: clamp(42px, 11vw, 66px) !important;
+  }
+
+  header h1 {
+    font-size: clamp(22px, 5.6vw, 38px) !important;
+  }
+
+  header p {
+    font-size: clamp(16px, 3.4vw, 24px) !important;
+  }
+
+  button {
+    font-size: clamp(13px, 2.4vw, 16px) !important;
+    padding: 8px 20px !important;
+  }
+
+  .main-wrap {
+    padding-top: clamp(28px, 6vw, 44px) !important;
+    padding-bottom: clamp(28px, 6vw, 44px) !important;
+  }
+
+  .content-card,
+  .rc,
+  .nc {
+    transform: scale(1.02);
+    transform-origin: center top;
+  }
+
+  .nakshatra-en {
+    font-size: clamp(24px, 6vw, 40px) !important;
+  }
+
+  .nakshatra-te {
+    font-size: clamp(28px, 7vw, 44px) !important;
+  }
+
+  .label-en {
+    font-size: clamp(10px, 2.2vw, 13px) !important;
+  }
+
+  .label-te {
+    font-size: clamp(17px, 3.5vw, 22px) !important;
+  }
+
+  .mantra-en {
+    font-size: clamp(19px, 3.8vw, 27px) !important;
+    line-height: 2.1 !important;
+  }
+
+  .mantra-te {
+    font-size: clamp(24px, 5.5vw, 35px) !important;
+    line-height: 2.45 !important;
+  }
+
+  #grid {
+    gap: clamp(14px, 3.5vw, 22px) !important;
+  }
+
+  .nc {
+    min-height: clamp(140px, 31vw, 195px) !important;
+    padding: clamp(20px, 4.5vw, 32px) clamp(14px, 3.5vw, 22px) !important;
+  }
+
+  .nc p:first-of-type {
+    font-size: clamp(16px, 3.2vw, 20px) !important;
+  }
+
+  .nc p:last-of-type {
+    font-size: clamp(13px, 2.7vw, 16px) !important;
+  }
+
+  footer p {
+    font-size: clamp(16px, 3.2vw, 22px) !important;
+  }
+
+  footer .te-font {
+    font-size: clamp(20px, 4.6vw, 28px) !important;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HEADER TITLE — SAME AS INDEX.HTML
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  letter-spacing: 0.01em !important;
+}
+
+header h1.te-font.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFD700 !important;
+
+  font-size: clamp(20px, 5vw, 34px) !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em !important;
+
+  /* soft glow */
+  text-shadow:
+    0 0 6px rgba(255, 200, 0, 0.25) !important;
+}
+
+/* Same title style in Telugu and English mode */
+body[data-lang="te"] header h1.te-font.telugu-heading,
+body[data-lang="en"] header h1.te-font.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFD700 !important;
+}
+
+/* Mobile header title */
+@media only screen and (max-width: 768px) {
+  header h1.te-font.telugu-heading {
+    font-size: 28px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.01em !important;
+    text-shadow:
+      0 0 6px rgba(255, 200, 0, 0.25) !important;
+  }
+}
+
+/* Smaller language toggle button like index.html */
+.lang-btn {
+  padding: 4px 12px !important;
+  gap: 5px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+.lang-btn span,
+.lang-btn .len,
+.lang-btn .lte,
+.lang-btn .te-font {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+}
+
+.lang-btn svg {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+/* Prevent Telugu mobile font enlargement inside button */
+body[data-lang="te"] .lang-btn .lte,
+body[data-lang="te"] .lang-btn .lte.te-font,
+body[data-lang="te"] .lang-btn .te-font {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   NAKSHATRA.HTML — TELUGU TEXT SIZE SAME AS INDEX.HTML
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Telugu font consistency */
+body[data-lang="te"] .lte,
+body[data-lang="te"] .lte.te-font,
+body[data-lang="te"] .te-font {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Header title same as index.html */
+body[data-lang="te"] header h1.te-font,
+body[data-lang="en"] header h1.te-font {
+  font-size: clamp(20px, 5vw, 34px) !important;
+  line-height: 1.6 !important;
+}
+
+/* Header Telugu subtitle same as index.html */
+body[data-lang="te"] header p .lte.te-font {
+  font-size: clamp(15px, 3vw, 22px) !important;
+  line-height: 1.7 !important;
+}
+
+/* Footer Telugu text same style */
+body[data-lang="te"] footer .lte.te-font,
+body[data-lang="te"] footer .te-font {
+  font-size: clamp(16px, 3.5vw, 24px) !important;
+  line-height: 1.6 !important;
+}
+
+/* Nakshatra [lunar mansion] Telugu label */
+body[data-lang="te"] .label-te {
+  font-size: clamp(17px, 3.5vw, 22px) !important;
+  line-height: 1.5 !important;
+}
+
+/* Nakshatra Telugu name */
+body[data-lang="te"] .nakshatra-te {
+  font-size: clamp(28px, 7vw, 44px) !important;
+  line-height: 1.7 !important;
+}
+
+/* Mantra Telugu text */
+body[data-lang="te"] .mantra-te {
+  font-size: clamp(24px, 5.5vw, 35px) !important;
+  line-height: 2.45 !important;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   MOBILE — SAME TELUGU TEXT SIZE AS INDEX.HTML
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media only screen and (max-width: 768px) {
+
+  /* General Telugu text */
+  body[data-lang="te"] .lte,
+  body[data-lang="te"] .lte.te-font,
+  body[data-lang="te"] .te-font {
+    font-size: 21px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Header title */
+  body[data-lang="te"] header h1.te-font,
+  body[data-lang="en"] header h1.te-font {
+    font-size: 28px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Header subtitle */
+  body[data-lang="te"] header p .lte.te-font {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Nakshatra label */
+  body[data-lang="te"] .label-te {
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Nakshatra name */
+  body[data-lang="te"] .nakshatra-te {
+    font-size: 44px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Telugu mantra */
+  body[data-lang="te"] .mantra-te {
+    font-size: 35px !important;
+    line-height: 2.45 !important;
+  }
+
+  /* Footer Telugu */
+  body[data-lang="te"] footer .lte.te-font,
+  body[data-lang="te"] footer .te-font {
+    font-size: 22px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Keep language button small */
+  body[data-lang="te"] .lang-btn .lte,
+  body[data-lang="te"] .lang-btn .lte.te-font,
+  body[data-lang="te"] .lang-btn .te-font {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* =========================================================
+   FINAL OVERRIDES — MATCH INDEX.HTML HEADER / FOOTER / TEXT
+   Put this at the VERY END of nakshatra.html CSS
+========================================================= */
+
+/* Prevent browser random Telugu font inflation differences */
+html,
+body {
+  -webkit-text-size-adjust: 120% !important;
+  text-size-adjust: 120% !important;
+}
+
+/* Telugu font consistency */
+body[data-lang="te"] .lte,
+body[data-lang="te"] .lte.te-font,
+body[data-lang="te"] .te-font {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Header wrapper same as index.html */
+header > div[style*="max-width:900px"] {
+  padding: clamp(16px, 4vw, 26px) clamp(12px, 4vw, 28px) !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Header OM same as index.html */
+header .om {
+  display: block !important;
+  font-size: clamp(38px, 10vw, 60px) !important;
+  line-height: 1 !important;
+  margin-bottom: 8px !important;
+}
+
+/* Header title same as index.html */
+header h1.te-font.telugu-heading,
+body[data-lang="te"] header h1.te-font.telugu-heading,
+body[data-lang="en"] header h1.te-font.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFD700 !important;
+  font-size: clamp(20px, 5vw, 34px) !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 400 !important;
+  text-shadow: 0 0 6px rgba(255, 200, 0, 0.25) !important;
+}
+
+/* Header subtitle same as index.html */
+header p.cor-font {
+  color: rgba(255, 215, 0, 0.75) !important;
+  font-style: italic !important;
+  font-size: clamp(15px, 3vw, 22px) !important;
+  line-height: 1.7 !important;
+  margin-top: 8px !important;
+}
+
+header p.cor-font span,
+header p.cor-font .lte.te-font {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Header shimmer spacing same as index.html */
+header .gline[style*="margin"] {
+  margin: clamp(10px, 2.5vw, 16px) 0 !important;
+}
+
+/* Language button must stay small and never inherit Telugu large sizes */
+.lang-btn {
+  padding: 4px 12px !important;
+  gap: 5px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+.lang-btn span,
+.lang-btn .len,
+.lang-btn .lte,
+.lang-btn .te-font,
+body[data-lang="te"] .lang-btn span,
+body[data-lang="te"] .lang-btn .lte,
+body[data-lang="te"] .lang-btn .lte.te-font,
+body[data-lang="te"] .lang-btn .te-font {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+}
+
+.lang-btn svg {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+/* Main content same spacing behavior as index.html */
+.main-wrap {
+  flex: 1 !important;
+  padding: clamp(24px, 5vw, 40px) clamp(14px, 5vw, 40px) clamp(24px, 5vw, 40px) !important;
+}
+
+.inner {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+}
+
+/* Content card text styles must win over broad .te-font/.lte rules */
+.label-en {
+  font-family: 'Cinzel', serif !important;
+  font-size: clamp(9px, 1.8vw, 11px) !important;
+  letter-spacing: 0.28em !important;
+  color: #C9980A !important;
+  text-transform: uppercase !important;
+  line-height: 1.4 !important;
+}
+
+.label-te,
+body[data-lang="te"] .label-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(15px, 3vw, 19px) !important;
+  color: #C9980A !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+.nakshatra-en {
+  font-family: 'Cinzel', serif !important;
+  font-size: clamp(22px, 5.5vw, 36px) !important;
+  color: #3D0E00 !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+}
+
+.nakshatra-te,
+body[data-lang="te"] .nakshatra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(24px, 6vw, 40px) !important;
+  color: #d4af37 !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+}
+
+.mantra-en {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(17px, 3.2vw, 24px) !important;
+  color: #3a1a00 !important;
+  line-height: 2 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.mantra-te,
+body[data-lang="te"] .mantra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  font-size: clamp(22px, 4.8vw, 32px) !important;
+  color: #f5e6cc !important;
+  font-weight: 400 !important;
+  line-height: 2.4 !important;
+}
+
+/* Footer same as index.html */
+footer.dark-band {
+  padding: clamp(28px, 6vw, 44px) clamp(12px, 4vw, 28px) !important;
+}
+
+footer p.cor-font {
+  font-style: italic !important;
+  color: rgba(255, 215, 0, 0.6) !important;
+  font-size: clamp(14px, 2.8vw, 20px) !important;
+  line-height: 1.75 !important;
+  margin-bottom: 10px !important;
+}
+
+footer p.cor-font span,
+footer p.cor-font .lte.te-font {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+footer p.te-font {
+  color: #FFD700 !important;
+  font-weight: 700 !important;
+  font-size: clamp(16px, 3.5vw, 24px) !important;
+  line-height: 1.5 !important;
+  text-shadow: 0 0 14px rgba(255, 200, 0, 0.4) !important;
+}
+
+/* =========================================================
+   MOBILE — EXACT CONTROL, NO OVERRIDE LEAKS
+========================================================= */
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 16px !important;
+    -webkit-text-size-adjust: 120% !important;
+    text-size-adjust: 120% !important;
+  }
+
+  .main-wrap {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    padding-top: 26px !important;
+    padding-bottom: 26px !important;
+  }
+
+  .inner {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  header .om {
+    font-size: 44px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 10px !important;
+  }
+
+  header h1.te-font.telugu-heading,
+  body[data-lang="te"] header h1.te-font.telugu-heading,
+  body[data-lang="en"] header h1.te-font.telugu-heading {
+    font-size: 28px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.01em !important;
+    text-shadow: 0 0 6px rgba(255, 200, 0, 0.25) !important;
+  }
+
+  header p.cor-font,
+  header p.cor-font span,
+  header p.cor-font .lte.te-font {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+  }
+
+  .content-card {
+    transform: none !important;
+    padding: clamp(20px, 5vw, 36px) !important;
+  }
+
+  .label-en {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  .label-te,
+  body[data-lang="te"] .label-te {
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+  }
+
+  .nakshatra-en {
+    font-size: 40px !important;
+    line-height: 1.35 !important;
+  }
+
+  .nakshatra-te,
+  body[data-lang="te"] .nakshatra-te {
+    font-size: 44px !important;
+    line-height: 1.5 !important;
+  }
+
+  .mantra-en {
+    font-size: 27px !important;
+    line-height: 2.1 !important;
+  }
+
+  .mantra-te,
+  body[data-lang="te"] .mantra-te {
+    font-size: 35px !important;
+    line-height: 2.45 !important;
+  }
+
+  footer p.cor-font,
+  footer p.cor-font span,
+  footer p.cor-font .lte.te-font {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+  }
+
+  footer p.te-font,
+  body[data-lang="te"] footer p.te-font,
+  body[data-lang="te"] footer .te-font {
+    font-size: 23px !important;
+    line-height: 1.5 !important;
+    font-weight: 700 !important;
+  }
+
+  footer svg {
+    width: 34px !important;
+    height: auto !important;
+  }
+
+  /* Keep language button small even on Telugu mobile */
+  .lang-btn,
+  .lang-btn span,
+  .lang-btn .len,
+  .lang-btn .lte,
+  .lang-btn .te-font,
+  body[data-lang="te"] .lang-btn span,
+  body[data-lang="te"] .lang-btn .lte,
+  body[data-lang="te"] .lang-btn .lte.te-font,
+  body[data-lang="te"] .lang-btn .te-font {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    padding: 4px 12px !important;
+  }
+
+  .lang-btn svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+}
+
+/* =========================================================
+   CONTENT CARD TEXT — TELUGU GLOW + ENGLISH SAME STYLE SMALLER
+   Paste this at the VERY END of nakshatra.html CSS
+========================================================= */
+
+/* Telugu labels inside card — slight golden glow */
+.content-card .label-te,
+body[data-lang="te"] .content-card .label-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #E6C878 !important;
+  font-size: clamp(15px, 3vw, 19px) !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 8px !important;
+
+  text-shadow:
+    0 0 4px rgba(255, 215, 120, 0.28),
+    0 0 9px rgba(212, 175, 55, 0.16) !important;
+}
+
+/* Telugu Nakshatra [lunar mansion] name — soft glow */
+.content-card .nakshatra-te,
+body[data-lang="te"] .content-card .nakshatra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #F3D37A !important;
+  font-size: clamp(24px, 6vw, 40px) !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+
+  text-shadow:
+    0 0 4px rgba(255, 230, 150, 0.32),
+    0 0 12px rgba(212, 175, 55, 0.22),
+    0 0 22px rgba(255, 180, 0, 0.10) !important;
+}
+
+/* Telugu mantra — readable with gentle glow */
+.content-card .mantra-te,
+body[data-lang="te"] .content-card .mantra-te {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFF0D2 !important;
+  font-size: clamp(22px, 4.8vw, 32px) !important;
+  font-weight: 400 !important;
+  line-height: 2.4 !important;
+
+text-shadow:
+  0 0 2px rgba(255, 245, 210, 0.34),
+  0 0 8px rgba(212, 175, 55, 0.26),
+  0 0 14px rgba(255, 180, 0, 0.14),
+  0 0 22px rgba(255, 200, 80, 0.08) !important;
+}
+
+/* English labels — same color/glow style as Telugu, but smaller */
+.content-card .label-en,
+body[data-lang="en"] .content-card .label-en {
+  font-family: 'Cinzel', serif !important;
+  color: #E6C878 !important;
+  font-size: clamp(10px, 1.7vw, 13px) !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 8px !important;
+
+  text-shadow:
+    0 0 4px rgba(255, 215, 120, 0.25),
+    0 0 9px rgba(212, 175, 55, 0.14) !important;
+}
+
+/* English Nakshatra [lunar mansion] name — same Telugu style, smaller */
+.content-card .nakshatra-en,
+body[data-lang="en"] .content-card .nakshatra-en {
+  font-family: 'Cinzel', serif !important;
+  color: #F3D37A !important;
+  font-size: clamp(20px, 4.8vw, 32px) !important;
+  font-weight: 600 !important;
+  line-height: 1.55 !important;
+
+  text-shadow:
+    0 0 4px rgba(255, 230, 150, 0.28),
+    0 0 12px rgba(212, 175, 55, 0.18),
+    0 0 20px rgba(255, 180, 0, 0.08) !important;
+}
+
+/* English mantra — same Telugu color/glow style, smaller */
+.content-card .mantra-en,
+body[data-lang="en"] .content-card .mantra-en {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  color: #FFF0D2 !important;
+  font-size: clamp(18px, 3.6vw, 26px) !important;
+  font-weight: 600 !important;
+  line-height: 2.15 !important;
+  letter-spacing: 0.01em !important;
+
+  text-shadow:
+    0 0 3px rgba(255, 245, 210, 0.20),
+    0 0 9px rgba(212, 175, 55, 0.14),
+    0 0 16px rgba(255, 180, 0, 0.07) !important;
+}
+
+/* =========================================================
+   MOBILE CARD TEXT
+========================================================= */
+@media only screen and (max-width: 768px) {
+
+  .content-card .label-te,
+  body[data-lang="te"] .content-card .label-te {
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+  }
+
+  .content-card .nakshatra-te,
+  body[data-lang="te"] .content-card .nakshatra-te {
+    font-size: 44px !important;
+    line-height: 1.5 !important;
+  }
+
+  .content-card .mantra-te,
+  body[data-lang="te"] .content-card .mantra-te {
+    font-size: 29px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* English mobile: same style, smaller than Telugu */
+  .content-card .label-en,
+  body[data-lang="en"] .content-card .label-en {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  .content-card .nakshatra-en,
+  body[data-lang="en"] .content-card .nakshatra-en {
+    font-size: 34px !important;
+    line-height: 1.4 !important;
+  }
+
+  .content-card .mantra-en,
+  body[data-lang="en"] .content-card .mantra-en {
+    font-size: 20px !important;
+    line-height: 2.15 !important;
+  }
+}
+
+/* =========================================================
+   FOOTER TITLE — SAME AS INDEX.HTML
+   Put at VERY END of nakshatra.html CSS
+========================================================= */
+
+footer p.te-font.telugu-heading,
+body[data-lang="te"] footer p.te-font.telugu-heading,
+body[data-lang="en"] footer p.te-font.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFD700 !important;
+
+  font-size: clamp(20px, 5vw, 34px) !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 400 !important;
+
+  margin-top: 14px !important;
+
+  text-shadow:
+    0 0 28px rgba(255, 200, 0, 0.5),
+    0 0 16px rgba(255, 180, 0, 0.3) !important;
+}
+
+/* Mobile footer title same as index.html */
+@media only screen and (max-width: 768px) {
+  footer p.te-font.telugu-heading,
+  body[data-lang="te"] footer p.te-font.telugu-heading,
+  body[data-lang="en"] footer p.te-font.telugu-heading {
+    font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+    font-size: 28px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.01em !important;
+    font-weight: 400 !important;
+
+    margin-top: 14px !important;
+
+    text-shadow:
+      0 0 28px rgba(255, 200, 0, 0.5),
+      0 0 16px rgba(255, 180, 0, 0.3) !important;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HEADER HEIGHT + NAMALU IMAGE — ALL DEVICES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.site-header {
+  min-height: clamp(300px, 38vw, 470px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.site-header .toran svg {
+  height: clamp(44px, 6vw, 70px) !important;
+}
+
+.header-inner {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(34px, 7vw, 72px) clamp(14px, 4vw, 32px) clamp(28px, 6vw, 58px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.namalu-img {
+  display: block;
+  width: auto;
+  height: clamp(78px, 15vw, 135px);
+  max-width: min(260px, 72vw);
+  object-fit: contain;
+  margin: 0 auto clamp(12px, 2.5vw, 20px);
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.28));
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .site-header {
+    min-height: clamp(330px, 72vw, 430px);
+  }
+
+  .header-inner {
+    padding-top: clamp(42px, 10vw, 64px);
+    padding-bottom: clamp(34px, 8vw, 54px);
+  }
+
+  .namalu-img {
+    height: clamp(82px, 22vw, 120px) !important;
+    max-width: min(240px, 76vw);
+    margin-bottom: 14px;
+  }
+}
+
+/* Small mobile */
+@media only screen and (max-width: 420px) {
+  .site-header {
+    min-height: 360px;
+  }
+
+  .header-inner {
+    padding-top: 46px;
+    padding-bottom: 38px;
+  }
+
+  .namalu-img {
+    height: 92px !important;
+    max-width: 210px;
+  }
+}
+
+/* FINAL OVERRIDE — bigger language toggle */
+button.lang-btn {
+  padding: 8px 18px !important;
+  gap: 8px !important;
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+}
+
+button.lang-btn span,
+button.lang-btn .len,
+button.lang-btn .lte,
+button.lang-btn .te-font,
+body[data-lang="te"] button.lang-btn .lte,
+body[data-lang="te"] button.lang-btn .te-font {
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+}
+
+button.lang-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  button.lang-btn {
+    padding: 9px 20px !important;
+    gap: 8px !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+
+  button.lang-btn span,
+  button.lang-btn .len,
+  button.lang-btn .lte,
+  button.lang-btn .te-font,
+  body[data-lang="te"] button.lang-btn .lte,
+  body[data-lang="te"] button.lang-btn .te-font {
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+  }
+
+  button.lang-btn svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   COMMON BACK HOME NAVIGATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.home-nav-wrap {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.home-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 8px 18px;
+  border-radius: 999px;
+
+  background: rgba(255, 215, 0, 0.07);
+  border: 1px solid rgba(201, 152, 10, 0.45);
+  color: #FFD700;
+
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.home-nav-link:hover {
+  background: rgba(255, 215, 0, 0.14);
+  transform: translateY(-1px);
+}
+
+.home-nav-link span,
+.home-nav-link .len,
+.home-nav-link .lte,
+.home-nav-link .te-font {
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+}
+
+.home-nav-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .home-nav-wrap {
+    margin-top: 12px;
+  }
+
+  .home-nav-link {
+    padding: 9px 20px;
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  .home-nav-link span,
+  .home-nav-link .len,
+  .home-nav-link .lte,
+  .home-nav-link .te-font {
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+  }
+
+  .home-nav-link svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ★ PRADAKSHINA BUBBLE SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Keyframe for bubble pop-in */
+@keyframes bubblePop {
+  0%   { transform: scale(0.6); opacity: 0; }
+  70%  { transform: scale(1.15); }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+/* Keyframe for completion celebration pulse */
+@keyframes bubbleComplete {
+  0%,100% { box-shadow: 0 0 10px rgba(255,215,0,0.5), 0 0 22px rgba(255,180,0,0.3); }
+  50%      { box-shadow: 0 0 22px rgba(255,215,0,0.9), 0 0 44px rgba(255,180,0,0.6), 0 0 66px rgba(255,140,0,0.3); }
+}
+
+/* Keyframe for done-state inner shimmer */
+@keyframes bubbleShimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.pradakshina-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(6px, 2.2vw, 14px);
+  padding: clamp(18px, 3.8vw, 26px) 0 clamp(10px, 1.8vw, 14px);
+  flex-wrap: nowrap;
+}
+
+.pradakshina-bubble {
+  /* sizing */
+  width:  clamp(38px, 8.5vw, 54px);
+  height: clamp(38px, 8.5vw, 54px);
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  /* default appearance */
+  background: rgba(255, 215, 0, 0.06);
+  border: 1.5px solid rgba(201, 152, 10, 0.55);
+  color: rgba(201, 152, 10, 0.6);
+
+  /* layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* typography */
+  font-family: 'Cinzel', serif;
+  font-size: clamp(10px, 2.2vw, 14px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+  /* transitions */
+  transition:
+    background   0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.32s ease,
+    color        0.32s ease,
+    box-shadow   0.32s ease,
+    transform    0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* pop-in animation on render */
+  animation: bubblePop 0.45s ease both;
+}
+
+/* stagger pop-in for each bubble */
+.pradakshina-bubble:nth-child(1) { animation-delay: 0.05s; }
+.pradakshina-bubble:nth-child(2) { animation-delay: 0.10s; }
+.pradakshina-bubble:nth-child(3) { animation-delay: 0.15s; }
+.pradakshina-bubble:nth-child(4) { animation-delay: 0.20s; }
+.pradakshina-bubble:nth-child(5) { animation-delay: 0.25s; }
+.pradakshina-bubble:nth-child(6) { animation-delay: 0.30s; }
+.pradakshina-bubble:nth-child(7) { animation-delay: 0.35s; }
+
+.pradakshina-bubble:hover {
+  background:  rgba(255, 215, 0, 0.14);
+  border-color: rgba(201, 152, 10, 0.9);
+  color: rgba(255, 215, 0, 0.85);
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(255, 200, 0, 0.25);
+}
+
+/* ── DONE STATE ── */
+.pradakshina-bubble.done {
+  background: radial-gradient(circle at 38% 32%, #FFE055 0%, #D4A017 45%, #8B5E00 100%);
+  border-color: #FFD700;
+  color: #3A1000;
+
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.55),
+    0 0 22px rgba(255, 180, 0, 0.30),
+    inset 0 1px 0 rgba(255, 255, 220, 0.35);
+
+  transform: scale(1.06);
+  animation: bubbleComplete 2.8s ease-in-out infinite;
+}
+
+.pradakshina-bubble.done:hover {
+  transform: scale(1.13);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ★ MANTRA OVERLAY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+#pradakshina-overlay {
+  /* positioning */
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  /* appearance */
+  background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(40, 5, 0, 0.94) 0%, rgba(8, 0, 0, 0.97) 100%);
+
+  /* layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+
+  /* hidden by default */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.65s ease;
+}
+
+#pradakshina-overlay.po-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* inner content box */
+.po-inner {
+  text-align: center;
+  max-width: 680px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+/* top text — nakshatra name */
+.po-text-top {
+  font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif;
+  color: #FFD700;
+  font-size: clamp(20px, 4.5vw, 28px);
+  line-height: 1.55;
+  text-shadow:
+    0 0 10px rgba(255, 200, 0, 0.55),
+    0 0 24px rgba(255, 160, 0, 0.28);
+
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+/* image wrapper */
+.po-img-wrap {
+  width:  clamp(180px, 42vw, 320px);
+  height: clamp(180px, 42vw, 320px);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(201, 152, 10, 0.65);
+  box-shadow:
+    0 0 18px rgba(255, 200, 0, 0.32),
+    0 0 40px rgba(255, 140, 0, 0.16);
+  flex-shrink: 0;
+
+  opacity: 0;
+  transform: scale(0.82);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.po-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* bottom text — mantra lines */
+.po-text-bottom {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: rgba(255, 238, 205, 0.88);
+  font-size: clamp(13px, 2.6vw, 17px);
+  line-height: 2;
+  font-style: italic;
+  max-width: 400px;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.18);
+
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+/* ── animate children IN when overlay is active ── */
+#pradakshina-overlay.po-active .po-text-top {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.28s;
+}
+
+#pradakshina-overlay.po-active .po-img-wrap {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.48s;
+}
+
+#pradakshina-overlay.po-active .po-text-bottom {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.68s;
+}
+
+/* ── animate children OUT when fading ── */
+#pradakshina-overlay.po-fading .po-text-top,
+#pradakshina-overlay.po-fading .po-img-wrap,
+#pradakshina-overlay.po-fading .po-text-bottom {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+/* decorative ring around image — pulsing halo */
+@keyframes haloRing {
+  0%,100% { box-shadow: 0 0 18px rgba(255,200,0,0.32), 0 0 40px rgba(255,140,0,0.16); }
+  50%      { box-shadow: 0 0 30px rgba(255,200,0,0.55), 0 0 65px rgba(255,140,0,0.30); }
+}
+#pradakshina-overlay.po-active .po-img-wrap {
+  animation: haloRing 2.8s ease-in-out infinite;
+}
+
+/* Mobile overlay adjustments */
+@media only screen and (max-width: 480px) {
+  .po-text-top {
+    font-size: 22px !important;
+  }
+
+  .po-img-wrap {
+    width: 240px !important;
+    height: 240px !important;
+  }
+
+  .po-text-bottom {
+    font-size: 14px !important;
+    line-height: 1.85 !important;
+  }
+}
+
+/* =========================================================
+   FINAL MOBILE OVERLAY LAYOUT
+   Top text near top edge, bottom text near bottom edge,
+   bigger image only on mobile
+========================================================= */
+
+@media only screen and (max-width: 480px) {
+
+  #pradakshina-overlay {
+    padding: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #pradakshina-overlay .po-inner {
+    position: relative !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    max-width: 100vw !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 0 !important;
+    padding: 0 14px !important;
+  }
+
+  /* Move headingTe to top edge */
+  #pradakshina-overlay .po-text-top {
+    position: absolute !important;
+    top: calc(env(safe-area-inset-top) + 94px) !important;
+    left: 12px !important;
+    right: 12px !important;
+
+    font-size: clamp(26px, 7.2vw, 34px) !important;
+    line-height: 1.35 !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    z-index: 2 !important;
+  }
+
+  #pradakshina-overlay .po-text-top span {
+    font-size: 0.9em !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Bigger image only on mobile */
+  #pradakshina-overlay .po-img-wrap {
+    width: min(92vw, 46dvh, 420px) !important;
+    height: min(92vw, 46dvh, 420px) !important;
+    margin: 0 auto !important;
+    z-index: 1 !important;
+  }
+
+  /* Move textTe / textEn to bottom edge */
+  #pradakshina-overlay .po-text-bottom {
+    position: absolute !important;
+    bottom: calc(env(safe-area-inset-bottom) + 114px) !important;
+    left: 12px !important;
+    right: 12px !important;
+
+    font-size: clamp(22px, 6.2vw, 30px) !important;
+    line-height: 1.45 !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    z-index: 2 !important;
+  }
+
+  body[data-lang="te"] #pradakshina-overlay .po-text-bottom {
+    font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+    font-size: clamp(24px, 6.6vw, 32px) !important;
+    line-height: 1.45 !important;
+  }
+}
+
+  </style>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dcffe6a87cd4112a67452301a457d98"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body data-lang="te">
+
+  <!-- ── HIDDEN SVG GRADIENT DEFS ── -->
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <defs>
+      <linearGradient id="gFlame" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%"   stop-color="#FF3300"/>
+        <stop offset="40%"  stop-color="#FFB200"/>
+        <stop offset="100%" stop-color="#FFFBE0"/>
+      </linearGradient>
+      <linearGradient id="gBrass" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#A87800"/>
+        <stop offset="45%"  stop-color="#FFD700"/>
+        <stop offset="100%" stop-color="#8B6800"/>
+      </linearGradient>
+      <linearGradient id="gLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#3CB371"/>
+        <stop offset="100%" stop-color="#004D00"/>
+      </linearGradient>
+      <linearGradient id="gMarigold" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#FFA800"/>
+        <stop offset="60%"  stop-color="#FF7000"/>
+        <stop offset="100%" stop-color="#FF3300"/>
+      </linearGradient>
+      <linearGradient id="gTrunk" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"   stop-color="#705238"/>
+        <stop offset="50%"  stop-color="#A08B60"/>
+        <stop offset="100%" stop-color="#705238"/>
+      </linearGradient>
+      <linearGradient id="gBLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#44CC55"/>
+        <stop offset="50%"  stop-color="#1C8020"/>
+        <stop offset="100%" stop-color="#003C04"/>
+      </linearGradient>
+      <linearGradient id="gGarland" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#FFA800"/>
+        <stop offset="100%" stop-color="#FF3300"/>
+      </linearGradient>
+            <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="#FFEE88" stop-opacity="0.55" />
+  <stop offset="100%" stop-color="#FF8800" stop-opacity="0" />
+</radialGradient>
+
+    </defs>
+  </svg>
+
+  <!-- petals removed -->
+
+  <!-- ══════════════════════════════════════
+       DARK HEADER
+  ══════════════════════════════════════ -->
+<header class="dark-band site-header">
+
+    <!-- Mango leaf toran hanging from header -->
+    <div class="toran">
+      <svg viewBox="0 0 1200 58" style="width:100%;height:clamp(34px,5.5vw,58px)" preserveAspectRatio="xMidYMid slice">
+        <path d="M0,8 Q300,26 600,8 Q900,26 1200,8" stroke="#7A5A14" stroke-width="2.5" fill="none" />
+        <g id="tu">
+          <path d="M-8,8 Q-2,26 -2,52 Q8,30 4,8 Z" fill="url(#gLeaf)" transform="rotate(-18 -2 8)" />
+          <path d="M14,8 Q20,30 20,52 Q30,26 26,8 Z" fill="url(#gLeaf)" transform="rotate(16 20 8)" />
+          <circle cx="8" cy="45" r="8" fill="url(#gMarigold)" />
+          <circle cx="8" cy="45" r="4.5" fill="#FFE000" />
+          <circle cx="28" cy="43" r="5.5" fill="url(#gMarigold)" />
+          <circle cx="28" cy="43" r="3" fill="#FFE000" />
+        </g>
+        <use href="#tu" x="0" />
+        <use href="#tu" x="50" />
+        <use href="#tu" x="100" />
+        <use href="#tu" x="150" />
+        <use href="#tu" x="200" />
+        <use href="#tu" x="250" />
+        <use href="#tu" x="300" />
+        <use href="#tu" x="350" />
+        <use href="#tu" x="400" />
+        <use href="#tu" x="450" />
+        <use href="#tu" x="500" />
+        <use href="#tu" x="550" />
+        <use href="#tu" x="600" />
+        <use href="#tu" x="650" />
+        <use href="#tu" x="700" />
+        <use href="#tu" x="750" />
+        <use href="#tu" x="800" />
+        <use href="#tu" x="850" />
+        <use href="#tu" x="900" />
+        <use href="#tu" x="950" />
+        <use href="#tu" x="1000" />
+        <use href="#tu" x="1050" />
+        <use href="#tu" x="1100" />
+        <use href="#tu" x="1150" />
+      </svg>
+    </div>
+
+    <!-- Header main content -->
+    <div class="header-inner">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+
+        <!-- Center -->
+        <div style="flex:1;text-align:center">
+          <img src="assets/namalu.png"
+            alt="Namalu"
+            class="namalu-img" />
+          <h1 class="te-font telugu-heading"
+            style="color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3)">
+            అఖండ దివ్య వైభవ జ్యోతి
+          </h1>
+          <p class="cor-font"
+            style="color:rgba(255,215,0,0.75);font-style:italic;font-size:clamp(15px,3vw,22px);margin-top:8px;line-height:1.7">
+            <span class="len">Ghrutayajna, Namayajna Sahita Sapta Pradakshina</span>
+            <span class="lte te-font">ఘృతయజ్ఞ, నామయజ్ఞ సహిత సప్త ప్రదక్షిణం</span>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Gold shimmer line -->
+      <div class="gline" style="margin:clamp(10px,2.5vw,16px) 0"></div>
+
+      <!-- Language toggle -->
+      <div style="text-align:center">
+        <button class="lang-btn" onclick="toggleLang()" style="background:rgba(255,215,0,0.07);border:1px solid rgba(201,152,10,0.45);color:#FFD700;
+                 border-radius:999px;cursor:pointer;
+                 font-family:'Cormorant Garamond',serif;
+                 display:inline-flex;align-items:center;transition:background 0.2s"
+          onmouseover="this.style.background='rgba(255,215,0,0.14)'"
+          onmouseout="this.style.background='rgba(255,215,0,0.07)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path
+              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          <span class="len">తెలుగు లో చూడండి</span>
+          <span class="lte te-font">View in English</span>
+        </button>
+      </div>
+
+      <!-- Back to Home Navigation -->
+<div class="home-nav-wrap">
+  <a href="index.html" class="home-nav-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 11L12 3l9 8" />
+      <path d="M5 10v10h14V10" />
+      <path d="M9 20v-6h6v6" />
+    </svg>
+
+    <span class="len">Back to Home</span>
+    <span class="lte te-font">హోమ్‌కు వెళ్ళండి</span>
+  </a>
+</div>
+
+    </div>
+
+    <!-- Header bottom shimmer -->
+    <div class="gline"></div>
+  </header>
+
+
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════ -->
+  <main class="main-wrap">
+    <div class="inner">
+
+      <div class="content-card">
+
+        <!-- VIDEO -->
+        <div class="video-wrap" id="video-wrap">
+          <div class="video-placeholder">Loading…</div>
+        </div>
+
+        <!-- ══════════════════════════════════════
+             ★ PRADAKSHINA BUBBLES
+             (between video and nakshatra title)
+        ══════════════════════════════════════ -->
+        <div class="pradakshina-title-wrap">
+          <div class="pradakshina-title">
+            <!-- <span class="pradakshina-title-star">✦</span> -->
+
+            <span class="len">Count of Pradakshinas</span>
+            <span class="lte te-font">ప్రదక్షిణల సంఖ్య</span>
+
+            <!-- <span class="pradakshina-title-star">✦</span> -->
+          </div>
+
+        </div>
+
+        <div class="pradakshina-wrap" id="pradakshina-wrap">
+          <!-- 7 bubbles injected by JS -->
+        </div>
+        <!-- ══════════════════════════════════════ -->
+
+        <!-- DIVIDER -->
+        <div style="display:flex;align-items:center;gap:10px;margin:clamp(18px,4vw,26px) 0">
+          <div class="gdiv" style="flex:1"></div>
+          <svg class="sp2" viewBox="0 0 100 100" style="color:#C9980A;width:16px;height:16px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <div class="gdiv" style="flex:1"></div>
+        </div>
+
+        <!-- NAKSHATRA -->
+        <div style="margin-bottom:clamp(18px,4vw,26px)">
+          <div class="label-en len">Nakshatra</div>
+          <div class="label-te lte">నక్షత్రం</div>
+          <div class="nakshatra-en len" id="nakshatra-en">—</div>
+          <div class="nakshatra-te lte" id="nakshatra-te">—</div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:clamp(18px,4vw,26px)">
+          <div class="gdiv" style="flex:1"></div>
+          <svg class="sp" viewBox="0 0 100 100" style="color:#C9980A;width:13px;height:13px;flex-shrink:0">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <svg class="sp2" viewBox="0 0 100 100" style="color:#C9980A;width:18px;height:18px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <svg class="sp3" viewBox="0 0 100 100" style="color:#C9980A;width:13px;height:13px;flex-shrink:0">
+            <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>
+          </svg>
+          <div class="gdiv" style="flex:1"></div>
+        </div>
+
+        <!-- MANTRA -->
+        <div>
+          <div class="label-en len">Mantra</div>
+          <div class="label-te lte">మంత్రం</div>
+          <div class="mantra-en len" id="mantra-en">—</div>
+          <div class="mantra-te lte" id="mantra-te">—</div>
+        </div>
+
+      </div><!-- /.content-card -->
+    </div><!-- /.inner -->
+  </main>
+
+
+  <!-- ── FLOWER GARLAND ── -->
+  <div style="overflow:hidden;line-height:0; padding-top:90px;">
+    <svg viewBox="0 0 1200 44" style="width:100%;height:clamp(28px,5vw,44px)" preserveAspectRatio="xMidYMid slice">
+      <path d="M0,22 Q150,38 300,22 Q450,6 600,22 Q750,38 900,22 Q1050,6 1200,22" stroke="#1A6A1A" stroke-width="4" fill="none"/>
+      <g id="gf"><circle r="7.5" fill="url(#gGarland)"/><circle r="3.8" fill="#FFE200"/></g>
+      <use href="#gf" x="0"    y="22"/> <use href="#gf" x="50"   y="29"/>
+      <use href="#gf" x="100"  y="23"/> <use href="#gf" x="150"  y="35"/>
+      <use href="#gf" x="200"  y="27"/> <use href="#gf" x="250"  y="18"/>
+      <use href="#gf" x="300"  y="22"/> <use href="#gf" x="350"  y="14"/>
+      <use href="#gf" x="400"  y="11"/> <use href="#gf" x="450"  y="7"/>
+      <use href="#gf" x="500"  y="11"/> <use href="#gf" x="550"  y="18"/>
+      <use href="#gf" x="600"  y="22"/> <use href="#gf" x="650"  y="29"/>
+      <use href="#gf" x="700"  y="35"/> <use href="#gf" x="750"  y="37"/>
+      <use href="#gf" x="800"  y="31"/> <use href="#gf" x="850"  y="23"/>
+      <use href="#gf" x="900"  y="22"/> <use href="#gf" x="950"  y="15"/>
+      <use href="#gf" x="1000" y="10"/> <use href="#gf" x="1050" y="7"/>
+      <use href="#gf" x="1100" y="12"/> <use href="#gf" x="1150" y="19"/>
+    </svg>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       DARK FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="dark-band" style="padding:clamp(28px,6vw,44px) clamp(12px,4vw,28px)">
+    <div style="max-width:720px;margin:0 auto;text-align:center">
+
+      <div class="gline" style="margin-bottom:clamp(16px,4vw,26px)"></div>
+
+      <!-- Lamps + name -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,24px);margin-bottom:12px">
+        <!-- <div class="lamp">
+          <svg viewBox="0 0 90 120" style="width:clamp(22px,4vw,36px);height:auto">
+            <g stroke="#FFD84D" stroke-linecap="round" opacity="0.9">
+              <line x1="45" y1="6"  x2="45" y2="1"  stroke-width="2.5"/>
+              <line x1="55" y1="9"  x2="58" y2="5"  stroke-width="2"/>
+              <line x1="63" y1="16" x2="67" y2="13" stroke-width="2"/>
+              <line x1="67" y1="26" x2="72" y2="25" stroke-width="2"/>
+              <line x1="35" y1="9"  x2="32" y2="5"  stroke-width="2"/>
+              <line x1="27" y1="16" x2="23" y2="13" stroke-width="2"/>
+              <line x1="23" y1="26" x2="18" y2="25" stroke-width="2"/>
+            </g>
+            <ellipse cx="45" cy="30" rx="22" ry="26" fill="url(#halo)"/>
+            <path d="M45,8 Q54,22 52,40 Q50,54 45,60 Q40,54 38,40 Q36,22 45,8" fill="url(#gFlame)"/>
+            <path d="M45,18 Q50,30 49,44 Q47,54 45,58 Q43,54 41,44 Q40,30 45,18" fill="#FFF5C0" opacity="0.5"/>
+            <ellipse cx="45" cy="60" rx="3" ry="2" fill="#CC3300"/>
+            <path d="M18,68 Q45,62 72,68" stroke="#E8A800" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M18,68 Q10,78 22,90 Q33,98 45,99 Q57,98 68,90 Q80,78 72,68 Q45,74 18,68Z" fill="url(#gBrass)"/>
+            <path d="M18,68 Q8,70 6,76 Q10,72 18,70Z" fill="url(#gBrass)"/>
+            <path d="M22,72 Q16,80 20,88 Q18,82 22,76Z" fill="rgba(255,235,120,0.3)"/>
+            <ellipse cx="45" cy="99" rx="12" ry="3.5" fill="#C08000" opacity="0.6"/>
+          </svg>
+        </div> -->
+        <p class="te-font telugu-heading"
+          style="margin-top:14px;color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3)">
+          అఖండ దివ్య వైభవ జ్యోతి
+        </p>
+        <!-- <div class="lamp2">
+          <svg viewBox="0 0 90 120" style="width:clamp(22px,4vw,36px);height:auto">
+            <g stroke="#FFD84D" stroke-linecap="round" opacity="0.9">
+              <line x1="45" y1="6"  x2="45" y2="1"  stroke-width="2.5"/>
+              <line x1="55" y1="9"  x2="58" y2="5"  stroke-width="2"/>
+              <line x1="63" y1="16" x2="67" y2="13" stroke-width="2"/>
+              <line x1="67" y1="26" x2="72" y2="25" stroke-width="2"/>
+              <line x1="35" y1="9"  x2="32" y2="5"  stroke-width="2"/>
+              <line x1="27" y1="16" x2="23" y2="13" stroke-width="2"/>
+              <line x1="23" y1="26" x2="18" y2="25" stroke-width="2"/>
+            </g>
+            <ellipse cx="45" cy="30" rx="22" ry="26" fill="url(#halo)"/>
+            <path d="M45,8 Q54,22 52,40 Q50,54 45,60 Q40,54 38,40 Q36,22 45,8" fill="url(#gFlame)"/>
+            <path d="M45,18 Q50,30 49,44 Q47,54 45,58 Q43,54 41,44 Q40,30 45,18" fill="#FFF5C0" opacity="0.5"/>
+            <ellipse cx="45" cy="60" rx="3" ry="2" fill="#CC3300"/>
+            <path d="M18,68 Q45,62 72,68" stroke="#E8A800" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M18,68 Q10,78 22,90 Q33,98 45,99 Q57,98 68,90 Q80,78 72,68 Q45,74 18,68Z" fill="url(#gBrass)"/>
+            <path d="M18,68 Q8,70 6,76 Q10,72 18,70Z" fill="url(#gBrass)"/>
+            <path d="M22,72 Q16,80 20,88 Q18,82 22,76Z" fill="rgba(255,235,120,0.3)"/>
+            <ellipse cx="45" cy="99" rx="12" ry="3.5" fill="#C08000" opacity="0.6"/>
+          </svg>
+        </div> -->
+      </div>
+
+       <p class="cor-font"
+        style="font-style:italic;color:rgba(255,215,0,0.6);font-size:clamp(14px,2.8vw,20px);margin-bottom:10px;line-height:1.75">
+        <span class="len">శ్లో" దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి : జానార్ధన: <br>  దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!</span>
+        <span class="lte te-font">శ్లో" దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి : జానార్ధన: <br>  దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!</span>
+      </p>
+
+      <div class="gline" style="margin-top:clamp(16px,4vw,26px)"></div>
+    </div>
+  </footer>
+
+    <!-- ══════════════════════════════════════
+       ★ PRADAKSHINA OVERLAY (fixed, fullscreen)
+  ══════════════════════════════════════ -->
+  <div id="pradakshina-overlay" role="dialog" aria-modal="true" aria-label="Pradakshina mantra">
+    <div class="po-inner">
+
+      <!-- top: nakshatra name -->
+      <div class="po-text-top" id="po-text-top"></div>
+
+      <!-- spiritual image -->
+      <div class="po-img-wrap">
+        <img
+          src="assets/Garudadhari.jpeg"
+          alt="Pradakshina"
+          id="po-img"
+          onerror="this.style.display='none'; this.parentElement.style.background='radial-gradient(circle, rgba(201,152,10,0.18) 0%, rgba(60,10,0,0.5) 100%)'"
+        />
+      </div>
+
+      <!-- bottom: first mantra lines -->
+      <div class="po-text-bottom" id="po-text-bottom"></div>
+
+    </div>
+  </div>
+  
+  <script>
+    // ═══════════════════════════════════════════════════════
+    //  VIDEO DATA — add all 27 videos here
+    //
+    //  videoUrl   : full Cloudflare R2 public URL of the .mp4
+    //  nakshatraEn: Nakshatra in English
+    //  nakshatraTe: Nakshatra in Telugu
+    //  mantraEn   : Mantra in English  (\n = new line)
+    //  mantraTe   : Mantra in Telugu   (\n = new line)
+    // ═══════════════════════════════════════════════════════
+    var videos = {
+
+"1": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Ashwini%20Nakshatram%201.mp4",
+  nakshatraEn: "Ashwini",
+  nakshatraTe: "అశ్విని",
+  mantraEn:
+    "harihi O:m \n\n" +
+    "visvam vishnur vashatka:ro:\n" +
+    "bhu:tha bhavya bhavath prabhuhu |\n" +
+    "bhu:thakrud bhu:thabhrud bha:vo:\n" +
+    "bhu:tha:thma bhu:tha bha:vanaha || 1 ||\n\n" +
+    "pu:tha:thma parama:thma: cha\n" +
+    "muktha:na:m parama:gathihi |\n" +
+    "avyayah purushas sa:kshi:\n" +
+    "kshe:thrajno: akshara e:va cha || 2 ||\n\n" +
+    "yo:go: yo:gavida:m ne:tha:\n" +
+    "pradha:na purushe:svaraha |\n" +
+    "na:rasimhavapussri:ma:n\n" +
+    "ke:savah purusho:tthmaha || 3 ||\n\n" +
+    "sarvas sarvas sivas stha:nuhu\n" +
+    "bhu:tha:dir nidhiravyayaha |\n" +
+    "sambhavo: bha:vano: bhartha:\n" +
+    "prabhavah prabhur i:svaraha || 4 ||\n\n" +
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+  mantraTe:
+    "హరిః ఓం \n\n" +
+    "విశ్వం విష్ణుర్వషట్కారో భూతభవ్యభవత్ప్రభుః ।\n" +
+    "భూతకృద్భూతభృద్భావో భూతాత్మా భూతభావనః ॥ 1 ॥\n\n" +
+    "పూతాత్మా పరమాత్మా చ ముక్తానాం పరమాగతిః ।\n" +
+    "అవ్యయః పురుషః సాక్షీ క్షేత్రజ్ఞోఽక్షర ఏవ చ ॥ 2 ॥\n\n" +
+    "యోగో యోగవిదాం నేతా ప్రధాన పురుషేశ్వరః ।\n" +
+    "నారసింహవపుః శ్రీమాన్ కేశవః పురుషోత్తమః ॥ 3 ॥\n\n" +
+    "సర్వః శర్వః శివః స్థాణుర్భూతాదిర్నిధిరవ్యయః ।\n" +
+    "సంభవో భావనో భర్తా ప్రభవః ప్రభురీశ్వరః ॥ 4 ॥\n\n" +
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"2": {
+  videoUrl: "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Bharini%20Nakshatram%202.mp4",
+  nakshatraEn: "Bharani",
+  nakshatraTe: "భరణి",
+
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "svayambhu:s sambhur a:dithyah\n" +
+    "pushkara:ksho: maha:svanaha |\n" +
+    "ana:di nidhano: dha:tha:\n" +
+    "vidha:tha: dha:thur utthamaha || 5 ||\n\n" +
+
+    "aprame:yo: hrushi:ke:sah\n" +
+    "padmana:bho: amaraprabhuhu |\n" +
+    "visvakarma: manus thvashta:\n" +
+    "sthavishtas sthaviro: dhruvaha || 6 ||\n\n" +
+
+    "agra:hyas sa:svathah krushno:\n" +
+    "lo:hitha:kshah prathardanaha |\n" +
+    "prabhu:thas thrikakubdha:ma\n" +
+    "pavithram mangalam param || 7 ||\n\n" +
+
+    "I:sa:nah pra:nadah pra:no:\n" +
+    "jye:shthas sre:shthah praja:pathihi |\n" +
+    "hiranyagarbho: bhu:garbho:\n" +
+    "ma:dhavo: madhusu:danaha || 8 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "స్వయంభూః శంభురాదిత్యః పుష్కరాక్షో మహాస్వనః ।\n" +
+    "అనాదినిధనో ధాతా విధాతా ధాతురుత్తమః ॥ 5 ॥\n\n" +
+
+    "అప్రమేయో హృషీకేశః పద్మనాభోఽమరప్రభుః ।\n" +
+    "విశ్వకర్మా మనుస్త్వష్టా స్థవిష్ఠః స్థవిరో ధ్రువః ॥ 6 ॥\n\n" +
+
+    "అగ్రాహ్యః శాశ్వతో కృష్ణో లోహితాక్షః ప్రతర్దనః ।\n" +
+    "ప్రభూతస్త్రికకుబ్ధామ పవిత్రం మంగళం పరమ్ ॥ 7 ॥\n\n" +
+
+    "ఈశానః ప్రాణదః ప్రాణో జ్యేష్ఠః శ్రేష్ఠః ప్రజాపతిః ।\n" +
+    "హిరణ్యగర్భో భూగర్భో మాధవో మధుసూదనః ॥ 8 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"3": {
+  videoUrl: "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Khruthika%20Nakshatram%203.mp4",
+  nakshatraEn: "Krittika",
+  nakshatraTe: "కృత్తిక",
+
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "I:svaro: vikrami: dhanvi:\n" +
+    "me:dha:vi: vikramah kramaha |\n" +
+    "anutththamo: dura:dharshahaha\n" +
+    "kruthajnah kruthir a:thmava:n || 9 ||\n\n" +
+
+    "sure:sas saranam sarma\n" +
+    "visvare:tha:h praja:bhavaha |\n" +
+    "ahas samvathsaro: vya:laha\n" +
+    "prathyayas sarva darsanaha || 10 ||\n\n" +
+
+    "ajas sarve:svaras siddhas siddhih\n" +
+    "sarva:dir achyuthahaha |\n" +
+    "vrusha:kapir ame:ya:thma:\n" +
+    "sarvayo:ga vinissruthahaha || 11 ||\n\n" +
+
+    "vasur vasumana:s sathyas\n" +
+    "sama:thma: sammithas samaha |\n" +
+    "amo:ghah pundari:ka:ksho:\n" +
+    "vrushakarma: vrusha:kruthihi || 12 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "ఈశ్వరో విక్రమీధన్వీ మేధావీ విక్రమః క్రమః ।\n" +
+    "అనుత్తమో దురాధర్షః కృతజ్ఞః కృతిరాత్మవాన్ ॥ 9 ॥\n\n" +
+
+    "సురేశః శరణం శర్మ విశ్వరేతాః ప్రజాభవః ।\n" +
+    "అహస్సంవత్సరో వ్యాళః ప్రత్యయః సర్వదర్శనః ॥ 10 ॥\n\n" +
+
+    "అజస్సర్వేశ్వరః సిద్ధః సిద్ధిః సర్వాదిరచ్యుతః ।\n" +
+    "వృషాకపిరమేయాత్మా సర్వయోగవినిస్సృతః ॥ 11 ॥\n\n" +
+
+    "వసుర్వసుమనాః సత్యః సమాత్మా సమ్మితస్సమః ।\n" +
+    "అమోఘః పుండరీకాక్షో వృషకర్మా వృషాకృతిః ॥ 12 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"4": {
+  videoUrl: "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Rohini%20Nakshatram%204.mp4",
+  nakshatraEn: "Rohini",
+  nakshatraTe: "రోహిణి",
+
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "rudro: bahusira: babhruhu\n" +
+    "visvayo:nis suchissrava:ha |\n" +
+    "amruthas sa:svathas stha:nuhu\n" +
+    "vara:ro:ho: maha:thapa:ha || 13 ||\n\n" +
+
+    "sarvagas sarvavid bha:nuhu\n" +
+    "vishvakse:no: jana:rdanaha |\n" +
+    "ve:do: ve:david avyango:\n" +
+    "ve:da:ngo: ve:davith kavihi || 14 ||\n\n" +
+
+    "lo:ka:dhyakshas sura:dhyaksho:\n" +
+    "dharma:dhyakshah krutha:kruthaha |\n" +
+    "chathura:thma: chathurvyu:has\n" +
+    "chathur damshtras chathurbhujaha || 15 ||\n\n" +
+
+    "bhra:jishnur bho:janam bho:ktha:\n" +
+    "sahishnur jagada:dijaha |\n" +
+    "anagho: vijayo: je:tha:\n" +
+    "visvayo:nih punarvasuhu || 16 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "రుద్రో బహుశిరా బభ్రుర్విశ్వయోనిః శుచిశ్రవాః ।\n" +
+    "అమృతః శాశ్వతస్థాణుర్వరారోహో మహాతపాః ॥ 13 ॥\n\n" +
+
+    "సర్వగః సర్వ విద్భానుర్విష్వక్సేనో జనార్దనః ।\n" +
+    "వేదో వేదవిదవ్యంగో వేదాంగో వేదవిత్కవిః ॥ 14 ॥\n\n" +
+
+    "లోకాధ్యక్షః సురాధ్యక్షో ధర్మాధ్యక్షః కృతాకృతః ।\n" +
+    "చతురాత్మా చతుర్వ్యూహశ్చతుర్దంష్ట్రశ్చతుర్భుజః ॥ 15 ॥\n\n" +
+
+    "భ్రాజిష్ణుర్భోజనం భోక్తా సహిష్ణుర్జగదాదిజః ।\n" +
+    "అనఘో విజయో జేతా విశ్వయోనిః పునర్వసుః ॥ 16 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"5": {
+  videoUrl: "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Mrugashira%20Nakshatram%205.mp4",
+  nakshatraEn: "Mrigashira",
+  nakshatraTe: "మృగశిర",
+
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "upe:ndro: va:manah pra:msuhu\n" +
+    "amo:ghas suchir u:rjithahaha |\n" +
+    "athi:ndras sangrahas sargo:\n" +
+    "dhrutha:thma: niyamo: yamaha || 17 ||\n\n" +
+
+    "ve:dyo: vaidyas sada:yo:gi:\n" +
+    "vi:raha: ma:dhavo: madhuhu |\n" +
+    "athi:ndriyo: maha:ma:yo:\n" +
+    "maho:thsa:ho: maha:balaha || 18 ||\n\n" +
+
+    "maha:buddhir maha:vi:ryo:\n" +
+    "maha:sakthir maha:dyuthihi |\n" +
+    "anirde:syavapus sri:ma:n\n" +
+    "ame:ya:thma: maha:dridhruth || 19 ||\n\n" +
+
+    "mahe:shva:so: mahi:bhartha:\n" +
+    "sri:niva:sas satha:m gathihi |\n" +
+    "aniruddhas sura:nando:\n" +
+    "go:vindo: go:vida:m pathihi || 20 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "ఉపేంద్రో వామనః ప్రాంశురమోఘః శుచిరూర్జితః ।\n" +
+    "అతీంద్రః సంగ్రహః సర్గో ధృతాత్మా నియమో యమః ॥ 17 ॥\n\n" +
+
+    "వేద్యో వైద్యః సదాయోగీ వీరహా మాధవో మధుః ।\n" +
+    "అతీంద్రియో మహామాయో మహోత్సాహో మహాబలః ॥ 18 ॥\n\n" +
+
+    "మహాబుద్ధిర్మహావీర్యో మహాశక్తిర్మహాద్యుతిః ।\n" +
+    "అనిర్దేశ్యవపుః శ్రీమానమేయాత్మా మహాద్రిధృక్ ॥ 19 ॥\n\n" +
+
+    "మహేశ్వాసో మహీభర్తా శ్రీనివాసః సతాంగతిః ।\n" +
+    "అనిరుద్ధః సురానందో గోవిందో గోవిదాం పతిః ॥ 20 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"6": {
+  videoUrl: "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Aarudhra%20Nakshatram%206.mp4",
+  nakshatraEn: "Ardra",
+  nakshatraTe: "ఆరుద్ర",
+
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "mari:chir damano: hamsaha\n" +
+    "suparno: bhujago:tthamaha |\n" +
+    "hiranyana:bhas suthapa:h\n" +
+    "padmana:bha:h praja:pathihi || 21 ||\n\n" +
+
+    "amruthyus sarvadruk simhaha\n" +
+    "sandha:tha: sandhima:n sthiraha |\n" +
+    "ajo: durmarshanas sa:stha:\n" +
+    "visrutha:thma: sura:riha: || 22 ||\n\n" +
+
+    "gurur guruthamo: dha:ma\n" +
+    "sathyas sathya para:kramaha |\n" +
+    "nimisho: animishas sragvi:\n" +
+    "va:chaspathir uda:rathi:hi || 23 ||\n\n" +
+
+    "agrani:r gramani:s sri:ma:n\n" +
+    "nya:yo: ne:tha: sami:ranaha |\n" +
+    "sahasra mu:rdha: visva:thma:\n" +
+    "sahasra:kshas sahasra pa:th || 24 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "మరీచిర్దమనో హంసః సుపర్ణో భుజగోత్తమః ।\n" +
+    "హిరణ్యనాభః సుతపాః పద్మనాభః ప్రజాపతిః ॥ 21 ॥\n\n" +
+
+    "అమృత్యుః సర్వదృక్ సింహః సంధాతా సంధిమాన్ స్థిరః ।\n" +
+    "అజో దుర్మర్షణః శాస్తా విశ్రుతాత్మా సురారిహా ॥ 22 ॥\n\n" +
+
+    "గురుర్గురుతమో ధామ సత్యః సత్యపరాక్రమః ।\n" +
+    "నిమిషోఽనిమిషః స్రగ్వీ వాచస్పతిరుదారధీః ॥ 23 ॥\n\n" +
+
+    "అగ్రణీగ్రామణీః శ్రీమాన్ న్యాయో నేతా సమీరణః ।\n" +
+    "సహస్రమూర్ధా విశ్వాత్మా సహస్రాక్షః సహస్రపాత్ ॥ 24 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"7": {
+  videoUrl: "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Punarwasuh%20Nakshatram%207.mp4",
+  nakshatraEn: "Punarvasu",
+  nakshatraTe: "పునర్వసు",
+
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "a:varthano: nivruththa:thma:\n" +
+    "samvruthas sampra mardanaha |\n" +
+    "ahas samvarthako: vanhir\n" +
+    "anilo: dharani:dharaha || 25 ||\n\n" +
+
+    "suprasa:dah prasanna:thma:\n" +
+    "visvasruk visvabhug vibhuhu |\n" +
+    "sathkartha: sathkruthas sa:dhuhu\n" +
+    "janhur na:ra:yano: naraha || 26 ||\n\n" +
+
+    "asankhye:yo: aprame:ya:thma:\n" +
+    "visishtas sishtakruch chuchihi |\n" +
+    "siddha:rthas siddha sankalpaha\n" +
+    "siddhidas siddhi sa:dhanaha || 27 ||\n\n" +
+
+    "vrusha:hi: vrishabho: vishnuhu\n" +
+    "vrusha parva: vrusho:daraha |\n" +
+    "vardhano: vardha ma:nascha\n" +
+    "vivikthas sruthi sa:garaha || 28 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "ఆవర్తనో నివృత్తాత్మా సంవృతః సంప్రమర్దనః ।\n" +
+    "అహః సంవర్తకో వహ్నిరనిలో ధరణీధరః ॥ 25 ॥\n\n" +
+
+    "సుప్రసాదః ప్రసన్నాత్మా విశ్వధృగ్విశ్వభుగ్విభుః ।\n" +
+    "సత్కర్తా సత్కృతః సాధుర్జహ్నుర్నారాయణో నరః ॥ 26 ॥\n\n" +
+
+    "అసంఖ్యేయోఽప్రమేయాత్మా విశిష్టః శిష్టకృచ్ఛుచిః ।\n" +
+    "సిద్ధార్థః సిద్ధసంకల్పః సిద్ధిదః సిద్ధి సాధనః ॥ 27 ॥\n\n" +
+
+    "వృషాహీ వృషభో విష్ణుర్వృషపర్వా వృషోదరః ।\n" +
+    "వర్ధనో వర్ధమానశ్చ వివిక్తః శ్రుతిసాగరః ॥ 28 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"8": {
+  videoUrl: "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Pushyami%20Nakshatram%208.mp4",
+  nakshatraEn: "Pushyami",
+  nakshatraTe: "పుష్యమి",
+
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "subhujo: durdharo: va:gmi:\n" +
+    "mahe:ndro: vasudo: vasuhu |\n" +
+    "naikaru:po: bruhad ru:paha\n" +
+    "sipivishtah praka:sanaha || 29 ||\n\n" +
+
+    "o:jas the:jo: dyuthi dharah\n" +
+    "praka:sa:thma pratha:panaha |\n" +
+    "ruddhas spashta:ksharo: manthraha\n" +
+    "chandra:msur bha:skara dyuthihi || 30 ||\n\n" +
+
+    "amrutha:m su:dhbhavo: bha:nuhu\n" +
+    "sasibindus sure:svaraha |\n" +
+    "aushadham jagathas se:thuhu\n" +
+    "sathya dharma para:kramaha || 31 ||\n\n" +
+
+    "bhu:tha bhavya bhavan na:tthaha\n" +
+    "pavanah pa:vano: analaha |\n" +
+    "ka:maha: ka:makruth ka:nthaha\n" +
+    "ka:mah ka:mapradah prabhuhu || 32 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "సుభుజో దుర్ధరో వాగ్మీ మహేంద్రో వసుదో వసుః ।\n" +
+    "నైకరూపో బృహద్రూపః శిపివిష్టః ప్రకాశనః ॥ 29 ॥\n\n" +
+
+    "ఓజస్తేజోద్యుతిధరః ప్రకాశాత్మా ప్రతాపనః ।\n" +
+    "ఋద్ధః స్పష్టాక్షరో మంత్రశ్చంద్రాంశుర్భాస్కరద్యుతిః ॥ 30 ॥\n\n" +
+
+    "అమృతాంశూద్భవో భానుః శశబిందుః సురేశ్వరః ।\n" +
+    "ఔషధం జగతః సేతుః సత్యధర్మపరాక్రమః ॥ 31 ॥\n\n" +
+
+    "భూతభవ్యభవన్నాథః పవనః పావనోఽనలః ।\n" +
+    "కామహా కామకృత్కాంతః కామః కామప్రదః ప్రభుః ॥ 32 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"9": {
+  videoUrl: "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Aaslesha%20Nakshatram%209.mp4",
+  nakshatraEn: "Ashlesha",
+  nakshatraTe: "ఆశ్లేష",
+
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "yuga:dikrud yuga:vartho:\n" +
+    "naikama:yo: maha:sanaha |\n" +
+    "adrusyo: vyaktharu:pascha\n" +
+    "sahasrajid ananthajith || 33 ||\n\n" +
+
+    "ishto: avisishtas sishte:shtah\n" +
+    "sikhandi: nahusho: vrushaha |\n" +
+    "kro:dhaha: kro:dha kruth kartha:\n" +
+    "visvaba:hur mahi:dharaha || 34 ||\n\n" +
+
+    "achyuthah prathithah pra:naha\n" +
+    "pra:nado: va:sava:nujaha |\n" +
+    "apa:mnidhir adhishta:nam\n" +
+    "apramaththah prathishthithaha || 35 ||\n\n" +
+
+    "skandas skandadharo: dhuryo:\n" +
+    "varado: va:yu va:hanaha |\n" +
+    "va:sude:vo bruhad bha:nuhu\n" +
+    "a:dide:vah purandaraha || 36 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "యుగాదికృద్యుగావర్తో నైకమాయో మహాశనః ।\n" +
+    "అదృశ్యో వ్యక్తరూపశ్చ సహస్రజిదనంతజిత్ ॥ 33 ॥\n\n" +
+
+    "ఇష్టోఽవిశిష్టః శిష్టేష్టః శిఖండీ నహుషో వృషః ।\n" +
+    "క్రోధహా క్రోధకృత్కర్తా విశ్వబాహుర్మహీధరః ॥ 34 ॥\n\n" +
+
+    "అచ్యుతః ప్రథితః ప్రాణః ప్రాణదో వాసవానుజః ।\n" +
+    "అపాంనిధిరధిష్ఠానమప్రమత్తః ప్రతిష్ఠితః ॥ 35 ॥\n\n" +
+
+    "స్కందః స్కందధరో ధుర్యో వరదో వాయువాహనః ।\n" +
+    "వాసుదేవో బృహద్భానురాదిదేవః పురంధరః ॥ 36 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"10": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Makha%20Nakshatram%2010.mp4",
+  nakshatraEn: "Magha",
+  nakshatraTe: "మాఘ",
+  mantraEn:
+    "harihi O:m \n\n" +
+    "aso:kas tha:ranas tha:raha\n" +
+    "su:ras saurir jane:svaraha |\n" +
+    "anuku:las satha:varthah\n" +
+    "padmi: padma nibhe:kshanaha || 37 ||\n\n" +
+
+    "padma na:bho: aravinda:kshah\n" +
+    "padma garbhas sari:rabruth |\n" +
+    "mahardhir ruddho: vruddha:thma\n" +
+    "maha:ksho: garuda dhvajaha || 38 ||\n\n" +
+
+    "athulas sarabho: bhi:maha\n" +
+    "samayajno: havir harihi |\n" +
+    "sarva lakshana lakshanyo:\n" +
+    "lakshmi:va:n samithinjayaha || 39 ||\n\n" +
+
+    "viksharo: ro:hitho: ma:rgo:\n" +
+    "he:thur da:mo:daras sahaha |\n" +
+    "mahi:dharo: maha:bha:go:\n" +
+    "ve:gava:n amitha:sanaha || 40 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+    "అశోకస్తారణస్తారః శూరః శౌరిర్జనేశ్వరః ।\n" +
+    "అనుకూలః శతావర్తః పద్మీ పద్మనిభేక్షణః ॥ 37 ॥\n\n" +
+
+    "పద్మనాభోఽరవిందాక్షః పద్మగర్భః శరీరభృత్ ।\n" +
+    "మహర్ధిరృద్ధో వృద్ధాత్మా మహాక్షో గరుడధ్వజః ॥ 38 ॥\n\n" +
+
+    "అతులః శరభో భీమః సమయజ్ఞో హవిర్హరిః ।\n" +
+    "సర్వలక్షణలక్షణ్యో లక్ష్మీవాన్ సమితింజయః ॥ 39 ॥\n\n" +
+
+    "విక్షరో రోహితో మార్గో హేతుర్దామోదరః సహః ।\n" +
+    "మహీధరో మహాభాగో వేగవానమితాశనః ॥ 40 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"11": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Pubha%20Nakshatram%2011.mp4",
+  nakshatraEn: "Pubba",
+  nakshatraTe: "పుబ్బ",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "udbhavah ksho:bhaṇo: de:vaha\n" +
+    "sri:garbhah parame:svaraha |\n" +
+    "karanam ka:ranam kartha\n" +
+    "vikartha: gahano: guhaha || 41 ||\n\n" +
+
+    "vyavasa:yo: vyavastha:naha\n" +
+    "samstha:nas stha:nado: dhruvaha |\n" +
+    "parardhih paramas spashtaha\n" +
+    "thushtah pushtas subhe:kshanaha || 42 ||\n\n" +
+
+    "ra:mo: vira:mo: virajo:\n" +
+    "ma:rgo: ne:yo: nayo: anayaha |\n" +
+    "vi:ras sakthi matha:m sre:shto:\n" +
+    "dharmo: dharma vidutthamaha || 43 ||\n\n" +
+
+    "vaikunṭah purushah pra:naha\n" +
+    "pra:nadah pranavah pruthuhu |\n" +
+    "hiranya garbhas sathrughno:\n" +
+    "vya:ptho: va:yur adho:kshajaha || 44 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "ఉద్భవః క్షోభణో దేవః శ్రీగర్భః పరమేశ్వరః ।\n" +
+    "కరణం కారణం కర్తా వికర్తా గహనో గుహః ॥ 41 ॥\n\n" +
+
+    "వ్యవసాయో వ్యవస్థానః సంస్థానః స్థానదో ధ్రువః ।\n" +
+    "పరర్ధిః పరమస్పష్టః తుష్టః పుష్టః శుభేక్షణః ॥ 42 ॥\n\n" +
+
+    "రామో విరామో విరజో మార్గోనేయో నయోఽనయః ।\n" +
+    "వీరః శక్తిమతాం శ్రేష్ఠో ధర్మోధర్మ విదుత్తమః ॥ 43 ॥\n\n" +
+
+    "వైకుంఠః పురుషః ప్రాణః ప్రాణదః ప్రణవః పృథుః ।\n" +
+    "హిరణ్యగర్భః శత్రుఘ్నో వ్యాప్తో వాయురధోక్షజః ॥ 44 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"12": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Uthara%20Nakshatram%2012.mp4",
+  nakshatraEn: "Uttara Phalguni",
+  nakshatraTe: "ఉత్తర",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "ruthus sudarsanah ka:laha\n" +
+    "parame:shti: parigrahaha |\n" +
+    "ugras samvathsaro: daksho:\n" +
+    "visra:mo: visva dakshinahaa || 45 ||\n\n" +
+
+    "vistha:ras stha:vara stha:nuh\n" +
+    "prama:nam bi:jam avyayam |\n" +
+    "artho: anartho: maha:ko:so:\n" +
+    "maha:bho:go: maha:dhanaha || 46 ||\n\n" +
+
+    "anirvinnas sthavishto: bhu:hu\n" +
+    "dharma yu:po: maha: makhaha |\n" +
+    "nakshathra ne:mir nakshathri:\n" +
+    "kshamaha ksha:mas sami:hanaha || 47 ||\n\n" +
+
+    "yajna ijyo: mahe:jyascha\n" +
+    "krathus sathram satha:m gathihi |\n" +
+    "sarvadarsi: vimuktha:thma:\n" +
+    "sarvajno: jna:nam utthamam || 48 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "ఋతుః సుదర్శనః కాలః పరమేష్ఠీ పరిగ్రహః ।\n" +
+    "ఉగ్రః సంవత్సరో దక్షో విశ్రామో విశ్వదక్షిణః ॥ 45 ॥\n\n" +
+
+    "విస్తారః స్థావర స్థాణుః ప్రమాణం బీజమవ్యయమ్ ।\n" +
+    "అర్థోఽనర్థో మహాకోశో మహాభోగో మహాధనః ॥ 46 ॥\n\n" +
+
+    "అనిర్విణ్ణః స్థవిష్ఠో భూర్ధర్మయూపో మహామఖః ।\n" +
+    "నక్షత్రనేమిర్నక్షత్రీ క్షమః క్షామః సమీహనః ॥ 47 ॥\n\n" +
+
+    "యజ్ఞ ఇజ్యో మహేజ్యశ్చ క్రతుః సత్రం సతాంగతిః ।\n" +
+    "సర్వదర్శీ విముక్తాత్మా సర్వజ్ఞో జ్ఞానముత్తమమ్ ॥ 48 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"13": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Hastha%20Nakshatram%2013.mp4",
+  nakshatraEn: "Hasta",
+  nakshatraTe: "హస్త",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "suvrathas sumukhas su:kshmaha\n" +
+    "sugho:shas sukhadas suhruth |\n" +
+    "mano:haro: jithakro:dho:\n" +
+    "vi:raba:hur vida:ranaha || 49 ||\n\n" +
+
+    "sva:panas svavaso: vya:pi:\n" +
+    "naika:thma: naika karmakruth |\n" +
+    "vathsaro: vathsalo: vathsi:\n" +
+    "rathna garbho: dhane:svaraha || 50 ||\n\n" +
+
+    "dharmagub dharmakrud dharmi:\n" +
+    "sad-aksharam-asath-ksharam |\n" +
+    "avijna:tha: sahasra:msuhu\n" +
+    "vidha:tha: krutha lakshanaha || 51 ||\n\n" +
+
+    "gabhasthi ne:mis sathvasthaha\n" +
+    "simho: bhu:tha mahe:svaraha |\n" +
+    "a:dide:vo: maha:de:vo:\n" +
+    "de:ve:so: de:vabhrud guruhu || 52 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "సువ్రతః సుముఖః సూక్ష్మః సుఘోషః సుఖదః సుహృత్ ।\n" +
+    "మనోహరో జితక్రోధో వీర బాహుర్విదారణః ॥ 49 ॥\n\n" +
+
+    "స్వాపనః స్వవశో వ్యాపీ నైకాత్మా నైకకర్మకృత్ ।\n" +
+    "వత్సరో వత్సలో వత్సీ రత్నగర్భో ధనేశ్వరః ॥ 50 ॥\n\n" +
+
+    "ధర్మగుబ్ధర్మకృద్ధర్మీ సదసక్షరమక్షరం ।\n" +
+    "అవిజ్ఞాతా సహస్త్రాంశుర్విధాతా కృతలక్షణః ॥ 51 ॥\n\n" +
+
+    "గభస్తినేమిః సత్త్వస్థః సింహో భూత మహేశ్వరః ।\n" +
+    "ఆదిదేవో మహాదేవో దేవేశో దేవభృద్గురుః ॥ 52 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"14": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Chitra%20Nakshatram%2014.mp4",
+  nakshatraEn: "Chithha",
+  nakshatraTe: "చిత్త",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "uththaro: go:pathir go:ptha:\n" +
+    "jna:na gamyah pura:thanaha |\n" +
+    "sari:ra bhu:tha bhrud bho:ktha:\n" +
+    "kapi:ndro: bhu:ri dakshinaha || 53 ||\n\n" +
+
+    "so:mapo: amruthapas so:maha\n" +
+    "purujith puru saththamaha |\n" +
+    "vinayo: jayas sathya sandho:\n" +
+    "da:sa:rhas sa:thvatha:m pathihi || 54 ||\n\n" +
+
+    "ji:vo: vinayitha: sa:kshi:\n" +
+    "mukundo: amitha vikramaha |\n" +
+    "ambho:nidhir anantha:thma:\n" +
+    "maho:dadhi sayo::nthakaha || 55 ||\n\n" +
+
+    "ajo: maha:rhas sva:bha:vyo:\n" +
+    "jitha:mithrah pramo:danaha |\n" +
+    "a:nando: nandano: nandaha\n" +
+    "sathya dharma: thrivikramaha || 56 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "ఉత్తరో గోపతిర్గోప్తా జ్ఞానగమ్యః పురాతనః ।\n" +
+    "శరీర భూతభృద్ భోక్తా కపీంద్రో భూరిదక్షిణః ॥ 53 ॥\n\n" +
+
+    "సోమపోఽమృతపః సోమః పురుజిత్ పురుసత్తమః ।\n" +
+    "వినయో జయః సత్యసంధో దాశార్హః సాత్వతాం పతిః ॥ 54 ॥\n\n" +
+
+    "జీవో వినయితా సాక్షీ ముకుందోఽమిత విక్రమః ।\n" +
+    "అంభోనిధిరనంతాత్మా మహోదధి శయోంతకః ॥ 55 ॥\n\n" +
+
+    "అజో మహార్హః స్వాభావ్యో జితామిత్రః ప్రమోదనః ।\n" +
+    "ఆనందోఽనందనోనందః సత్యధర్మా త్రివిక్రమః ॥ 56 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"15": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Swathi%20Nakshatram%2015.mp4",
+  nakshatraEn: "Swati",
+  nakshatraTe: "స్వాతి",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "maharshih kapila:cha:ryaha\n" +
+    "kruthajno: me:dini:pathihi |\n" +
+    "thripadas thridasa:dhyakshaha\n" +
+    "maha:srungah krutha:ntha kruth || 57 ||\n\n" +
+
+    "maha:vara:ho: go:vindaha\n" +
+    "sushe:nah kanaka:ngadi: |\n" +
+    "guhyo: gabhi:ro: gahano:\n" +
+    "gupthas chakra gada: dharaha || 58 ||\n\n" +
+
+    "ve:dha:s sva:ngo::jithah krushno:\n" +
+    "drudas sankarshano::chyuthaha |\n" +
+    "varuno: va:runo: vrukshah\n" +
+    "pushkara:ksho: maha: mana:ha || 59 ||\n\n" +
+
+    "bhagava:n bhagaha: nandi:\n" +
+    "vanama:li: hala:yudhaha |\n" +
+    "a:dithyo: jyothir a:dithyaha\n" +
+    "sahishnur gathi saththamaha || 60 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "మహర్షిః కపిలాచార్యః కృతజ్ఞో మేదినీపతిః ।\n" +
+    "త్రిపదస్త్రిదశాధ్యక్షో మహాశృంగః కృతాంతకృత్ ॥ 57 ॥\n\n" +
+
+    "మహావరాహో గోవిందః సుషేణః కనకాంగదీ ।\n" +
+    "గుహ్యో గభీరో గహనో గుప్తశ్చక్ర గదాధరః ॥ 58 ॥\n\n" +
+
+    "వేధాః స్వాంగోఽజితః కృష్ణో దృఢః సంకర్షణోఽచ్యుతః ।\n" +
+    "వరుణో వారుణో వృక్షః పుష్కరాక్షో మహామనాః ॥ 59 ॥\n\n" +
+
+    "భగవాన్ భగహా నందీ వనమాలీ హలాయుధః ।\n" +
+    "ఆదిత్యో జ్యోతిరాదిత్యః సహిష్ణుర్గతిసత్తమః ॥ 60 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"16": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Visakha%20Nakshatram%2016.mp4",
+  nakshatraEn: "Vishakha",
+  nakshatraTe: "విశాఖ",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "sudhanva: khanda parasuhu\n" +
+    "da:runo: dravina pradaha |\n" +
+    "divispruk sarvadrug vya:so:\n" +
+    "va:chaspathir ayo:nijaha || 61 ||\n\n" +
+
+    "thrisa:ma: sa:magas sa:ma\n" +
+    "nirva:nam bhe:shajam bhishak |\n" +
+    "sannya:sakruch chamas sa:ntho:\n" +
+    "nishta: sa:nthih para:yanaha || 62 ||\n\n" +
+
+    "subha:ngas sa:nthidas srashta:\n" +
+    "kumudah kuvale:sayaha |\n" +
+    "go:hitho: go:pathir go:ptha:\n" +
+    "vrushabha:ksho: vrusha priyaha || 63 ||\n\n" +
+
+    "anivarthi: nivruththa:thma:\n" +
+    "sankshe:ptha: kshe:makruch chivaha |\n" +
+    "sri:vathsa vaksha:s sri:va:saha\n" +
+    "sri:pathis sri:matha:m varaha || 64 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "సుధన్వా ఖండపరశుర్దారుణో ద్రవిణప్రదః ।\n" +
+    "దివఃస్పృక్ సర్వదృగ్వ్యాసో వాచస్పతిరయోనిజః ॥ 61 ॥\n\n" +
+
+    "త్రిసామా సామగః సామ నిర్వాణం భేషజం భిషక్ ।\n" +
+    "సన్యాసకృచ్ఛమః శాంతో నిష్ఠా శాంతిః పరాయణం ॥ 62 ॥\n\n" +
+
+    "శుభాంగః శాంతిదః స్రష్టా కుముదః కువలేశయః ।\n" +
+    "గోహితో గోపతిర్గోప్తా వృషభాక్షో వృషప్రియః ॥ 63 ॥\n\n" +
+
+    "అనివర్తీ నివృత్తాత్మా సంక్షేప్తా క్షేమకృచ్ఛివః ।\n" +
+    "శ్రీవత్సవక్షాః శ్రీవాసః శ్రీపతిః శ్రీమతాం వరః ॥ 64 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"17": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Anuradha%20Nakshatram%2017.mp4",
+  nakshatraEn: "Anuradha",
+  nakshatraTe: "అనూరాధ",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "sri:das sri:sas sri:niva:saha\n" +
+    "sri:nidhis sri:vibha: vanaha |\n" +
+    "sri:dharas sri:karas sre:yaha\n" +
+    "sri:ma:n lo:ka thraya:srayaha || 65 ||\n\n" +
+
+    "svakshas svangas satha:nando:\n" +
+    "nandir jyothir gane:svaraha |\n" +
+    "vijitha:thma: vidhe:ya:thma:\n" +
+    "sathki:rthischinna samsayaha || 66 ||\n\n" +
+
+    "udi:rnas sarvathas chakshuhu\n" +
+    "ani:sas sa:svatha sthiraha |\n" +
+    "bhu:sayo: bhu:shano: bhu:thihi\n" +
+    "viso:kas so:ka na:sanaha || 67 ||\n\n" +
+
+    "archishma:n archithah kumbho:\n" +
+    "visuddha:thma: viso:dhanaha |\n" +
+    "aniruddho::prathi rathaha\n" +
+    "pradyumno::mitha vikramaha || 68 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "శ్రీదః శ్రీశః శ్రీనివాసః శ్రీనిధిః శ్రీవిభావనః ।\n" +
+    "శ్రీధరః శ్రీకరః శ్రేయః శ్రీమాన్ లోకత్రయాశ్రయః ॥ 65 ॥\n\n" +
+
+    "స్వక్షః స్వంగః శతానందో నందిర్జ్యోతిర్గణేశ్వరః ।\n" +
+    "విజితాత్మాఽవిధేయాత్మా సత్కీర్తిచ్ఛిన్నసంశయః ॥ 66 ॥\n\n" +
+
+    "ఉదీర్ణః సర్వతశ్చక్షురనీశః శాశ్వతస్థిరః ।\n" +
+    "భూశయో భూషణో భూతిర్విశోకః శోకనాశనః ॥ 67 ॥\n\n" +
+
+    "అర్చిష్మానర్చితః కుంభో విశుద్ధాత్మా విశోధనః ।\n" +
+    "అనిరుద్ధోఽప్రతిరథః ప్రద్యుమ్నోఽమితవిక్రమః ॥ 68 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+"18": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Jeystha%20Nakshatram%2018.mp4",
+  nakshatraEn: "Jyeshtha",
+  nakshatraTe: "జ్యేష్ఠ",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "ka:lane:miniha: saurihi\n" +
+    "su:ras su:rajane:svaraha |\n" +
+    "thrilo:ka:thma: thrilo:ke:saha\n" +
+    "ke:savah ke:siha: harihi || 69 ||\n\n" +
+
+    "ka:ma de:vah ka:ma pa:lah\n" +
+    "ka:mi: ka:nthah krutha:gamaha |\n" +
+    "anirde:syavapur vishnuhu\n" +
+    "vi:ro::nantho: dhananjayaha || 70 ||\n\n" +
+
+    "bramhanyo: bramhakrud bramha:\n" +
+    "bramha brahma vivardhanaha |\n" +
+    "bramhavid bra:mhano: bramhi:\n" +
+    "bramhajno: bra:mhana priyaha || 71 ||\n\n" +
+
+    "maha:kramo: maha:karma:\n" +
+    "maha:the:ja: maho:ragaha |\n" +
+    "maha:krathur maha:yajva:\n" +
+    "maha:yajno: maha:havihi || 72 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "కాలనేమినిహా వీరః శౌరిః శూరః శూరజనేశ్వరః ।\n" +
+    "త్రిలోకాత్మా త్రిలోకేశః కేశవః కేశిహా హరిః ॥ 69 ॥\n\n" +
+
+    "కామదేవః కామపాలః కామీ కాంతః కృతాగమః ।\n" +
+    "అనిర్దేశ్యవపుర్విష్ణుర్వీరోఽనంతో ధనంజయః ॥ 70 ॥\n\n" +
+
+    "బ్రహ్మణ్యో బ్రహ్మకృద్ బ్రహ్మా బ్రహ్మ బ్రహ్మవివర్ధనః ।\n" +
+    "బ్రహ్మవిద్ బ్రాహ్మణో బ్రహ్మీ బ్రహ్మజ్ఞో బ్రాహ్మణప్రియః ॥ 71 ॥\n\n" +
+
+    "మహాక్రమో మహాకర్మా మహాతేజా మహోరగః ।\n" +
+    "మహాక్రతుర్మహాయజ్వా మహాయజ్ఞో మహాహవిః ॥ 72 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+"19": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Mulha%20Nakshatram%2019.mp4",
+  nakshatraEn: "Moola",
+  nakshatraTe: "మూల",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "sthavyas sthavapriyas stho:thram\n" +
+    "sthuthas stho:tha: ranapriyaha |\n" +
+    "pu:rnah pu:rayitha: punyah\n" +
+    "punyaki:rthir ana:mayaha || 73 ||\n\n" +
+
+    "mano:javas thi:rthakaro:\n" +
+    "vasure:tha: vasu pradaha |\n" +
+    "vasuprado: va:sude:vo:\n" +
+    "vasur vasumana: havihi || 74 ||\n\n" +
+
+    "sadgathis sathkruthis saththa:\n" +
+    "sadbhu:this sathpara:yanaha |\n" +
+    "su:rase:no: yadusre:shtaha\n" +
+    "sanniva:sas suya:munaha || 75 ||\n\n" +
+
+    "bhu:tha:va:so: va:sudevaha\n" +
+    "sarva:sunilayo: analaha |\n" +
+    "darpaha: darpado: druptho:\n" +
+    "durdharo::tha::para:jithaha || 76 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "స్తవ్యః స్తవప్రియః స్తోత్రం స్తుతిః స్తోతా రణప్రియః ।\n" +
+    "పూర్ణః పూరయితా పుణ్యః పుణ్యకీర్తిరనామయః ॥ 73 ॥\n\n" +
+
+    "మనోజవస్తీర్థకరో వసురేతా వసుప్రదః ।\n" +
+    "వసుప్రదో వాసుదేవో వసుర్వసుమనా హవిః ॥ 74 ॥\n\n" +
+
+    "సద్గతిః సత్కృతిః సత్తా సద్భూతిః సత్పరాయణః ।\n" +
+    "శూరసేనో యదుశ్రేష్ఠః సన్నివాసః సుయామునః ॥ 75 ॥\n\n" +
+
+    "భూతావాసో వాసుదేవః సర్వాసునిలయోఽనలః ।\n" +
+    "దర్పహా దర్పదో దృప్తో దుర్ధరోఽథాపరాజితః ॥ 76 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+"20": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Purvhashada%20Nakshatram%2020.mp4",
+  nakshatraEn: "Purva Ashadha",
+  nakshatraTe: "పూర్వాషాఢ",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "visva mu:rthir maha: mu:rthihi\n" +
+    "di:ptha mu:rthir amu:rthima:n |\n" +
+    "ane:ka mu:rthir avyakthaha\n" +
+    "satha mu:rthis satha:nanaha || 77 ||\n\n" +
+
+    "e:ko: naikas sa vah kah kim\n" +
+    "yath thath padam anuththamam |\n" +
+    "lo:ka bandhur lo:kana:tho:\n" +
+    "ma:dhavo: bhaktha vathsalaha || 78 ||\n\n" +
+
+    "suvarnavarno: he:ma:ngo:\n" +
+    "vara:ngas chandana:ngadi: |\n" +
+    "vi:raha: vishamas su:nyo:\n" +
+    "ghrutha:si:r achalas chalaha || 79 ||\n\n" +
+
+    "ama:ni: ma:nado: ma:nyo:\n" +
+    "lo:ka sva:mi: thrilo:ka dhruth |\n" +
+    "sume:dha: me:dhajo: dhanyaha\n" +
+    "sathya me:dha: dhara:dharaha || 80 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "విశ్వమూర్తిర్మహామూర్తి-<br>ర్దీప్తమూర్తిరమూర్తిమాన్ ।\n" +
+    "అనేకమూర్తిరవ్యక్తః శతమూర్తిః శతాననః ॥ 77 ॥\n\n" +
+
+    "ఏకో నైకః స్తవః కః కిం యత్తత్ పదమనుత్తమమ్ ।\n" +
+    "లోకబంధుర్లోకనాథో మాధవో భక్తవత్సలః ॥ 78 ॥\n\n" +
+
+    "సువర్ణవర్ణో హేమాంగో వరాంగశ్చందనాంగదీ ।\n" +
+    "వీరహా విషమః శూన్యో ఘృతాశీరచలశ్చలః ॥ 79 ॥\n\n" +
+
+    "అమానీ మానదో మాన్యో లోకస్వామీ త్రిలోకధృత్ ।\n" +
+    "సుమేధా మేధజో ధన్యః సత్యమేధా ధరాధరః ॥ 80 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"21": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Utharashada%20Nakshatram%2021.mp4",
+  nakshatraEn: "Uttara Ashadha",
+  nakshatraTe: "ఉత్తరాషాఢ",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "the:jo:vrusho: dyuthidharaha\n" +
+    "sarva-sasthra-bhrutha:m-varaha |\n" +
+    "pragraho: nigraho: vyagro:\n" +
+    "naikasrungo: gada:grajaha || 81 ||\n\n" +
+
+    "chathur mu:rthis chathur ba:huhu\n" +
+    "chathur vyu:has chathur gathihi |\n" +
+    "chathur a:thma: chathur bha:vaha\n" +
+    "chathur-ve:david-e:kapa:th || 82 ||\n\n" +
+
+    "sama:vartho: nivruththa:thma:\n" +
+    "durjayo: durathi-kramaha |\n" +
+    "durlabho: durgamo: durgo:\n" +
+    "dura:va:so: dura:riha: || 83 ||\n\n" +
+
+    "subha:ngo: lo:kasa:rangaha\n" +
+    "suthanthus thanthu-vardhanaha |\n" +
+    "indra karma: maha: karma:\n" +
+    "krutha karma: krutha:gamaha || 84 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "తేజోఽవృషో ద్యుతిధరః సర్వశస్త్రభృతాంవరః ।\n" +
+    "ప్రగ్రహో నిగ్రహో వ్యగ్రో నైకశృంగో గదాగ్రజః ॥ 81 ॥\n\n" +
+
+    "చతుర్మూర్తిశ్చతుర్బాహుశ్చ-<br>తుర్వ్యూహశ్చతుర్గతిః ।\n" +
+    "చతురాత్మా చతుర్భావశ్చతుర్వేదవిదేకపాత్ ॥ 82 ॥\n\n" +
+
+    "సమావర్తో నివృత్తాత్మా దుర్జయో దురతిక్రమః ।\n" +
+    "దుర్లభో దుర్గమో దుర్గో దురావాసో దురారిహా ॥ 83 ॥\n\n" +
+
+    "శుభాంగో లోకసారంగః సుతంతుస్తంతువర్ధనః ।\n" +
+    "ఇంద్రకర్మా మహాకర్మా కృతకర్మా కృతాగమః ॥ 84 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"22": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Sravanam%20Nakshatram%2022.mp4",
+  nakshatraEn: "Shravanam",
+  nakshatraTe: "శ్రవణం",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "udbhavas sundaras sundo:\n" +
+    "rathna na:bhas sulo:chanaha |\n" +
+    "arko: va:jasanis srungi:\n" +
+    "jayanthas sarva vijjayi: || 85 ||\n\n" +
+
+    "suvarna bindur aksho:byaha\n" +
+    "sarva-va:gi:sva re:svaraha |\n" +
+    "maha:hrado: maha:gartho:\n" +
+    "maha:bhu:tho: maha:nidhihi || 86 ||\n\n" +
+
+    "kumudah kundarah kundah\n" +
+    "parjanyah pa:vano::nilaha |\n" +
+    "amrutha:so::mrutha vapuhu\n" +
+    "sarvajnas sarvatho: mukhaha || 87 ||\n\n" +
+
+    "sulabhas suvrathas siddhaha\n" +
+    "sathru-jicchathru-tha:panaha |\n" +
+    "nyagro:dho: dumbaro: asvatthaha\n" +
+    "cha:nu:ra:ndhra-nishu:danaha || 88 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "ఉద్భవః సుందరః సుందో రత్ననాభః సులోచనః ।\n" +
+    "అర్కో వాజసనః శృంగీ జయంతః సర్వవిజ్జయీ ॥ 85 ॥\n\n" +
+
+    "సువర్ణబిందురక్షోభ్యః సర్వవాగీశ్వరేశ్వరః ।\n" +
+    "మహాహృదో మహాగర్తో మహాభూతో మహానిధిః ॥ 86 ॥\n\n" +
+
+    "కుముదః కుందరః కుందః పర్జన్యః పావనోఽనిలః ।\n" +
+    "అమృతాశోఽమృతవపుః సర్వజ్ఞః సర్వతోముఖః ॥ 87 ॥\n\n" +
+
+    "సులభః సువ్రతః సిద్ధః శత్రుజిచ్ఛత్రుతాపనః ।\n" +
+    "న్యగ్రోధోఽదుంబరోఽశ్వత్థ-<br>శ్చాణూరాంధ్ర నిషూదనః ॥ 88 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"23": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Dhanishta%20Nakshatram%2023.mp4",
+  nakshatraEn: "Dhanishta",
+  nakshatraTe: "ధనిష్ట",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "sahasra:rchis sapthajihvaha\n" +
+    "sapthaidha:s saptha-va:hanaha |\n" +
+    "amu:rthir anagho::chinthyo:\n" +
+    "bhayakruth bhaya na:sanaha || 89 ||\n\n" +
+
+    "anur bruhath krusas sthu:lo:\n" +
+    "gunabhrun nirguno: maha:n |\n" +
+    "adhruthas svadhruthas sva:sthyaha\n" +
+    "pra:gvamso: vamsa-vardhanaha || 90 ||\n\n" +
+
+    "bha:ra bhruth kathitho: yo:gi:\n" +
+    "yo:gi:sas sarva-ka:madaha |\n" +
+    "a:sramas sramanah ksha:maha\n" +
+    "suparno: va:yu-va:hanaha || 91 ||\n\n" +
+
+    "dhanur dharo: dhanur ve:do:\n" +
+    "dando: damayitha::damaha |\n" +
+    "apara:jithas sarvasaho:\n" +
+    "niyantha: niyamo: yamaha || 92 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "సహస్రార్చిః సప్తజిహ్వః సప్తైధాః సప్తవాహనః ।\n" +
+    "అమూర్తిరనఘోఽచింత్యో భయకృద్భయనాశనః ॥ 89 ॥\n\n" +
+
+    "అణుర్బృహత్కృశః స్థూలో గుణభృన్నిర్గుణో మహాన్ ।\n" +
+    "అధృతః స్వధృతః స్వాస్థ్యః ప్రాగ్వంశో వంశవర్ధనః ॥ 90 ॥\n\n" +
+
+    "భారభృత్ కథితో యోగీ యోగీశః సర్వకామదః ।\n" +
+    "ఆశ్రమః శ్రమణః క్షామః సుపర్ణో వాయువాహనః ॥ 91 ॥\n\n" +
+
+    "ధనుర్ధరో ధనుర్వేదో దండో దమయితా దమః ।\n" +
+    "అపరాజితః సర్వసహో నియంతాఽనియమోఽయమః ॥ 92 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"24": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Sathabisham%20Nakshatram%2024.mp4",
+  nakshatraEn: "Shatabhisham",
+  nakshatraTe: "శతభిషం",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "sathvava:n sa:thvikas sathyaha\n" +
+    "sathya-dharma-para:yanaha |\n" +
+    "abhipra:yah priya:rho::rhaha\n" +
+    "priyakruth pri:thi-vardhanaha || 93 ||\n\n" +
+
+    "viha:yasagathir jyo:thihi\n" +
+    "suruchir huthabhug-vibhuhu |\n" +
+    "ravir vilo:chanas su:ryaha\n" +
+    "savitha: ravilo:chanaha || 94 ||\n\n" +
+
+    "anantha hutha-bhug bho:ktha:\n" +
+    "sukhado: naikado: agrajaha |\n" +
+    "anirvinnas sada:marshi:\n" +
+    "lo:ka:dhishta:nam adbhuthaha || 95 ||\n\n" +
+
+    "sana:th sana:thana-thamaha\n" +
+    "kapilah kapir avyayaha |\n" +
+    "svasthidas svasthi kruth svasthi\n" +
+    "svasthi bhuk svasthi-dakshinaha || 96 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "సత్త్వవాన్ సాత్త్వికః సత్యః సత్యధర్మపరాయణః ।\n" +
+    "అభిప్రాయః ప్రియార్హోఽర్హః ప్రియకృత్ ప్రీతివర్ధనః ॥ 93 ॥\n\n" +
+
+    "విహాయసగతిర్జ్యోతిః సురుచిర్హుతభుగ్విభుః ।\n" +
+    "రవిర్విరోచనః సూర్యః సవితా రవిలోచనః ॥ 94 ॥\n\n" +
+
+    "అనంతో హుతభుగ్భోక్తా సుఖదో నైకజోఽగ్రజః ।\n" +
+    "అనిర్విణ్ణః సదామర్షీ లోకధిష్ఠానమద్భుతః ॥ 95 ॥\n\n" +
+
+    "సనాత్సనాతనతమః కపిలః కపిరవ్యయః ।\n" +
+    "స్వస్తిదః స్వస్తికృత్స్వస్తిః స్వస్తిభుక్ స్వస్తిదక్షిణః ॥ 96 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"25": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Purvhabadhra%20Nakshatram%2025.mp4",
+  nakshatraEn: "Purva Bhadrapada",
+  nakshatraTe: "పూర్వాభాద్ర",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "araudrah kundali: chakri:\n" +
+    "vikramyu:rjitha-sa:sanaha |\n" +
+    "sabda:thigas sabda-sahaha\n" +
+    "sisirassarvari:karaha || 97 ||\n\n" +
+
+    "akru:rah pe:salo: daksho:\n" +
+    "dakshinaha kshamina:m-varaha |\n" +
+    "vidvaththamo: vi:thabhayaha\n" +
+    "punyas sravana-ki:rthanaha || 98 ||\n\n" +
+
+    "uththa:rano: dushkruthiha:\n" +
+    "punyo: dussvapna-na:sanaha |\n" +
+    "vi:raha rakshanas santho:\n" +
+    "ji:vanah paryavasthithaha || 99 ||\n\n" +
+
+    "anantharu:po::nanthasri:hi\n" +
+    "jithamanyur bhaya:pahaha |\n" +
+    "chathurasro: gabhi:ra:thma:\n" +
+    "vidiso: vya:diso: disaha || 100 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "అరౌద్రః కుండలీ చక్రీ విక్రమ్యూర్జితశాసనః ।\n" +
+    "శబ్దాతిగః శబ్దసహః శిశిరః శర్వరీకరః ॥ 97 ॥\n\n" +
+
+    "అక్రూరః పేశలో దక్షో దక్షిణః క్షమిణాం వరః ।\n" +
+    "విద్వత్తమో వీతభయః పుణ్యశ్రవణకీర్తనః ॥ 98 ॥\n\n" +
+
+    "ఉత్తారణో దుష్కృతిహా పుణ్యో దుస్స్వప్ననాశనః ।\n" +
+    "వీరహా రక్షణః సంతో జీవనః పర్యవస్థితః ॥ 99 ॥\n\n" +
+
+    "అనంతరూపోఽనంతశ్రీర్జి-<br>తమన్యుర్భయాపహః ।\n" +
+    "చతురస్రో గభీరాత్మా విదిశో వ్యాదిశో దిశః ॥ 100 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"26": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Utharabadhra%20Nakshatram%2026.mp4",
+  nakshatraEn: "Uttara Bhadrapada",
+  nakshatraTe: "ఉత్తరాభాద్ర",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "ana:dir bhu:rbhuvo: lakshmi:hi\n" +
+    "suvi:ro: ruchira:ngadaha |\n" +
+    "janano: jana-janma:dir\n" +
+    "bhi:mo: bhi:ma-para:kramaha || 101 ||\n\n" +
+
+    "a:dha:ra-nilayo::dha:tha:\n" +
+    "pushpaha:sah praja:garaha |\n" +
+    "u:rdhvagas sathpathha:cha:rah\n" +
+    "pra:nadah pranavah panaha || 102 ||\n\n" +
+
+    "prama:nam pra:nanilayah\n" +
+    "pra:nabhruth pra:na-ji:vanaha |\n" +
+    "thathvam thathvavidaeka:thma:\n" +
+    "janma-mruthyu-jara:thigaha || 103 ||\n\n" +
+
+    "bhu:rbhuvassvarutharastha:raha\n" +
+    "savithha: prapitha:mahaha |\n" +
+    "yagnyo: yagnyapathir yagvha:\n" +
+    "yagnya:ngo: yagnyava:hanaha || 104 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "అనాదిర్భూర్భువో లక్ష్మీః సువీరో రుచిరాంగదః ।\n" +
+    "జననో జనజన్మాదిర్భీమో భీమపరాక్రమః ॥ 101 ॥\n\n" +
+
+    "ఆధారనిలయోఽధాతా పుష్పహాసః ప్రజాగరః ।\n" +
+    "ఊర్ధ్వగః సత్పథాచారః ప్రాణదః ప్రణవః పణః ॥ 102 ॥\n\n" +
+
+    "ప్రమాణం ప్రాణనిలయః ప్రాణభృత్ ప్రాణజీవనః ।\n" +
+    "తత్త్వం తత్త్వవిదేకాత్మా జన్మమృత్యుజరాతిగః ॥ 103 ॥\n\n" +
+
+    "భూర్భువః స్వస్తరుస్తారః సవితా ప్రపితామహః ।\n" +
+    "యజ్ఞో యజ్ఞపతిర్యజ్వా యజ్ఞాంగో యజ్ఞవాహనః ॥ 104 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+"27": {
+  videoUrl:    "https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Revathi%20Nakshatram%2027.mp4",
+  nakshatraEn: "Revati",
+  nakshatraTe: "రేవతి",
+  mantraEn:
+    "harihi O:m \n\n" +
+
+    "yajna bhruth yajna kruth yajni:\n" +
+    "yajna bhuk yajna-sa:dhanaha |\n" +
+    "yajna:ntha krud yajna guhyam\n" +
+    "annam anna:da e:va cha || 105 ||\n\n" +
+
+    "a:thma yo:nis svayam ja:tho:\n" +
+    "vaikha:nas sa:ma ga:yanaha |\n" +
+    "de:vaki: nandanas srashta:\n" +
+    "kshithi:sah pa:pana:sanaha || 106 ||\n\n" +
+
+    "sankha bhrun nandaki: chakri:\n" +
+    "sa:rnga dhanva: gada:dharaha |\n" +
+    "ratha:ngapa:nir aksho:byaha\n" +
+    "sarva-praharana:yudhaha || 107 ||\n\n" +
+
+    "sri: sarva-praharana:yudhaha\n" +
+    "o:m nama ithi |\n\n" +
+
+    "vanama:li: gadi: sa:rngi:\n" +
+    "sankhi: chakri: cha nandaki: |\n" +
+    "sri:ma:n na:ra:yano: vishnuhu\n" +
+    "va:sude:vo::bhi rakshathu || 108 ||\n\n" +
+
+    "sri:ra:ma ra:ma ra:me:thi\n" +
+    "rame:! ra:me mano:rame:! |\n" +
+    "sahasra na:ma thath thulyam\n" +
+    "ra:ma na:me vara:nane:! ||",
+
+  mantraTe:
+    "హరిః ఓం \n\n" +
+
+    "యజ్ఞభృద్ యజ్ఞకృద్ యజ్ఞీ యజ్ఞభుక్ యజ్ఞసాధనః ।\n" +
+    "యజ్ఞాంతకృద్ యజ్ఞగుహ్యమన్నమన్నాద ఏవ చ ॥ 105 ॥\n\n" +
+
+    "ఆత్మయోనిః స్వయంజాతో వైఖానః సామగాయనః ।\n" +
+    "దేవకీనందనః స్రష్టా క్షితీశః పాపనాశనః ॥ 106 ॥\n\n" +
+
+    "శంఖభృన్నందకీ చక్రీ శార్ఙ్గధన్వా గదాధరః ।\n" +
+    "రథాంగపాణిరక్షోభ్యః సర్వప్రహరణాయుధః ॥ 107 ॥\n\n" +
+
+    "శ్రీ సర్వప్రహరణాయుధ ఓం నమ ఇతి ।\n\n" +
+
+    "వనమాలీ గదీ శార్ఙ్గీ శంఖీ చక్రీ చ నందకీ ।\n" +
+    "శ్రీమాన్నారాయణో విష్ణుర్వాసుదేవోఽభిరక్షతు ॥ 108 ॥\n\n" +
+
+    "శ్రీరామ రామ రామేతి రమే రామే మనోరమే |\n" +
+    "సహస్రనామ తత్తుల్యం రామ నామ వరాననే ||"
+},
+
+    };
+
+    // ── Load video based on ?video= in URL ──────────────
+    var params = new URLSearchParams(window.location.search);
+    var id     = params.get("id") || "1";
+    var data   = videos[id];
+    var wrap   = document.getElementById("video-wrap");
+
+    if (data) {
+      // loop attribute added — video repeats until user pauses
+      wrap.innerHTML =
+        '<video loop playsinline controls preload="metadata">' +
+          '<source src="' + data.videoUrl + '#t=0.1" type="video/mp4" />' +
+          'Your browser does not support video playback.' +
+        '</video>';
+
+      document.getElementById("nakshatra-en").textContent = data.nakshatraEn;
+      document.getElementById("nakshatra-te").textContent = data.nakshatraTe;
+      document.getElementById("mantra-en").innerHTML = data.mantraEn.split("\n").join("<br>");
+      document.getElementById("mantra-te").innerHTML = data.mantraTe.split("\n").join("<br>");
+    } else {
+      wrap.innerHTML =
+        '<div class="video-placeholder">Video not found. Please reload again.</div>';
+    }
+
+    // ── Language toggle ──────────────────────────────────
+    function toggleLang() {
+      var body = document.body;
+      body.setAttribute("data-lang",
+        body.getAttribute("data-lang") === "en" ? "te" : "en");
+    }
+
+    // ═══════════════════════════════════════════════════════
+    //  ★ PRADAKSHINA BUBBLE FEATURE
+    // ═══════════════════════════════════════════════════════
+    (function () {
+
+      
+      var TOTAL       = 7;
+      var storageKey  = 'nakshatra_' + id + '_bubbles';
+      var overlayEl   = document.getElementById('pradakshina-overlay');
+      var wrapEl      = document.getElementById('pradakshina-wrap');
+
+        // Main video pause/resume state
+      var pausedMainVideo = null;
+      var shouldResumeMainVideo = false;
+
+      // ── Audio (replace 'assets/pradakshina-audio.mp3' with your file) ──
+      var audio = new Audio('https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/om%20audio.mp3');
+      audio.preload = 'auto';
+
+      // Pause main video when overlay starts
+      function pauseMainVideoForOverlay() {
+        var mainVideo = document.querySelector('#video-wrap video');
+
+        if (!mainVideo) return;
+
+        // If already paused by this overlay, do not overwrite the resume state
+        if (shouldResumeMainVideo && pausedMainVideo) return;
+
+        pausedMainVideo = mainVideo;
+
+        // Resume only if it was playing before overlay opened
+        shouldResumeMainVideo = !mainVideo.paused && !mainVideo.ended;
+
+        if (shouldResumeMainVideo) {
+          mainVideo.pause();
+        }
+      }
+
+      // Resume main video after overlay closes
+      function resumeMainVideoAfterOverlay() {
+        if (pausedMainVideo && shouldResumeMainVideo) {
+          pausedMainVideo.play().catch(function () {
+            // Browser may block autoplay resume; ignore safely
+          });
+        }
+
+        pausedMainVideo = null;
+        shouldResumeMainVideo = false;
+      }
+
+      var bubbleImages = [
+        'assets/Seshadri.jpeg',
+        'assets/Neeladri.jpeg',
+        'assets/Garudadhari.jpeg',
+        'assets/Anjanadri.jpeg',
+        'assets/Vrushabhadri.jpeg',
+        'assets/Naraynadri.jpg',
+        'assets/Venkatadri.jpeg'
+      ];
+
+      // ── Timers ──
+      var fadeOutTimer  = null;
+      var hideTimer     = null;
+
+      // ── LocalStorage helpers ──
+      function loadStates() {
+        try {
+          var raw = localStorage.getItem(storageKey);
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            if (Array.isArray(parsed) && parsed.length === TOTAL) return parsed;
+          }
+        } catch (e) { /* ignore */ }
+        return new Array(TOTAL).fill(false);
+      }
+
+      function saveStates(states) {
+        try { localStorage.setItem(storageKey, JSON.stringify(states)); }
+        catch (e) { /* quota exceeded — ignore */ }
+      }
+
+      function clearStates() {
+        try { localStorage.removeItem(storageKey); }
+        catch (e) { /* ignore */ }
+      }
+
+      function allDone(states) {
+        return states.every(function (v) { return v; });
+      }
+
+      // ── Overlay helpers ──
+function buildOverlayContent(bubbleIndex) {
+  var topEl = document.getElementById('po-text-top');
+  var botEl = document.getElementById('po-text-bottom');
+  var imgEl = document.getElementById('po-img');
+
+  if (imgEl) {
+    imgEl.style.display = 'block';
+    imgEl.src = bubbleImages[bubbleIndex];
+  }
+
+  // Custom animation text for each bubble
+  var customOverlayText = [
+    {
+      headingTe: "ఓం శేషాద్రివాసాయ<br>గోవిందాయ నమో నమః",
+      // headingEn: "First Pradakshina",
+      textTe: "మొదటి ప్రదక్షిణం పూర్తి అయింది.",
+      textEn: "First Pradakshina"
+    },
+    {
+      headingTe: "ఓం నీలాద్రి వాసాయ<br>గోవిందాయ నమో నమః",
+      // headingEn: "Second Pradakshina",
+      textTe: "రెండవ ప్రదక్షిణం పూర్తి అయింది.",
+      textEn: "Second Pradakshina"
+    },
+    {
+      headingTe: "ఓం గరుడాద్రి వాసాయ<br>గోవిందాయ నమో నమః",
+      // headingEn: "Third Pradakshina",
+      textTe: "మూడవ ప్రదక్షిణం పూర్తి అయింది.",
+      textEn: "Third Pradakshina"
+    },
+    {
+      headingTe: "ఓం అంజనాద్రి వాసాయ<br>గోవిందాయ నమో నమః",
+      // headingEn: "Fourth Pradakshina",
+      textTe: "నాలుగవ ప్రదక్షిణం పూర్తి అయింది.",
+      textEn: "Fourth Pradakshina"
+    },
+    {
+      headingTe: "ఓం వృషభాద్రి వాసాయ<br>గోవిందాయ నమో నమః",
+      // headingEn: "Fifth Pradakshina",
+      textTe: "ఐదవ ప్రదక్షిణం పూర్తి అయింది.",
+      textEn: "Fifth Pradakshina"
+    },
+    {
+      headingTe: "ఓం నారాయణాద్రి వాసాయ<br>గోవిందాయ నమో నమః",
+      // headingEn: "Sixth Pradakshina",
+      textTe: "ఆరవ ప్రదక్షిణం పూర్తి అయింది.",
+      textEn: "Sixth Pradakshina"
+    },
+    {
+      headingTe: "ఓం వేంకటాద్రి వాసాయ<br>గోవిందాయ నమో నమః",
+      // headingEn: "Seventh Pradakshina",
+      textTe: "ఏడవ ప్రదక్షిణం పూర్తి అయింది.",
+      textEn: "Seventh Pradakshina"
+    }
+  ];
+
+  var lang = document.body.getAttribute('data-lang') || 'te';
+  var item = customOverlayText[bubbleIndex];
+
+  if (!item) return;
+
+  if (lang === 'te') {
+    topEl.innerHTML =
+      item.headingTe +
+      '<br><span style="font-family:\'Cinzel\',serif;font-size:0.6em;' +
+      'color:rgba(255,215,0,0.65);font-weight:400;">' +
+      // item.headingEn +
+      '</span>';
+
+    botEl.innerHTML = item.textTe;
+  } else {
+    topEl.innerHTML =
+      // item.headingEn +
+      '<br><span style="font-family:\'Mallanna\',\'Noto Serif Telugu\',sans-serif;font-size:0.75em;' +
+      'color:rgba(255,215,0,0.65);font-weight:400;">' +
+      item.headingTe +
+      '</span>';
+
+    botEl.innerHTML = item.textEn;
+  }
+}
+
+      function showOverlay(bubbleIndex) {
+        // clear any pending hide
+        if (fadeOutTimer) { clearTimeout(fadeOutTimer); fadeOutTimer = null; }
+        if (hideTimer)    { clearTimeout(hideTimer);    hideTimer    = null; }
+
+        buildOverlayContent(bubbleIndex);
+
+        // reset child visibility for re-entry
+        overlayEl.classList.remove('po-fading');
+
+        // force reflow so the remove above settles before we add po-active
+        void overlayEl.offsetWidth;
+
+        overlayEl.classList.add('po-active');
+
+        // schedule fade-out at 7.5 s  (leaves 0.65 s to fully fade before audio ~10 s)
+        fadeOutTimer = setTimeout(function () {
+          startFadeOut();
+        }, 9500);
+      }
+
+      function startFadeOut() {
+        overlayEl.classList.remove('po-active');
+        overlayEl.classList.add('po-fading');
+
+        // after transition fully clean up, then resume video
+        hideTimer = setTimeout(function () {
+          overlayEl.classList.remove('po-fading');
+
+          // Resume main video from the same paused position
+          resumeMainVideoAfterOverlay();
+        }, 700);
+      }
+      
+      function dismissOverlay() {
+        if (fadeOutTimer) { clearTimeout(fadeOutTimer); fadeOutTimer = null; }
+        if (hideTimer)    { clearTimeout(hideTimer);    hideTimer    = null; }
+        startFadeOut();
+        // stop audio
+        try { audio.pause(); audio.currentTime = 0; } catch (e) {}
+      }
+
+      // tap overlay to dismiss early
+      // overlayEl.addEventListener('click', function () {
+      //   dismissOverlay();
+      // });
+
+      // ── Play audio + show overlay ──
+      function playSequence(bubbleIndex) {
+        // Pause main video behind the animation
+        pauseMainVideoForOverlay();
+
+        // restart overlay audio each time
+        try {
+          audio.pause();
+          audio.currentTime = 0;
+          audio.play().catch(function () {
+            // autoplay blocked — overlay still shown
+          });
+        } catch (e) {}
+
+        showOverlay(bubbleIndex);
+      }
+
+      // ── Celebrate all-7 completion, then auto-reset ──
+      function celebrateAndReset() {
+        // brief pause so the final bubble glow is visible
+        setTimeout(function () {
+          clearStates();
+          renderBubbles(); // re-render all unselected
+        }, 900);
+      }
+
+      // ── Render all 7 bubbles ──
+      function renderBubbles() {
+        if (!wrapEl) return;
+        wrapEl.innerHTML = '';
+
+        var states = loadStates();
+
+        for (var i = 0; i < TOTAL; i++) {
+          /* jshint ignore:start */
+          (function (idx) {
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'pradakshina-bubble' + (states[idx] ? ' done' : '');
+            btn.setAttribute('aria-label', 'Pradakshina ' + (idx + 1));
+            btn.textContent = idx + 1;
+
+            btn.addEventListener('click', function () {
+              var current = loadStates();
+              var wasSelected = current[idx];
+
+              if (!wasSelected) {
+                // ── ACTIVATE ──
+                current[idx] = true;
+                btn.classList.add('done');
+                saveStates(current);
+                playSequence(idx);
+
+                // Check all done AFTER saving
+                if (allDone(current)) {
+                  celebrateAndReset();
+                }
+              } else {
+                // ── DEACTIVATE ──
+                current[idx] = false;
+                btn.classList.remove('done');
+                saveStates(current);
+              }
+            });
+
+            wrapEl.appendChild(btn);
+          })(i);
+          /* jshint ignore:end */
+        }
+      }
+
+      // ── Init ──
+      renderBubbles();
+
+    })(); // end IIFE
+
+  </script>
+
+</body>
+</html>

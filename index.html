@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>అఖండ దివ్య వైభవ జ్యోతి</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ponnala&family=Mallanna&family=Noto+Serif+Telugu:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       BODY — rich multi-shade gradient
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    body {
+      min-height: 100vh;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      overflow-x: hidden;
+      background-color: #F0DFA8;
+      background-image:
+        radial-gradient(ellipse 130% 50% at 50% 0%, rgba(255, 160, 0, 0.22) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 55% at 0% 55%, rgba(139, 69, 19, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 55% at 100% 45%, rgba(139, 69, 19, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 120% 45% at 50% 100%, rgba(201, 152, 10, 0.20) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 25% 30%, rgba(255, 120, 0, 0.08) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 75% 70%, rgba(255, 120, 0, 0.07) 0%, transparent 55%),
+        linear-gradient(170deg,
+          #FBE8B8 0%,
+          #FFF6DC 14%,
+          #F6E4B0 28%,
+          #FFFBEA 42%,
+          #F2DBA0 56%,
+          #FBF2D0 70%,
+          #EDD596 84%,
+          #F8ECC0 100%);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       DARK HEADER / FOOTER
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .dark-band {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(90, 20, 5, 0.6) 0%, transparent 70%),
+        linear-gradient(135deg, #0A0100 0%, #2C0700 20%, #4E1204 40%, #5A1606 50%, #4E1204 60%, #2C0700 80%, #0A0100 100%);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       BANANA TREES — fixed, all screen sizes
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .btree {
+      position: fixed;
+      top: 14%;
+      z-index: 8;
+      pointer-events: none;
+    }
+
+    .btree svg {
+      display: block;
+      width: clamp(42px, 8vw, 110px);
+      height: auto;
+    }
+
+    .btree.L {
+      left: 0;
+      animation: sway 4.2s ease-in-out infinite;
+      transform-origin: top center;
+    }
+
+    .btree.R {
+      right: 0;
+      animation: sway2 4.8s ease-in-out infinite 0.5s;
+      transform-origin: top center;
+    }
+
+    /* MOBILE */
+    .LMid {
+      top: 34%;
+      left: 0;
+    }
+
+    .RMid {
+      top: 34%;
+      right: 0;
+    }
+
+    .L2 {
+      top: 55%;
+      left: 0;
+    }
+
+    .R2 {
+      top: 55%;
+      right: 0;
+    }
+
+    /* BIG SCREENS */
+    @media (min-width: 1200px) {
+
+      .btree svg {
+        width: 62px !important;
+        height: 240px !important;
+      }
+
+      /* TOP */
+      .L,
+      .R {
+        top: 9%;
+      }
+
+      /* MIDDLE */
+      .LMid,
+      .RMid {
+        top: 48%;
+      }
+
+      /* BOTTOM */
+      .L2,
+      .R2 {
+        top: 96%;
+      }
+    }
+
+    @keyframes sway {
+
+      0%,
+      100% {
+        transform: rotate(-1.8deg)
+      }
+
+      50% {
+        transform: rotate(2deg)
+      }
+    }
+
+    @keyframes sway2 {
+
+      0%,
+      100% {
+        transform: rotate(1.6deg)
+      }
+
+      50% {
+        transform: rotate(-2.2deg)
+      }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       FALLING PETALS — Temple Flowers
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #petals {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9;
+      overflow: hidden;
+    }
+
+    @keyframes fall1 {
+      0% {
+        transform: translate(0, -30px) rotate(0deg);
+        opacity: 0;
+      }
+
+      5% {
+        opacity: 0.85;
+      }
+
+      85% {
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: translate(55px, 108vh) rotate(420deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fall2 {
+      0% {
+        transform: translate(0, -30px) rotate(0deg);
+        opacity: 0;
+      }
+
+      5% {
+        opacity: 0.8;
+      }
+
+      85% {
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: translate(-65px, 112vh) rotate(-390deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fall3 {
+      0% {
+        transform: translate(0, -30px) rotate(20deg);
+        opacity: 0;
+      }
+
+      5% {
+        opacity: 0.75;
+      }
+
+      85% {
+        opacity: 0.55;
+      }
+
+      100% {
+        transform: translate(30px, 109vh) rotate(200deg);
+        opacity: 0;
+      }
+    }
+
+    .petal {
+      filter: drop-shadow(0 0 2px rgba(255, 150, 0, 0.4)) drop-shadow(0 0 4px rgba(255, 100, 0, 0.2));
+      mix-blend-mode: normal;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       OM GLOW
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @keyframes omGlow {
+
+      0%,
+      100% {
+        text-shadow: 0 0 10px #FFD700, 0 0 22px rgba(255, 200, 0, 0.5);
+      }
+
+      50% {
+        text-shadow: 0 0 24px #FFD700, 0 0 50px rgba(255, 180, 0, 0.75), 0 0 80px rgba(255, 140, 0, 0.3);
+      }
+    }
+
+    .om {
+      animation: omGlow 3.5s ease-in-out infinite;
+      color: #FFD700;
+      font-family: serif;
+      display: block;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       LAMP FLICKER
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @keyframes flicker {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      20% {
+        opacity: 0.78
+      }
+
+      50% {
+        opacity: 0.95
+      }
+
+      75% {
+        opacity: 0.72
+      }
+    }
+
+    .lamp {
+      animation: flicker 2.2s ease-in-out infinite;
+    }
+
+    .lamp2 {
+      animation: flicker 2.5s ease-in-out infinite 0.45s;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       TORAN BOB
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @keyframes toranBob {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(5px)
+      }
+    }
+
+    .toran {
+      animation: toranBob 3.8s ease-in-out infinite;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       SHIMMER GOLD LINE
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @keyframes shimmer {
+      0% {
+        background-position: -300% center
+      }
+
+      100% {
+        background-position: 300% center
+      }
+    }
+
+    .gline {
+      height: 2px;
+      background: linear-gradient(90deg, #3A1000, #C9980A 20%, #FFD700 50%, #C9980A 80%, #3A1000);
+      background-size: 300% auto;
+      animation: shimmer 4s linear infinite;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ROUND FLOWER WATERMARK — slow rotation
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .flower-bg {
+      position: absolute;
+      top: 78%;
+      left: 50%;
+      width: clamp(170px, 52vw, 340px);
+      height: clamp(170px, 52vw, 340px);
+      transform: translate(-50%, -50%);
+      transform-origin: center center;
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: 0;
+      filter: drop-shadow(0 0 22px rgba(255, 170, 0, 0.12));
+    }
+
+    @keyframes flowerRotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .flower-bg svg {
+      animation: flowerRotate 42s linear infinite;
+      transform-origin: center center;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       DIVINE GLOW PULSE
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @keyframes divPulse {
+
+      0%,
+      100% {
+        opacity: 0.5
+      }
+
+      50% {
+        opacity: 1
+      }
+    }
+
+    .div-pulse {
+      animation: divPulse 5.5s ease-in-out infinite;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       STAR PULSE
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @keyframes starP {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.7
+      }
+
+      50% {
+        transform: scale(1.22);
+        opacity: 1
+      }
+    }
+
+    .sp {
+      animation: starP 2.6s ease-in-out infinite;
+    }
+
+    .sp2 {
+      animation: starP 2.6s ease-in-out infinite 0.35s;
+    }
+
+    .sp3 {
+      animation: starP 2.6s ease-in-out infinite 0.7s;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NAKSHATRA CARD — Enhanced for mobile & elderly users
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .nc {
+      display: block;
+      text-decoration: none;
+      background: linear-gradient(145deg, #FAF3E2 0%, #FEF9EF 50%, #FAF3E2 100%);
+      border: 1px solid rgba(201, 152, 10, 0.45);
+      border-radius: 7px;
+      padding: clamp(18px, 4vw, 28px) clamp(12px, 3vw, 20px);
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(90, 20, 5, 0.1), inset 0 1px 0 rgba(255, 215, 0, 0.12), 0 0 0 1px rgba(255, 200, 0, 0.1);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s;
+      position: relative;
+      overflow: hidden;
+      min-height: clamp(130px, 28vw, 180px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .nc::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(255, 200, 50, 0.12) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.22s;
+      border-radius: 7px;
+    }
+
+    .nc::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(255, 215, 0, 0);
+      border-radius: 7px;
+      box-shadow: inset 0 0 12px rgba(255, 200, 0, 0.04);
+      pointer-events: none;
+    }
+
+    .nc:hover {
+      transform: translateY(-6px);
+      border-color: #C9980A;
+      box-shadow: 0 10px 30px rgba(90, 20, 5, 0.2), 0 0 0 1px rgba(201, 152, 10, 0.3), 0 0 16px rgba(255, 200, 0, 0.15);
+    }
+
+    .nc:hover::before {
+      opacity: 1;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       RULES CARD
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .rc {
+      background: linear-gradient(145deg, #FAF3E2 0%, #FFF9F0 50%, #FAF3E2 100%);
+      border: 2px solid rgba(201, 152, 10, 0.65);
+      border-radius: 10px;
+      box-shadow: 0 0 35px rgba(90, 20, 5, 0.15), 0 0 70px rgba(90, 20, 5, 0.07);
+      transition: transform 0.22s ease, box-shadow 0.22s;
+    }
+
+    .rc:hover {
+      transform: scale(1.025);
+      box-shadow: 0 0 55px rgba(90, 20, 5, 0.22), 0 0 100px rgba(90, 20, 5, 0.1);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       GOLD DIVIDER LINE
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .gdiv {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201, 152, 10, 0.5) 20%, #C9980A 50%, rgba(201, 152, 10, 0.5) 80%, transparent);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       LANG TOGGLE
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    [data-lang="te"] .len {
+      display: none;
+    }
+
+    [data-lang="en"] .lte {
+      display: none;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       MAIN CONTENT — accounts for tree width
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .main-wrap {
+      padding-left: calc(clamp(42px, 8vw, 110px) + 6px);
+      padding-right: calc(clamp(42px, 8vw, 110px) + 6px);
+      padding-top: clamp(24px, 5vw, 40px);
+      padding-bottom: clamp(24px, 5vw, 40px);
+    }
+
+    .inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NAKSHATRA GRID
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #grid {
+      display: grid;
+      gap: clamp(12px, 3vw, 18px);
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 800px;
+      margin: clamp(24px, 6vw, 40px) auto;
+      padding: 0 clamp(12px, 4vw, 20px);
+    }
+
+    @media(min-width:480px) {
+      #grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(12px, 3.2vw, 20px);
+      }
+    }
+
+    @media(min-width:700px) {
+      #grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: clamp(14px, 3.5vw, 22px);
+      }
+    }
+
+    @media(min-width:1000px) {
+      #grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: clamp(14px, 3vw, 20px);
+      }
+    }
+
+    @media(min-width:1300px) {
+      #grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: clamp(14px, 2.5vw, 20px);
+      }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       MISC UTILITIES
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .te-font {
+      font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      font-weight: 400 !important;
+    }
+
+    .telugu-heading {
+      font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+
+      letter-spacing: 0.01em !important;
+    }
+
+    .cin-font {
+      font-family: 'Cinzel', serif;
+    }
+
+    .cor-font {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+    @media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+
+      body {
+        font-size: 105%;
+      }
+
+      header .om {
+        font-size: clamp(42px, 11vw, 66px) !important;
+      }
+
+      header h1 {
+        font-size: clamp(22px, 5.6vw, 38px) !important;
+      }
+
+      header p {
+        font-size: clamp(16px, 3.4vw, 24px) !important;
+      }
+
+      button {
+        font-size: clamp(13px, 2.4vw, 16px) !important;
+        padding: 8px 20px !important;
+      }
+
+      .main-wrap {
+        padding-top: clamp(28px, 6vw, 44px) !important;
+        padding-bottom: clamp(28px, 6vw, 44px) !important;
+      }
+
+      .content-card,
+      .rc,
+      .nc {
+        transform: scale(1.02);
+        transform-origin: center top;
+      }
+
+      .nakshatra-en {
+        font-size: clamp(24px, 6vw, 40px) !important;
+      }
+
+      .nakshatra-te {
+        font-size: clamp(28px, 7vw, 44px) !important;
+      }
+
+      .label-en {
+        font-size: clamp(10px, 2.2vw, 13px) !important;
+      }
+
+      .label-te {
+        font-size: clamp(17px, 3.5vw, 22px) !important;
+      }
+
+      .mantra-en {
+        font-size: clamp(19px, 3.8vw, 27px) !important;
+        line-height: 2.1 !important;
+      }
+
+      .mantra-te {
+        font-size: clamp(24px, 5.5vw, 35px) !important;
+        line-height: 2.45 !important;
+      }
+
+      #grid {
+        gap: clamp(14px, 3.5vw, 22px) !important;
+      }
+
+      .nc {
+        min-height: clamp(140px, 31vw, 195px) !important;
+        padding: clamp(20px, 4.5vw, 32px) clamp(14px, 3.5vw, 22px) !important;
+      }
+
+      .nc p:first-of-type {
+        font-size: clamp(16px, 3.2vw, 20px) !important;
+      }
+
+      .nc p:last-of-type {
+        font-size: clamp(13px, 2.7vw, 16px) !important;
+      }
+
+      footer p {
+        font-size: clamp(16px, 3.2vw, 22px) !important;
+      }
+
+      footer .te-font {
+        font-size: clamp(20px, 4.6vw, 28px) !important;
+      }
+    }
+
+    body[data-lang="te"] .lte,
+    body[data-lang="te"] .te-font {
+      font-family: 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+      font-weight: 400 !important;
+    }
+
+    /* GOVINDA SWAMY IMAGE — always centered on all devices */
+    .deity-wrap {
+      position: relative;
+      z-index: 1;
+      margin-top: clamp(24px, 6vw, 40px);
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .deity-frame {
+      position: relative;
+      width: 100%;
+      max-width: 372px;
+      box-sizing: border-box;
+      padding: clamp(8px, 2.5vw, 16px);
+      background: linear-gradient(145deg, #FAF3E2 0%, #FEF9EF 50%, #FAF3E2 100%);
+      border: 2px solid rgba(201, 152, 10, 0.6);
+      border-radius: 14px;
+      box-shadow:
+        0 0 0 1px rgba(255, 200, 0, 0.15),
+        0 6px 32px rgba(90, 20, 5, 0.18),
+        inset 0 1px 0 rgba(255, 215, 0, 0.15),
+        0 0 40px rgba(255, 180, 0, 0.08);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .deity-frame img {
+      display: block;
+      width: 100% !important;
+      max-width: 340px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: contain;
+      box-sizing: border-box;
+    }
+
+    /* Extra safety for very small mobile screens */
+    @media (max-width: 420px) {
+      .deity-frame {
+        max-width: 100%;
+        padding: 8px;
+      }
+
+      .deity-frame img {
+        max-width: 100%;
+      }
+    }
+
+
+    @media only screen and (max-width: 768px) {
+
+      html,
+      body {
+        font-size: 16px !important;
+        -webkit-text-size-adjust: 120% !important;
+        text-size-adjust: 120% !important;
+      }
+
+      /* Reduce side spacing */
+      .main-wrap {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        padding-top: 26px !important;
+        padding-bottom: 26px !important;
+      }
+
+      .inner {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      /* Header Om */
+      header .om {
+        font-size: 44px !important;
+        line-height: 1.1 !important;
+        margin-bottom: 10px !important;
+      }
+
+      /* Main Telugu title */
+      header h1,
+      header h1.te-font {
+        font-size: 26px !important;
+        line-height: 1.45 !important;
+
+        letter-spacing: 0 !important;
+      }
+
+      /* Header subtitle */
+      header p,
+      header p span,
+      header .lte,
+      header .lte.te-font {
+        font-size: 18px !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Language button */
+      button,
+      button span {
+        font-size: 16px !important;
+        line-height: 1.35 !important;
+        padding: 10px 18px !important;
+      }
+
+      button svg {
+        width: 17px !important;
+        height: 17px !important;
+      }
+
+      /* Hero heading */
+      main h2,
+      main h2 span,
+      main h2 .te-font {
+        font-size: 25px !important;
+        line-height: 1.45 !important;
+      }
+
+      /* Hero paragraph */
+      main p,
+      main p span,
+      main p .te-font {
+        font-size: 19px !important;
+        line-height: 1.7 !important;
+      }
+
+      /* Section headings */
+      main h3,
+      main h3 span,
+      main h3 .te-font {
+        font-size: 23px !important;
+        line-height: 1.45 !important;
+      }
+
+      /* Govinda Swamy caption */
+      .deity-wrap p,
+      .deity-wrap p span,
+      .deity-wrap .te-font {
+        font-size: 21px !important;
+        line-height: 1.55 !important;
+      }
+
+      /* Make deity image still fit */
+      .deity-frame {
+        max-width: 94vw !important;
+      }
+
+      .deity-frame img {
+        max-width: 100% !important;
+      }
+
+      /* Nakshatra grid */
+      #grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 100% !important;
+      }
+
+      .nc {
+        min-height: 135px !important;
+        padding: 22px 16px !important;
+        border-radius: 14px !important;
+        transform: none !important;
+      }
+
+      /* Nakshatra Telugu names generated by JavaScript */
+      .nc p,
+      .nc p span,
+      .nc .lte,
+      .nc .lte.te-font {
+        font-size: 24px !important;
+        line-height: 1.4 !important;
+        font-weight: 700 !important;
+      }
+
+      .nc p:first-of-type {
+        font-size: 24px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+      }
+
+      .nc p:first-of-type span {
+        font-size: 24px !important;
+        line-height: 1.4 !important;
+      }
+
+      .nc p:last-of-type {
+        font-size: 17px !important;
+        line-height: 1.3 !important;
+      }
+
+      .nc>div {
+        width: 46px !important;
+        height: 46px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .nc svg {
+        width: 26px !important;
+        height: 26px !important;
+      }
+
+      /* Rules card */
+      .rc {
+        padding: 24px 18px !important;
+        border-radius: 16px !important;
+        transform: none !important;
+      }
+
+      .rc h3,
+      .rc h3 span,
+      .rc h3 .te-font {
+        font-size: 23px !important;
+        line-height: 1.45 !important;
+      }
+
+      .rc p,
+      .rc p span,
+      .rc p .te-font {
+        font-size: 18px !important;
+        line-height: 1.6 !important;
+      }
+
+      .rc>span,
+      .rc>span span,
+      .rc .cin-font span {
+        font-size: 17px !important;
+        line-height: 1.4 !important;
+      }
+
+      .rc svg {
+        width: 50px !important;
+        height: auto !important;
+      }
+
+      /* Footer title */
+      footer p,
+      footer p span {
+        font-size: 18px !important;
+        line-height: 1.6 !important;
+      }
+
+      footer p.te-font,
+      footer .te-font {
+        font-size: 23px !important;
+        line-height: 1.5 !important;
+        font-weight: 700 !important;
+      }
+
+      footer svg {
+        width: 34px !important;
+        height: auto !important;
+      }
+
+      /* Telugu text general */
+      body[data-lang="te"] .lte,
+      body[data-lang="te"] .lte.te-font,
+      body[data-lang="te"] .te-font {
+        font-size: 21px !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Main header slightly bigger */
+      body[data-lang="te"] header h1.te-font {
+        font-size: 28px !important;
+        line-height: 1.45 !important;
+      }
+
+      body[data-lang="te"] header p .lte.te-font {
+        font-size: 18px !important;
+        line-height: 1.6 !important;
+      }
+
+      body[data-lang="te"] main h2 .lte.te-font {
+        font-size: 25px !important;
+        line-height: 1.45 !important;
+      }
+
+      body[data-lang="te"] main h3 .lte.te-font {
+        font-size: 24px !important;
+        line-height: 1.45 !important;
+      }
+
+      body[data-lang="te"] main p .lte.te-font {
+        font-size: 20px !important;
+        line-height: 1.7 !important;
+      }
+
+      body[data-lang="te"] .nc .lte.te-font {
+        font-size: 25px !important;
+        line-height: 1.4 !important;
+      }
+
+      body[data-lang="te"] .rc .lte.te-font {
+        font-size: 20px !important;
+        line-height: 1.6 !important;
+      }
+
+      body[data-lang="te"] footer .lte.te-font,
+      body[data-lang="te"] footer .te-font {
+        font-size: 22px !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Banana tree */
+      .btree svg {
+        width: 34px !important;
+      }
+    }
+
+
+    /* Smaller language toggle button — same size for Telugu and English */
+    .lang-btn {
+      padding: 4px 12px !important;
+      gap: 5px !important;
+      font-size: 12px !important;
+      line-height: 1.2 !important;
+    }
+
+    .lang-btn span,
+    .lang-btn .len,
+    .lang-btn .lte,
+    .lang-btn .te-font {
+      font-size: 12px !important;
+      line-height: 1.2 !important;
+      font-weight: 400 !important;
+    }
+
+    .lang-btn svg {
+      width: 12px !important;
+      height: 12px !important;
+    }
+
+    /* Override Telugu mobile font enlargement only inside language button */
+    body[data-lang="te"] .lang-btn .lte,
+    body[data-lang="te"] .lang-btn .lte.te-font,
+    body[data-lang="te"] .lang-btn .te-font {
+      font-size: 12px !important;
+      line-height: 1.2 !important;
+    }
+
+    /* Final override for Telugu headings */
+body[data-lang="te"] .telugu-heading,
+body[data-lang="te"] .lte.telugu-heading,
+body[data-lang="te"] .te-font.telugu-heading,
+.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+
+  letter-spacing: 0.01em !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   NAKSHATRA CARDS — TEMPLE DARK THEME
+   4 LUXURY COLORS REPEATED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Common premium dark card style */
+#grid .nc {
+  border: 1px solid rgba(212, 175, 55, 0.22) !important;
+
+  box-shadow:
+    0 0 18px rgba(212, 175, 55, 0.06),
+    0 10px 26px rgba(0, 0, 0, 0.48),
+    inset 0 0 18px rgba(255, 255, 255, 0.02) !important;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CARD COLOR SETS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* 1st, 5th, 9th... */
+/* Deep Temple Maroon */
+#grid .nc:nth-child(4n + 1) {
+  background:
+    radial-gradient(circle at top,
+      rgba(255, 215, 120, 0.08),
+      transparent 42%),
+
+    linear-gradient(
+      145deg,
+      #5B0F0F 0%,
+      #3A0808 45%,
+      #1A0303 100%
+    ) !important;
+}
+
+/* 2nd, 6th, 10th... */
+/* Sacred Brown */
+#grid .nc:nth-child(4n + 2) {
+  background:
+    radial-gradient(circle at top,
+      rgba(255, 215, 120, 0.08),
+      transparent 42%),
+
+    linear-gradient(
+      145deg,
+      #5A2B12 0%,
+      #3A1A0B 45%,
+      #1B0C05 100%
+    ) !important;
+}
+
+/* 3rd, 7th, 11th... */
+/* Royal Wine */
+#grid .nc:nth-child(4n + 3) {
+  background:
+    radial-gradient(circle at top,
+      rgba(255, 215, 120, 0.08),
+      transparent 42%),
+
+    linear-gradient(
+      145deg,
+      #4A102C 0%,
+      #2B0818 45%,
+      #14030B 100%
+    ) !important;
+}
+
+/* 4th, 8th, 12th... */
+/* Dark Sandalwood */
+#grid .nc:nth-child(4n + 4) {
+  background:
+    radial-gradient(circle at top,
+      rgba(255, 215, 120, 0.08),
+      transparent 42%),
+
+    linear-gradient(
+      145deg,
+      #5A3D1E 0%,
+      #35210F 45%,
+      #1A1007 100%
+    ) !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TEXT STYLING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+#grid .nc p,
+#grid .nc p span,
+#grid .nc .len,
+#grid .nc .lte,
+#grid .nc .te-font {
+
+  color: #F8E7C7 !important;
+  font-weight: 600 !important;
+
+  text-shadow:
+    0 0 2px rgba(255, 255, 255, 0.18),
+    0 0 6px rgba(212, 175, 55, 0.12) !important;
+}
+
+/* Number text */
+#grid .nc p:last-of-type {
+
+  color: #E6C878 !important;
+  font-weight: 600 !important;
+  opacity: 0.95 !important;
+
+  text-shadow:
+    0 0 3px rgba(212, 175, 55, 0.16) !important;
+} 
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STAR CIRCLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+#grid .nc > div {
+  background: rgba(255, 215, 120, 0.08) !important;
+
+  box-shadow:
+    inset 0 0 10px rgba(255, 215, 120, 0.12),
+    0 0 14px rgba(255, 215, 120, 0.10) !important;
+}
+
+/* Star icon */
+#grid .nc svg {
+  color: #E6C878 !important;
+
+  filter:
+    drop-shadow(0 0 3px rgba(255, 215, 120, 0.7))
+    drop-shadow(0 0 8px rgba(255, 215, 120, 0.28)) !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HOVER EFFECT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+#grid .nc:hover {
+
+  transform: translateY(-6px) scale(1.03);
+
+  border-color: rgba(212, 175, 55, 0.55) !important;
+
+  box-shadow:
+    0 0 22px rgba(212, 175, 55, 0.18),
+    0 14px 34px rgba(0, 0, 0, 0.62),
+    inset 0 0 22px rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Soft golden glow */
+#grid .nc::before {
+
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(255, 215, 120, 0.16) 0%,
+    transparent 72%
+  ) !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ENGLISH ONLY — NAKSHATRA CARD FONT SIZE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* English Nakshatra names only */
+body[data-lang="en"] #grid .nc p:first-of-type .len {
+  font-size: clamp(11px, 2vw, 15px) !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.02em;
+}
+
+/* Mobile English card text only */
+@media only screen and (max-width: 768px) {
+  body[data-lang="en"] #grid .nc p:first-of-type .len {
+    font-size: 17px !important;
+    line-height: 1.3 !important;
+  }
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HEADER TITLE — SAME STYLE, SOFT GLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+header h1.te-font.telugu-heading {
+  font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+  color: #FFD700 !important;
+
+  font-size: clamp(20px, 5vw, 34px) !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em !important;
+
+text-shadow:
+  0 0 6px rgba(255, 200, 0, 0.25) !important;
+}
+
+/* Mobile also same in both languages */
+@media only screen and (max-width: 768px) {
+  header h1.te-font.telugu-heading {
+    font-family: 'Ponnala', 'Mallanna', 'Noto Serif Telugu', sans-serif !important;
+    font-size: 28px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.01em !important;
+
+text-shadow:
+  0 0 6px rgba(255, 200, 0, 0.25) !important;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HEADER HEIGHT + NAMALU IMAGE — ALL DEVICES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.site-header {
+  min-height: clamp(300px, 38vw, 470px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.site-header .toran svg {
+  height: clamp(44px, 6vw, 70px) !important;
+}
+
+.header-inner {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(34px, 7vw, 72px) clamp(14px, 4vw, 32px) clamp(28px, 6vw, 58px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.namalu-img {
+  display: block;
+  width: auto;
+  height: clamp(78px, 15vw, 135px);
+  max-width: min(260px, 72vw);
+  object-fit: contain;
+  margin: 0 auto clamp(12px, 2.5vw, 20px);
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.28));
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .site-header {
+    min-height: clamp(330px, 72vw, 430px);
+  }
+
+  .header-inner {
+    padding-top: clamp(42px, 10vw, 64px);
+    padding-bottom: clamp(34px, 8vw, 54px);
+  }
+
+  .namalu-img {
+    height: clamp(82px, 22vw, 120px) !important;
+    max-width: min(240px, 76vw);
+    margin-bottom: 14px;
+  }
+}
+
+/* Small mobile */
+@media only screen and (max-width: 420px) {
+  .site-header {
+    min-height: 360px;
+  }
+
+  .header-inner {
+    padding-top: 46px;
+    padding-bottom: 38px;
+  }
+
+  .namalu-img {
+    height: 92px !important;
+    max-width: 210px;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SMALLER DETAILS / GUIDELINES CARDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.quick-tiles-section {
+  margin-bottom: clamp(16px, 3.5vw, 28px) !important;
+}
+
+.quick-tiles-grid {
+  max-width: 560px !important;
+  grid-template-columns: repeat(2, minmax(150px, 1fr)) !important;
+  gap: clamp(10px, 2vw, 16px) !important;
+}
+
+.quick-tile-card {
+  padding: clamp(8px, 1.8vw, 12px) !important;
+  border-radius: 12px !important;
+  min-height: clamp(128px, 18vw, 170px) !important;
+
+  box-shadow:
+    0 0 18px rgba(90, 20, 5, 0.12),
+    0 0 34px rgba(90, 20, 5, 0.05) !important;
+}
+
+.quick-tile-card .gline {
+  width: 44px !important;
+}
+
+.quick-tile-card .gline:first-child {
+  margin-bottom: 8px !important;
+}
+
+.quick-tile-card .gline:last-child {
+  margin-top: 8px !important;
+}
+
+.quick-tile-icon {
+  width: clamp(34px, 6vw, 48px) !important;
+  margin-bottom: 6px !important;
+}
+
+.quick-tile-card h3,
+.quick-tile-card h3 span,
+.quick-tile-card h3 .te-font {
+  font-size: clamp(13px, 2.2vw, 16px) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 4px !important;
+}
+
+.quick-tile-card > span,
+.quick-tile-card > span span {
+  font-size: clamp(10px, 1.8vw, 12px) !important;
+  line-height: 1.2 !important;
+}
+
+/* Telugu override only inside these small cards */
+body[data-lang="te"] .quick-tile-card .lte,
+body[data-lang="te"] .quick-tile-card .lte.te-font,
+body[data-lang="te"] .quick-tile-card .te-font {
+  font-size: clamp(14px, 2.4vw, 17px) !important;
+  line-height: 1.3 !important;
+}
+
+/* Hover should also be smaller */
+.quick-tile-card:hover {
+  transform: translateY(-3px) scale(1.015) !important;
+  box-shadow:
+    0 0 26px rgba(90, 20, 5, 0.16),
+    0 0 46px rgba(90, 20, 5, 0.07) !important;
+}
+
+/* Tablet and mobile */
+@media only screen and (max-width: 768px) {
+  .quick-tiles-grid {
+    max-width: 360px !important;
+    grid-template-columns: repeat(2, minmax(130px, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .quick-tile-card {
+    padding: 10px 8px !important;
+    min-height: 132px !important;
+    border-radius: 12px !important;
+    transform: none !important;
+  }
+
+  .quick-tile-icon {
+    width: 38px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .quick-tile-card h3,
+  .quick-tile-card h3 span,
+  .quick-tile-card h3 .te-font {
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+  }
+
+  body[data-lang="te"] .quick-tile-card .lte,
+  body[data-lang="te"] .quick-tile-card .lte.te-font,
+  body[data-lang="te"] .quick-tile-card .te-font {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+}
+
+/* Very small mobile */
+@media only screen and (max-width: 420px) {
+  .quick-tiles-grid {
+    max-width: 310px !important;
+    grid-template-columns: repeat(2, minmax(120px, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  .quick-tile-card {
+    padding: 9px 7px !important;
+    min-height: 118px !important;
+  }
+
+  .quick-tile-icon {
+    width: 34px !important;
+  }
+
+  .quick-tile-card h3,
+  .quick-tile-card h3 span,
+  .quick-tile-card h3 .te-font {
+    font-size: 14px !important;
+  }
+
+  body[data-lang="te"] .quick-tile-card .lte,
+  body[data-lang="te"] .quick-tile-card .lte.te-font,
+  body[data-lang="te"] .quick-tile-card .te-font {
+    font-size: 15px !important;
+  }
+}
+
+.main-title{
+  font-size: clamp(30px, 6vw, 56px);
+  line-height: 1.45;
+}
+
+.sub-title{
+  font-size: clamp(11px, 1.5vw, 16px);
+  line-height: 1.8;
+  opacity: 0.92;
+  margin-top: 10px;
+  color: #FFD700 !important;
+}
+  </style>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dcffe6a87cd4112a67452301a457d98"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+
+<body data-lang="te">
+
+  <!-- ══ HIDDEN SVG GRADIENT DEFS ══ -->
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <defs>
+      <linearGradient id="gFlame" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" stop-color="#FF3300" />
+        <stop offset="40%" stop-color="#FFB200" />
+        <stop offset="100%" stop-color="#FFFBE0" />
+      </linearGradient>
+      <linearGradient id="gBrass" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#A87800" />
+        <stop offset="45%" stop-color="#FFD700" />
+        <stop offset="100%" stop-color="#8B6800" />
+      </linearGradient>
+      <linearGradient id="gLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#3CB371" />
+        <stop offset="100%" stop-color="#004D00" />
+      </linearGradient>
+      <linearGradient id="gMarigold" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFA800" />
+        <stop offset="60%" stop-color="#FF7000" />
+        <stop offset="100%" stop-color="#FF3300" />
+      </linearGradient>
+      <linearGradient id="gTrunk" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#705238" />
+        <stop offset="50%" stop-color="#A08B60" />
+        <stop offset="100%" stop-color="#705238" />
+      </linearGradient>
+      <linearGradient id="gBLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#44CC55" />
+        <stop offset="50%" stop-color="#1C8020" />
+        <stop offset="100%" stop-color="#003C04" />
+      </linearGradient>
+      <linearGradient id="gGarland" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFA800" />
+        <stop offset="100%" stop-color="#FF3300" />
+      </linearGradient>
+      <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#FFEE88" stop-opacity="0.55" />
+        <stop offset="100%" stop-color="#FF8800" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+  </svg>
+
+  <!-- ══ FALLING PETALS ══ -->
+  <div id="petals" aria-hidden="true"></div>
+
+
+  <!-- ══ BANANA TREE LEFT ══ -->
+  <div class="btree L" aria-hidden="true">
+    <svg viewBox="0 0 110 390" xmlns="http://www.w3.org/2000/svg">
+      <path d="M55,390 Q50,285 56,185 Q63,90 56,40" stroke="url(#gTrunk)" stroke-width="16" fill="none"
+        stroke-linecap="round" />
+      <line x1="47" y1="345" x2="63" y2="345" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="295" x2="63" y2="295" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="245" x2="63" y2="245" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="195" x2="63" y2="195" stroke="#5A4430" stroke-width="1.5" />
+      <path d="M56,40 Q15,-5 -24,24  Q16,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,40 Q97,-5 134,24  Q95,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q9,42  -12,96  Q30,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q103,42 124,96 Q82,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q22,88 -2,150  Q40,116 56,67" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q90,88 112,150 Q72,116 56,67" fill="url(#gBLeaf)" />
+      <ellipse cx="32" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(24 32 125)" />
+      <ellipse cx="43" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(10 43 130)" />
+      <ellipse cx="54" cy="132" rx="5" ry="13" fill="#F0CC00" />
+      <ellipse cx="65" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(-10 65 130)" />
+      <ellipse cx="76" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(-22 76 125)" />
+      <ellipse cx="54" cy="118" rx="3.5" ry="5" fill="#CC6600" />
+    </svg>
+  </div>
+
+  <!-- ══ BANANA TREE RIGHT ══ -->
+  <div class="btree R" aria-hidden="true">
+    <svg viewBox="0 0 110 390" xmlns="http://www.w3.org/2000/svg" style="transform:scaleX(-1)">
+      <path d="M55,390 Q50,285 56,185 Q63,90 56,40" stroke="url(#gTrunk)" stroke-width="16" fill="none"
+        stroke-linecap="round" />
+      <line x1="47" y1="345" x2="63" y2="345" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="295" x2="63" y2="295" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="245" x2="63" y2="245" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="195" x2="63" y2="195" stroke="#5A4430" stroke-width="1.5" />
+      <path d="M56,40 Q15,-5 -24,24  Q16,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,40 Q97,-5 134,24  Q95,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q9,42  -12,96  Q30,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q103,42 124,96 Q82,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q22,88 -2,150  Q40,116 56,67" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q90,88 112,150 Q72,116 56,67" fill="url(#gBLeaf)" />
+      <ellipse cx="32" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(24 32 125)" />
+      <ellipse cx="43" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(10 43 130)" />
+      <ellipse cx="54" cy="132" rx="5" ry="13" fill="#F0CC00" />
+      <ellipse cx="65" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(-10 65 130)" />
+      <ellipse cx="76" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(-22 76 125)" />
+      <ellipse cx="54" cy="118" rx="3.5" ry="5" fill="#CC6600" />
+    </svg>
+  </div>
+
+
+  <!-- ══ MIDDLE BANANA TREE LEFT ══ -->
+  <div class="btree L LMid" aria-hidden="true">
+    <svg viewBox="0 0 110 390" xmlns="http://www.w3.org/2000/svg">
+      <path d="M55,390 Q50,285 56,185 Q63,90 56,40" stroke="url(#gTrunk)" stroke-width="16" fill="none"
+        stroke-linecap="round" />
+      <line x1="47" y1="345" x2="63" y2="345" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="295" x2="63" y2="295" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="245" x2="63" y2="245" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="195" x2="63" y2="195" stroke="#5A4430" stroke-width="1.5" />
+      <path d="M56,40 Q15,-5 -24,24  Q16,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,40 Q97,-5 134,24  Q95,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q9,42  -12,96  Q30,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q103,42 124,96 Q82,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q22,88 -2,150  Q40,116 56,67" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q90,88 112,150 Q72,116 56,67" fill="url(#gBLeaf)" />
+      <ellipse cx="32" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(24 32 125)" />
+      <ellipse cx="43" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(10 43 130)" />
+      <ellipse cx="54" cy="132" rx="5" ry="13" fill="#F0CC00" />
+      <ellipse cx="65" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(-10 65 130)" />
+      <ellipse cx="76" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(-22 76 125)" />
+      <ellipse cx="54" cy="118" rx="3.5" ry="5" fill="#CC6600" />
+    </svg>
+  </div>
+
+  <!-- ══ MIDDLE BANANA TREE RIGHT ══ -->
+  <div class="btree R RMid" aria-hidden="true">
+    <svg viewBox="0 0 110 390" xmlns="http://www.w3.org/2000/svg" style="transform:scaleX(-1)">
+      <path d="M55,390 Q50,285 56,185 Q63,90 56,40" stroke="url(#gTrunk)" stroke-width="16" fill="none"
+        stroke-linecap="round" />
+      <line x1="47" y1="345" x2="63" y2="345" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="295" x2="63" y2="295" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="245" x2="63" y2="245" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="195" x2="63" y2="195" stroke="#5A4430" stroke-width="1.5" />
+      <path d="M56,40 Q15,-5 -24,24  Q16,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,40 Q97,-5 134,24  Q95,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q9,42  -12,96  Q30,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q103,42 124,96 Q82,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q22,88 -2,150  Q40,116 56,67" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q90,88 112,150 Q72,116 56,67" fill="url(#gBLeaf)" />
+      <ellipse cx="32" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(24 32 125)" />
+      <ellipse cx="43" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(10 43 130)" />
+      <ellipse cx="54" cy="132" rx="5" ry="13" fill="#F0CC00" />
+      <ellipse cx="65" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(-10 65 130)" />
+      <ellipse cx="76" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(-22 76 125)" />
+      <ellipse cx="54" cy="118" rx="3.5" ry="5" fill="#CC6600" />
+    </svg>
+  </div>
+
+
+  <!-- ══ EXTRA BANANA TREE LEFT ══ -->
+  <div class="btree L L2" aria-hidden="true">
+    <svg viewBox="0 0 110 390" xmlns="http://www.w3.org/2000/svg">
+      <path d="M55,390 Q50,285 56,185 Q63,90 56,40" stroke="url(#gTrunk)" stroke-width="16" fill="none"
+        stroke-linecap="round" />
+      <line x1="47" y1="345" x2="63" y2="345" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="295" x2="63" y2="295" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="245" x2="63" y2="245" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="195" x2="63" y2="195" stroke="#5A4430" stroke-width="1.5" />
+      <path d="M56,40 Q15,-5 -24,24  Q16,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,40 Q97,-5 134,24  Q95,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q9,42  -12,96  Q30,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q103,42 124,96 Q82,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q22,88 -2,150  Q40,116 56,67" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q90,88 112,150 Q72,116 56,67" fill="url(#gBLeaf)" />
+      <ellipse cx="32" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(24 32 125)" />
+      <ellipse cx="43" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(10 43 130)" />
+      <ellipse cx="54" cy="132" rx="5" ry="13" fill="#F0CC00" />
+      <ellipse cx="65" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(-10 65 130)" />
+      <ellipse cx="76" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(-22 76 125)" />
+      <ellipse cx="54" cy="118" rx="3.5" ry="5" fill="#CC6600" />
+    </svg>
+  </div>
+
+  <!-- ══ EXTRA BANANA TREE RIGHT ══ -->
+  <div class="btree R R2" aria-hidden="true">
+    <svg viewBox="0 0 110 390" xmlns="http://www.w3.org/2000/svg" style="transform:scaleX(-1)">
+      <path d="M55,390 Q50,285 56,185 Q63,90 56,40" stroke="url(#gTrunk)" stroke-width="16" fill="none"
+        stroke-linecap="round" />
+      <line x1="47" y1="345" x2="63" y2="345" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="295" x2="63" y2="295" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="245" x2="63" y2="245" stroke="#5A4430" stroke-width="1.5" />
+      <line x1="47" y1="195" x2="63" y2="195" stroke="#5A4430" stroke-width="1.5" />
+      <path d="M56,40 Q15,-5 -24,24  Q16,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,40 Q97,-5 134,24  Q95,34 56,40" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q9,42  -12,96  Q30,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,54 Q103,42 124,96 Q82,74 56,54" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q22,88 -2,150  Q40,116 56,67" fill="url(#gBLeaf)" />
+      <path d="M56,67 Q90,88 112,150 Q72,116 56,67" fill="url(#gBLeaf)" />
+      <ellipse cx="32" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(24 32 125)" />
+      <ellipse cx="43" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(10 43 130)" />
+      <ellipse cx="54" cy="132" rx="5" ry="13" fill="#F0CC00" />
+      <ellipse cx="65" cy="130" rx="5" ry="13" fill="#F0CC00" transform="rotate(-10 65 130)" />
+      <ellipse cx="76" cy="125" rx="5" ry="13" fill="#F0CC00" transform="rotate(-22 76 125)" />
+      <ellipse cx="54" cy="118" rx="3.5" ry="5" fill="#CC6600" />
+    </svg>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       DARK HEADER
+  ══════════════════════════════════════ -->
+ <header class="dark-band site-header">
+
+    <!-- Mango leaf toran hanging from header -->
+    <div class="toran">
+      <svg viewBox="0 0 1200 58" style="width:100%;height:clamp(34px,5.5vw,58px)" preserveAspectRatio="xMidYMid slice">
+        <path d="M0,8 Q300,26 600,8 Q900,26 1200,8" stroke="#7A5A14" stroke-width="2.5" fill="none" />
+        <g id="tu">
+          <path d="M-8,8 Q-2,26 -2,52 Q8,30 4,8 Z" fill="url(#gLeaf)" transform="rotate(-18 -2 8)" />
+          <path d="M14,8 Q20,30 20,52 Q30,26 26,8 Z" fill="url(#gLeaf)" transform="rotate(16 20 8)" />
+          <circle cx="8" cy="45" r="8" fill="url(#gMarigold)" />
+          <circle cx="8" cy="45" r="4.5" fill="#FFE000" />
+          <circle cx="28" cy="43" r="5.5" fill="url(#gMarigold)" />
+          <circle cx="28" cy="43" r="3" fill="#FFE000" />
+        </g>
+        <use href="#tu" x="0" />
+        <use href="#tu" x="50" />
+        <use href="#tu" x="100" />
+        <use href="#tu" x="150" />
+        <use href="#tu" x="200" />
+        <use href="#tu" x="250" />
+        <use href="#tu" x="300" />
+        <use href="#tu" x="350" />
+        <use href="#tu" x="400" />
+        <use href="#tu" x="450" />
+        <use href="#tu" x="500" />
+        <use href="#tu" x="550" />
+        <use href="#tu" x="600" />
+        <use href="#tu" x="650" />
+        <use href="#tu" x="700" />
+        <use href="#tu" x="750" />
+        <use href="#tu" x="800" />
+        <use href="#tu" x="850" />
+        <use href="#tu" x="900" />
+        <use href="#tu" x="950" />
+        <use href="#tu" x="1000" />
+        <use href="#tu" x="1050" />
+        <use href="#tu" x="1100" />
+        <use href="#tu" x="1150" />
+      </svg>
+    </div>
+
+    <!-- Header main content -->
+    <div class="header-inner">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+
+        <!-- Center -->
+        <div style="flex:1;text-align:center">
+          <img src="assets/namalu.png"
+            alt="Namalu"
+            class="namalu-img" />
+          <h1 class="te-font telugu-heading"
+            style="color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3)">
+            అఖండ దివ్య వైభవ జ్యోతి
+          </h1>
+          <p class="sub-title" style="line-height:1.8">
+
+            <span class="lte te-font">
+              శ్రీశ్రీశ్రీ వైభవ వేంకటేశ్వర స్వామి వారి దివ్యక్షేత్రం <br>
+              దేవదయ - ధర్మదయ శాఖ<br>
+              ఎన్.జి.ఓ.ఎస్. కోలనీ, కప్పరాడ, విశాఖపట్నం - <br>530 007
+            </span>
+
+            <span class="len cor-font">
+              Sri Sri Sri Vaibhava Venkateswara Swamy Vari Devasthanam <br>
+              
+              N.G.G.O.S Colony, Kapparada, Visakhapatnam - 530 007
+            </span>
+
+          </p>
+          <p class="cor-font"
+            style="color:rgba(255,215,0,0.75);font-style:italic;font-size:clamp(15px,3vw,22px);margin-top:8px;line-height:1.7">
+            <span class="len">Ghrutayajna, Namayajna Sahita Sapta Pradakshina</span>
+            <span class="lte te-font">ఘృతయజ్ఞ, నామయజ్ఞ సహిత సప్త ప్రదక్షిణం</span>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Gold shimmer line -->
+      <div class="gline" style="margin:clamp(10px,2.5vw,16px) 0"></div>
+
+      <!-- Language toggle -->
+      <div style="text-align:center">
+        <button class="lang-btn" onclick="toggleLang()" style="background:rgba(255,215,0,0.07);border:1px solid rgba(201,152,10,0.45);color:#FFD700;
+                 border-radius:999px;cursor:pointer;
+                 font-family:'Cormorant Garamond',serif;
+                 display:inline-flex;align-items:center;transition:background 0.2s"
+          onmouseover="this.style.background='rgba(255,215,0,0.14)'"
+          onmouseout="this.style.background='rgba(255,215,0,0.07)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path
+              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          <span class="len">తెలుగు లో చూడండి</span>
+          <span class="lte te-font">View in English</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Header bottom shimmer -->
+    <div class="gline"></div>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════ -->
+  <main class="main-wrap">
+    <div class="inner">
+
+      <!-- ── HERO SECTION ── -->
+      <section
+        style="position:relative;text-align:center;padding:clamp(28px,7vw,48px) 16px;margin-bottom:clamp(32px,7vw,52px)">
+
+
+        <!-- Content above watermark -->
+        <div style="position:relative;z-index:1">
+
+
+
+          <!-- ── GOVINDHA SWAMY DEITY IMAGE ── -->
+          <div class="deity-wrap">
+
+            <!-- Gold decorative border frame -->
+            <div class="deity-frame">
+
+              <!-- Corner ornaments -->
+              <svg style="position:absolute;top:6px;left:6px;width:18px;height:18px;color:#C9980A" viewBox="0 0 30 30">
+                <path d="M2,28 L2,2 L28,2" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" />
+                <circle cx="2" cy="2" r="3" fill="currentColor" />
+              </svg>
+              <svg style="position:absolute;top:6px;right:6px;width:18px;height:18px;color:#C9980A" viewBox="0 0 30 30">
+                <path d="M28,28 L28,2 L2,2" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" />
+                <circle cx="28" cy="2" r="3" fill="currentColor" />
+              </svg>
+              <svg style="position:absolute;bottom:6px;left:6px;width:18px;height:18px;color:#C9980A"
+                viewBox="0 0 30 30">
+                <path d="M2,2 L2,28 L28,28" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" />
+                <circle cx="2" cy="28" r="3" fill="currentColor" />
+              </svg>
+              <svg style="position:absolute;bottom:6px;right:6px;width:18px;height:18px;color:#C9980A"
+                viewBox="0 0 30 30">
+                <path d="M28,2 L28,28 L2,28" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" />
+                <circle cx="28" cy="28" r="3" fill="currentColor" />
+              </svg>
+
+              <!-- The deity image -->
+              <img src="assets/lord-balaji.jpeg" alt="శ్రీ గోవింద స్వామి" style="display:block;
+                       width:clamp(200px,72vw,340px);
+                       height:auto;
+                       border-radius:8px;
+                       object-fit:cover;" />
+            </div>
+
+            <!-- Shimmer line below image -->
+            <div class="gline"
+              style="width:clamp(120px,40vw,220px);margin:clamp(14px,3.5vw,22px) auto 0;border-radius:2px"></div>
+
+            <!-- Telugu caption -->
+   
+          </div>
+
+          <!-- Top lotus divider -->
+          <div
+            style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:clamp(18px,4vw,26px)">
+            <div class="gdiv" style="flex:1;max-width:clamp(50px,14vw,120px)"></div>
+            <svg viewBox="0 0 100 100"
+              style="color:#C9980A;width:clamp(24px,5.5vw,32px);height:clamp(24px,5.5vw,32px);flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.3))">
+              <ellipse cx="50" cy="70" rx="44" ry="24" fill="none" stroke="currentColor" stroke-width="2.5" />
+              <ellipse cx="28" cy="56" rx="11" ry="17" fill="currentColor" transform="rotate(-32 28 56)" />
+              <ellipse cx="72" cy="56" rx="11" ry="17" fill="currentColor" transform="rotate(32 72 56)" />
+              <ellipse cx="50" cy="46" rx="10" ry="16" fill="currentColor" />
+              <ellipse cx="50" cy="22" rx="6" ry="11" fill="currentColor" />
+            </svg>
+            <div class="gdiv" style="flex:1;max-width:clamp(50px,14vw,120px)"></div>
+          </div>
+
+          <h2 class="cin-font"
+            style="color:#3D0E00;font-weight:600;font-size:clamp(22px,5.8vw,38px);margin-bottom:clamp(10px,2.5vw,16px);text-shadow:0 0 0px rgba(255,200,0,0.1)">
+            <span class="len te-font telugu-heading">శ్రీ వైభవ వేంకటేశ్వర సామివారు అనుగ్రహించిన అపురూప అవకాశము</span>
+            <span class="lte te-font telugu-heading">శ్రీ వైభవ వేంకటేశ్వర సామివారు అనుగ్రహించిన అపురూప అవకాశము</span>
+          </h2>
+          <!-- <p class="cor-font"
+            style="font-style:italic;color:#5C3000;font-size:clamp(17px,3.8vw,24px);max-width:500px;margin:0 auto;line-height:1.9">
+            <span class="len">"Experience the divine blessings of the 27 Nakshatras through sacred slokas and devotional
+              rituals"</span>
+            <span class="lte te-font">"27 నక్షత్రాల దివ్య ఆశీర్వాదాలను పవిత్ర శ్లోకాలు మరియు భక్తి ఆచారాల ద్వారా
+              అనుభవించండి"</span>
+          </p> -->
+
+          <!-- Bottom star divider -->
+          <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:clamp(18px,4vw,26px)">
+            <div class="gdiv" style="flex:1;max-width:clamp(50px,14vw,120px)"></div>
+            <svg class="sp" viewBox="0 0 100 100"
+              style="color:#C9980A;width:15px;height:15px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+              <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor" />
+            </svg>
+            <svg class="sp2" viewBox="0 0 100 100"
+              style="color:#C9980A;width:20px;height:20px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.5))">
+              <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor" />
+            </svg>
+            <svg class="sp3" viewBox="0 0 100 100"
+              style="color:#C9980A;width:15px;height:15px;flex-shrink:0;filter:drop-shadow(0 0 2px rgba(255,200,0,0.4))">
+              <polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor" />
+            </svg>
+            <div class="gdiv" style="flex:1;max-width:clamp(50px,14vw,120px)"></div>
+          </div>
+        </div>
+
+        <!-- Round flower watermark -->
+        <div class="flower-bg div-pulse" aria-hidden="true">
+          <svg viewBox="0 0 200 200" style="width:100%;height:100%;color:rgba(150,80,0,0.18)">
+            <defs>
+              <radialGradient id="roundFlowerGold" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FFD700" stop-opacity="0.5" />
+                <stop offset="55%" stop-color="#C9980A" stop-opacity="0.24" />
+                <stop offset="100%" stop-color="#8B4500" stop-opacity="0.04" />
+              </radialGradient>
+
+              <g id="roundFlowerPetal">
+                <ellipse cx="100" cy="43" rx="13" ry="34" fill="currentColor" />
+              </g>
+
+              <g id="roundFlowerInnerPetal">
+                <ellipse cx="100" cy="62" rx="8" ry="22" fill="currentColor" />
+              </g>
+            </defs>
+
+            <!-- soft circular glow -->
+            <circle cx="100" cy="100" r="82" fill="url(#roundFlowerGold)" />
+
+            <!-- outer petals: fewer petals -->
+            <g opacity="0.9">
+              <use href="#roundFlowerPetal" transform="rotate(0 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(30 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(60 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(90 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(120 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(150 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(180 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(210 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(240 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(270 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(300 100 100)" />
+              <use href="#roundFlowerPetal" transform="rotate(330 100 100)" />
+            </g>
+
+            <!-- inner petals: fewer petals -->
+            <g opacity="0.58">
+              <use href="#roundFlowerInnerPetal" transform="rotate(15 100 100)" />
+              <use href="#roundFlowerInnerPetal" transform="rotate(75 100 100)" />
+              <use href="#roundFlowerInnerPetal" transform="rotate(135 100 100)" />
+              <use href="#roundFlowerInnerPetal" transform="rotate(195 100 100)" />
+              <use href="#roundFlowerInnerPetal" transform="rotate(255 100 100)" />
+              <use href="#roundFlowerInnerPetal" transform="rotate(315 100 100)" />
+            </g>
+
+            <!-- center -->
+            <circle cx="100" cy="100" r="26" fill="none" stroke="currentColor" stroke-width="3" />
+            <circle cx="100" cy="100" r="15" fill="currentColor" opacity="0.72" />
+            <circle cx="100" cy="100" r="6" fill="#FFD700" opacity="0.85" />
+          </svg>
+        </div>
+      </section>
+<!-- ── TEMPLE RULES & GUIDELINES TILES ── -->
+<section class="quick-tiles-section" style="margin-bottom:clamp(24px,5vw,40px)">
+  <div class="quick-tiles-grid"
+    style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(14px,4vw,24px);max-width:820px;margin:0 auto">
+    <!-- RULES TILE -->
+    <a href="about.html" style="display:block">
+      <div class="rc quick-tile-card" style="padding:clamp(12px,3vw,18px);text-align:center;height:100%">
+
+        <div class="gline" style="width:64px;margin:0 auto 16px;border-radius:2px"></div>
+
+<!-- Hindu Temple Gopuram [temple tower] icon -->
+<svg class="quick-tile-icon" viewBox="0 0 120 150"
+  style="width:clamp(48px,10vw,68px);height:auto;display:block;margin:0 auto 12px;color:#4A1205">
+  
+  <!-- Base platform -->
+  <path d="M14 138 H106" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+  <path d="M20 130 H100" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none" />
+
+  <!-- Bottom mandapam -->
+  <rect x="24" y="96" width="72" height="34" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M30 130 V106 Q36 98 42 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M48 130 V106 Q54 98 60 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M66 130 V106 Q72 98 78 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M84 130 V106 Q90 98 96 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+
+  <!-- Decorative row above base -->
+  <path d="M20 92 H100" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+  <path d="M25 92 Q30 82 35 92 Q40 82 45 92 Q50 82 55 92 Q60 82 65 92 Q70 82 75 92 Q80 82 85 92 Q90 82 95 92"
+    fill="none" stroke="currentColor" stroke-width="2.4" />
+
+  <!-- Gopuram tiers -->
+  <path d="M28 86 H92 L88 76 H32 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M34 76 H86 L82 66 H38 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M40 66 H80 L76 56 H44 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M46 56 H74 L70 46 H50 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M51 46 H69 L66 36 H54 Z" fill="none" stroke="currentColor" stroke-width="3" />
+
+  <!-- Horizontal tier lines -->
+  <line x1="31" y1="81" x2="89" y2="81" stroke="currentColor" stroke-width="2" />
+  <line x1="37" y1="71" x2="83" y2="71" stroke="currentColor" stroke-width="2" />
+  <line x1="43" y1="61" x2="77" y2="61" stroke="currentColor" stroke-width="2" />
+  <line x1="49" y1="51" x2="71" y2="51" stroke="currentColor" stroke-width="2" />
+
+  <!-- Central shrine openings -->
+  <path d="M53 86 V75 Q60 68 67 75 V86" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M55 66 V58 Q60 52 65 58 V66" fill="none" stroke="currentColor" stroke-width="2.6" />
+  <path d="M57 46 V40 Q60 36 63 40 V46" fill="none" stroke="currentColor" stroke-width="2.4" />
+
+  <!-- Side miniature pillars/details -->
+  <line x1="38" y1="84" x2="38" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="44" y1="84" x2="44" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="76" y1="84" x2="76" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="82" y1="84" x2="82" y2="78" stroke="currentColor" stroke-width="2" />
+
+  <line x1="45" y1="64" x2="45" y2="58" stroke="currentColor" stroke-width="2" />
+  <line x1="75" y1="64" x2="75" y2="58" stroke="currentColor" stroke-width="2" />
+
+  <!-- Top kalasam row -->
+  <path d="M53 34 H67" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+  <path d="M54 31 Q56 24 60 31 Q64 24 66 31" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <circle cx="50" cy="34" r="3" fill="currentColor" />
+  <circle cx="70" cy="34" r="3" fill="currentColor" />
+  <circle cx="60" cy="25" r="3" fill="currentColor" />
+
+  <!-- Guidelines list symbol -->
+  <circle cx="92" cy="113" r="12" fill="currentColor" opacity="0.13" />
+  <line x1="86" y1="108" x2="98" y2="108" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="86" y1="113" x2="98" y2="113" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="86" y1="118" x2="95" y2="118" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+</svg>
+
+        <h3 class="cin-font"
+          style="color:#3D0E00;font-weight:600;font-size:clamp(14px,3vw,18px);margin-bottom:8px">
+          <span class="len">Details</span>
+          <span class="lte te-font telugu-heading">వివరములు</span>
+        </h3>
+
+        <!-- <p class="cor-font"
+          style="color:#5C3000;font-size:clamp(13px,2.2vw,16px);margin-bottom:14px;line-height:1.6">
+          <span class="len">View the sacred rules to be followed by devotees</span>
+          <span class="lte te-font">భక్తులు పాటించవలసిన పవిత్ర నియమాలు</span>
+        </p> -->
+
+        <span class="cin-font"
+          style="color:#4A1205;font-size:clamp(11px,2vw,13px);display:inline-flex;align-items:center;gap:6px">
+          <span class="len">→</span>
+          <span class="lte te-font">→</span>
+        </span>
+
+        <div class="gline" style="width:64px;margin:16px auto 0;border-radius:2px"></div>
+      </div>
+    </a>
+
+    <!-- GUIDELINES TILE -->
+    <a href="rules.html" style="display:block">
+      <div class="rc quick-tile-card" style="padding:clamp(12px,3vw,18px);text-align:center;height:100%">
+
+        <div class="gline" style="width:64px;margin:0 auto 16px;border-radius:2px"></div>
+
+<!-- Hindu Temple Gopuram [temple tower] icon -->
+<svg class="quick-tile-icon" viewBox="0 0 120 150"
+  style="width:clamp(48px,10vw,68px);height:auto;display:block;margin:0 auto 12px;color:#4A1205">
+  
+  <!-- Base platform -->
+  <path d="M14 138 H106" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+  <path d="M20 130 H100" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none" />
+
+  <!-- Bottom mandapam -->
+  <rect x="24" y="96" width="72" height="34" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M30 130 V106 Q36 98 42 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M48 130 V106 Q54 98 60 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M66 130 V106 Q72 98 78 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M84 130 V106 Q90 98 96 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+
+  <!-- Decorative row above base -->
+  <path d="M20 92 H100" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+  <path d="M25 92 Q30 82 35 92 Q40 82 45 92 Q50 82 55 92 Q60 82 65 92 Q70 82 75 92 Q80 82 85 92 Q90 82 95 92"
+    fill="none" stroke="currentColor" stroke-width="2.4" />
+
+  <!-- Gopuram tiers -->
+  <path d="M28 86 H92 L88 76 H32 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M34 76 H86 L82 66 H38 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M40 66 H80 L76 56 H44 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M46 56 H74 L70 46 H50 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M51 46 H69 L66 36 H54 Z" fill="none" stroke="currentColor" stroke-width="3" />
+
+  <!-- Horizontal tier lines -->
+  <line x1="31" y1="81" x2="89" y2="81" stroke="currentColor" stroke-width="2" />
+  <line x1="37" y1="71" x2="83" y2="71" stroke="currentColor" stroke-width="2" />
+  <line x1="43" y1="61" x2="77" y2="61" stroke="currentColor" stroke-width="2" />
+  <line x1="49" y1="51" x2="71" y2="51" stroke="currentColor" stroke-width="2" />
+
+  <!-- Central shrine openings -->
+  <path d="M53 86 V75 Q60 68 67 75 V86" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M55 66 V58 Q60 52 65 58 V66" fill="none" stroke="currentColor" stroke-width="2.6" />
+  <path d="M57 46 V40 Q60 36 63 40 V46" fill="none" stroke="currentColor" stroke-width="2.4" />
+
+  <!-- Side miniature pillars/details -->
+  <line x1="38" y1="84" x2="38" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="44" y1="84" x2="44" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="76" y1="84" x2="76" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="82" y1="84" x2="82" y2="78" stroke="currentColor" stroke-width="2" />
+
+  <line x1="45" y1="64" x2="45" y2="58" stroke="currentColor" stroke-width="2" />
+  <line x1="75" y1="64" x2="75" y2="58" stroke="currentColor" stroke-width="2" />
+
+  <!-- Top kalasam row -->
+  <path d="M53 34 H67" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+  <path d="M54 31 Q56 24 60 31 Q64 24 66 31" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <circle cx="50" cy="34" r="3" fill="currentColor" />
+  <circle cx="70" cy="34" r="3" fill="currentColor" />
+  <circle cx="60" cy="25" r="3" fill="currentColor" />
+
+  <!-- Guidelines list symbol -->
+  <circle cx="92" cy="113" r="12" fill="currentColor" opacity="0.13" />
+  <line x1="86" y1="108" x2="98" y2="108" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="86" y1="113" x2="98" y2="113" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="86" y1="118" x2="95" y2="118" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+</svg>
+
+        <h3 class="cin-font"
+          style="color:#3D0E00;font-weight:600;font-size:clamp(14px,3vw,18px);margin-bottom:8px">
+          <span class="len">Guidelines</span>
+          <span class="lte te-font telugu-heading">నియమములు</span>
+        </h3>
+
+        <!-- <p class="cor-font"
+          style="color:#5C3000;font-size:clamp(13px,2.2vw,16px);margin-bottom:14px;line-height:1.6">
+          <span class="len">View helpful guidelines for devotees attending the festival</span>
+          <span class="lte te-font">ఉత్సవంలో పాల్గొనే భక్తులకు ఉపయోగకరమైన మార్గదర్శకాలు</span>
+        </p> -->
+
+        <span class="cin-font"
+          style="color:#4A1205;font-size:clamp(11px,2vw,13px);display:inline-flex;align-items:center;gap:6px">
+          <span class="len">→</span>
+          <span class="lte te-font">→</span>
+        </span>
+
+        <div class="gline" style="width:64px;margin:16px auto 0;border-radius:2px"></div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+
+      <!-- ── 27 NAKSHATRA GRID ── -->
+      <section style="margin-bottom:clamp(36px,8vw,56px)">
+        <h3 class="cin-font"
+          style="text-align:center;color:#3D0E00;font-weight:600;font-size:clamp(19px,4.2vw,30px);margin-bottom:clamp(18px,4.5vw,28px);text-shadow:0 0 8px rgba(255,200,0,0.15), 0 0 0px rgba(255,180,0,0.08)">
+          <span class="len">27 Nakshatras</span>
+          <span class="lte te-font telugu-heading">27 నక్షత్రాలు</span>
+        </h3>
+        <div id="grid"></div>
+      </section>
+
+  
+    </div>
+  </main>
+
+
+  <!-- ══ FLOWER GARLAND ══ -->
+  <div style="overflow:hidden;line-height:0">
+    <svg viewBox="0 0 1200 44" style="width:100%;height:clamp(28px,5vw,44px)" preserveAspectRatio="xMidYMid slice">
+      <path d="M0,22 Q150,38 300,22 Q450,6 600,22 Q750,38 900,22 Q1050,6 1200,22" stroke="#1A6A1A" stroke-width="4"
+        fill="none" />
+      <g id="gf">
+        <circle r="7.5" fill="url(#gGarland)" />
+        <circle r="3.8" fill="#FFE200" />
+      </g>
+      <use href="#gf" x="0" y="22" />
+      <use href="#gf" x="50" y="29" />
+      <use href="#gf" x="100" y="23" />
+      <use href="#gf" x="150" y="35" />
+      <use href="#gf" x="200" y="27" />
+      <use href="#gf" x="250" y="18" />
+      <use href="#gf" x="300" y="22" />
+      <use href="#gf" x="350" y="14" />
+      <use href="#gf" x="400" y="11" />
+      <use href="#gf" x="450" y="7" />
+      <use href="#gf" x="500" y="11" />
+      <use href="#gf" x="550" y="18" />
+      <use href="#gf" x="600" y="22" />
+      <use href="#gf" x="650" y="29" />
+      <use href="#gf" x="700" y="35" />
+      <use href="#gf" x="750" y="37" />
+      <use href="#gf" x="800" y="31" />
+      <use href="#gf" x="850" y="23" />
+      <use href="#gf" x="900" y="22" />
+      <use href="#gf" x="950" y="15" />
+      <use href="#gf" x="1000" y="10" />
+      <use href="#gf" x="1050" y="7" />
+      <use href="#gf" x="1100" y="12" />
+      <use href="#gf" x="1150" y="19" />
+    </svg>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       DARK FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="dark-band" style="padding:clamp(28px,6vw,44px) clamp(12px,4vw,28px)">
+    <div style="max-width:720px;margin:0 auto;text-align:center">
+
+      <div class="gline" style="margin-bottom:clamp(16px,4vw,26px)"></div>
+
+      <!-- Lamps + name -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,24px);margin-bottom:12px">
+        <!-- <div class="lamp">
+          <svg viewBox="0 0 90 120" style="width:clamp(22px,4vw,36px);height:auto">
+            <g stroke="#FFD84D" stroke-linecap="round" opacity="0.9">
+              <line x1="45" y1="6" x2="45" y2="1" stroke-width="2.5" />
+              <line x1="55" y1="9" x2="58" y2="5" stroke-width="2" />
+              <line x1="63" y1="16" x2="67" y2="13" stroke-width="2" />
+              <line x1="67" y1="26" x2="72" y2="25" stroke-width="2" />
+              <line x1="35" y1="9" x2="32" y2="5" stroke-width="2" />
+              <line x1="27" y1="16" x2="23" y2="13" stroke-width="2" />
+              <line x1="23" y1="26" x2="18" y2="25" stroke-width="2" />
+            </g>
+            <ellipse cx="45" cy="30" rx="22" ry="26" fill="url(#halo)" />
+            <path d="M45,8 Q54,22 52,40 Q50,54 45,60 Q40,54 38,40 Q36,22 45,8" fill="url(#gFlame)" />
+            <path d="M45,18 Q50,30 49,44 Q47,54 45,58 Q43,54 41,44 Q40,30 45,18" fill="#FFF5C0" opacity="0.5" />
+            <ellipse cx="45" cy="60" rx="3" ry="2" fill="#CC3300" />
+            <path d="M18,68 Q45,62 72,68" stroke="#E8A800" stroke-width="3" fill="none" stroke-linecap="round" />
+            <path d="M18,68 Q10,78 22,90 Q33,98 45,99 Q57,98 68,90 Q80,78 72,68 Q45,74 18,68Z" fill="url(#gBrass)" />
+            <path d="M18,68 Q8,70 6,76 Q10,72 18,70Z" fill="url(#gBrass)" />
+            <path d="M22,72 Q16,80 20,88 Q18,82 22,76Z" fill="rgba(255,235,120,0.3)" />
+            <ellipse cx="45" cy="99" rx="12" ry="3.5" fill="#C08000" opacity="0.6" />
+          </svg>
+        </div> -->
+        <p class="te-font telugu-heading"
+          style="margin-top:14px;color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3)">
+          అఖండ దివ్య వైభవ జ్యోతి
+        </p>
+        <!-- <div class="lamp2">
+          <svg viewBox="0 0 90 120" style="width:clamp(22px,4vw,36px);height:auto">
+            <g stroke="#FFD84D" stroke-linecap="round" opacity="0.9">
+              <line x1="45" y1="6" x2="45" y2="1" stroke-width="2.5" />
+              <line x1="55" y1="9" x2="58" y2="5" stroke-width="2" />
+              <line x1="63" y1="16" x2="67" y2="13" stroke-width="2" />
+              <line x1="67" y1="26" x2="72" y2="25" stroke-width="2" />
+              <line x1="35" y1="9" x2="32" y2="5" stroke-width="2" />
+              <line x1="27" y1="16" x2="23" y2="13" stroke-width="2" />
+              <line x1="23" y1="26" x2="18" y2="25" stroke-width="2" />
+            </g>
+            <ellipse cx="45" cy="30" rx="22" ry="26" fill="url(#halo)" />
+            <path d="M45,8 Q54,22 52,40 Q50,54 45,60 Q40,54 38,40 Q36,22 45,8" fill="url(#gFlame)" />
+            <path d="M45,18 Q50,30 49,44 Q47,54 45,58 Q43,54 41,44 Q40,30 45,18" fill="#FFF5C0" opacity="0.5" />
+            <ellipse cx="45" cy="60" rx="3" ry="2" fill="#CC3300" />
+            <path d="M18,68 Q45,62 72,68" stroke="#E8A800" stroke-width="3" fill="none" stroke-linecap="round" />
+            <path d="M18,68 Q10,78 22,90 Q33,98 45,99 Q57,98 68,90 Q80,78 72,68 Q45,74 18,68Z" fill="url(#gBrass)" />
+            <path d="M18,68 Q8,70 6,76 Q10,72 18,70Z" fill="url(#gBrass)" />
+            <path d="M22,72 Q16,80 20,88 Q18,82 22,76Z" fill="rgba(255,235,120,0.3)" />
+            <ellipse cx="45" cy="99" rx="12" ry="3.5" fill="#C08000" opacity="0.6" />
+          </svg>
+        </div> -->
+      </div>
+
+      <p class="cor-font"
+        style="font-style:italic;color:rgba(255,215,0,0.6);font-size:clamp(14px,2.8vw,20px);margin-bottom:10px;line-height:1.75">
+        <span class="len">శ్లో" దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి : జానార్ధన: <br>  దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!</span>
+        <span class="lte te-font">శ్లో" దీపజ్యోతి పరంబ్రహ్మ, దీపజ్యోతి : జానార్ధన: <br>  దీపో హరతు మే పాపం, దీపజ్యోతి: నమోస్తుతే!</span>
+      </p>
+
+      <div class="gline" style="margin-top:clamp(16px,4vw,26px)"></div>
+    </div>
+  </footer>
+
+
+  <script>
+    /* ── 27 Nakshatras ───────────────────────────────── */
+    var nakshatras = [
+      { id: 1, en: "Ashwini", te: "అశ్విని" },
+      { id: 2, en: "Bharani", te: "భరణి" },
+      { id: 3, en: "Krittika", te: "కృత్తిక" },
+      { id: 4, en: "Rohini", te: "రోహిణి" },
+      { id: 5, en: "Mrigashira", te: "మృగశిర" },
+      { id: 6, en: "Ardra", te: "ఆరుద్ర" },
+      { id: 7, en: "Punarvasu", te: "పునర్వసు" },
+      { id: 8, en: "Pushyami", te: "పుష్యమి" },
+      { id: 9, en: "Ashlesha", te: "ఆశ్లేష" },
+      { id: 10, en: "Magha", te: "మఘ" },
+      { id: 11, en: "Pubba", te: "పుబ్బ" },
+      { id: 12, en: "Uttara", te: "ఉత్తర" },
+      { id: 13, en: "Hasta", te: "హస్త" },
+      { id: 14, en: "Chithha", te: "చిత్త" },
+      { id: 15, en: "Swati", te: "స్వాతి" },
+      { id: 16, en: "Vishakha", te: "విశాఖ" },
+      { id: 17, en: "Anuradha", te: "అనూరాధ" },
+      { id: 18, en: "Jyeshtha", te: "జ్యేష్ఠ" },
+      { id: 19, en: "Moola", te: "మూల" },
+      { id: 20, en: "Purva Ashadha", te: "పూర్వాషాఢ" },
+      { id: 21, en: "Uttara Ashadha", te: "ఉత్తరాషాఢ" },
+      { id: 22, en: "Shravanam", te: "శ్రవణం" },
+      { id: 23, en: "Dhanishta", te: "ధనిష్ట" },
+      { id: 24, en: "Shatabhisham", te: "శతభిషం" },
+      { id: 25, en: "Purva Bhadra", te: "పూర్వాభాద్ర" },
+      { id: 26, en: "Uttara Bhadra", te: "ఉత్తరాభాద్ర" },
+      { id: 27, en: "Revati", te: "రేవతి" }
+    ];
+
+    /* ── Build nakshatra grid ────────────────────────── */
+    var grid = document.getElementById("grid");
+    nakshatras.forEach(function (n) {
+      var a = document.createElement("a");
+      a.href = "./nakshatra.html?id=" + n.id;
+      a.className = "nc";
+      a.innerHTML =
+        '<div style="width:clamp(32px,6.5vw,44px);height:clamp(32px,6.5vw,44px);margin:0 auto clamp(10px,2.5vw,15px);' +
+        'border-radius:50%;background:rgba(60,14,0,0.11);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 8px rgba(255,200,0,0.08)">' +
+        '<svg viewBox="0 0 100 100" style="width:clamp(18px,3.2vw,24px);height:clamp(18px,3.2vw,24px);color:#C9980A" class="sp2">' +
+        '<polygon points="50,4 61,38 98,38 70,60 80,96 50,74 20,96 30,60 2,38 39,38" fill="currentColor"/>' +
+        '</svg>' +
+        '</div>' +
+        '<p style="font-size:clamp(14px,2.8vw,18px);font-weight:600;color:#3D0E00;line-height:1.5;margin-bottom:5px;text-shadow:0 0 0px rgba(255,200,0,0.05)">' +
+        '<span class="len cin-font">' + n.en + '</span>' +
+        '<span class="lte te-font">' + n.te + '</span>' +
+        '</p>' +
+        '<p style="font-size:clamp(12px,2.4vw,14px);color:#8B5E3C;font-family:Cinzel,serif;font-weight:500">' + String(n.id).padStart(2, "0") + '</p>';
+      grid.appendChild(a);
+    });
+
+    /* ── Falling Petals ──────────────────────────────── */
+    var petalColors = [
+      // Marigold tones
+      "#FF8C00", "#FFA500", "#FF9500", "#FFA200",
+      // Golden/Saffron
+      "#FFD700", "#FFC700", "#FFB800",
+      // Rose petals
+      "#FF5252", "#FF6B6B", "#FF4444", "#FF3333",
+      // Jasmine/White flowers
+      "#FFF5E1", "#FFFACD",
+      // Temple warm tones
+      "#FF7F00", "#FF8B00", "#FF9E00"
+    ];
+
+    var flowerTypes = [
+      { name: "marigold", petals: 5 },
+      { name: "rose", petals: 6 },
+      { name: "jasmine", petals: 4 },
+      { name: "simple", petals: 0 }
+    ];
+
+    var anims = ["fall1", "fall2", "fall3"];
+    var container = document.getElementById("petals");
+    var count = 0;
+    var MAX = 28;
+
+    function createFlowerSVG(type, color, size) {
+      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("viewBox", "0 0 " + size + " " + size);
+      svg.setAttribute("width", size);
+      svg.setAttribute("height", size);
+      svg.style.display = "block";
+
+      if (type === "marigold") {
+        // Create marigold with layered petals
+        for (var layer = 0; layer < 3; layer++) {
+          var opacity = 1 - (layer * 0.2);
+          var radius = (size / 2) - (layer * 2);
+          for (var i = 0; i < 6; i++) {
+            var angle = (i * 60) * Math.PI / 180;
+            var x = size / 2 + Math.cos(angle) * radius;
+            var y = size / 2 + Math.sin(angle) * radius;
+            var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute("cx", x);
+            circle.setAttribute("cy", y);
+            circle.setAttribute("r", 2 + layer);
+            circle.setAttribute("fill", color);
+            circle.setAttribute("opacity", opacity * 0.9);
+            svg.appendChild(circle);
+          }
+        }
+        var center = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        center.setAttribute("cx", size / 2);
+        center.setAttribute("cy", size / 2);
+        center.setAttribute("r", 3);
+        center.setAttribute("fill", "#FFE000");
+        svg.appendChild(center);
+      } else if (type === "rose") {
+        // Create rose petal shape
+        var petal = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+        petal.setAttribute("cx", size / 2);
+        petal.setAttribute("cy", size / 2);
+        petal.setAttribute("rx", size / 3);
+        petal.setAttribute("ry", size / 2.5);
+        petal.setAttribute("fill", color);
+        petal.setAttribute("opacity", "0.9");
+        svg.appendChild(petal);
+      } else if (type === "jasmine") {
+        // Create jasmine flower
+        var petals = 5;
+        for (var i = 0; i < petals; i++) {
+          var angle = (i * 360 / petals) * Math.PI / 180;
+          var x = size / 2 + Math.cos(angle) * (size / 3);
+          var y = size / 2 + Math.sin(angle) * (size / 3);
+          var p = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+          p.setAttribute("cx", x);
+          p.setAttribute("cy", y);
+          p.setAttribute("rx", 2);
+          p.setAttribute("ry", 3);
+          p.setAttribute("fill", color);
+          p.setAttribute("opacity", "0.95");
+          svg.appendChild(p);
+        }
+        var c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        c.setAttribute("cx", size / 2);
+        c.setAttribute("cy", size / 2);
+        c.setAttribute("r", 2);
+        c.setAttribute("fill", "#FFD700");
+        svg.appendChild(c);
+      } else {
+        // Simple petal
+        var simple = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+        simple.setAttribute("cx", size / 2);
+        simple.setAttribute("cy", size / 2);
+        simple.setAttribute("rx", size / 3);
+        simple.setAttribute("ry", size / 2);
+        simple.setAttribute("fill", color);
+        simple.setAttribute("opacity", "0.88");
+        svg.appendChild(simple);
+      }
+
+      return svg;
+    }
+
+    function spawnPetal() {
+      if (count >= MAX) return;
+      count++;
+      var el = document.createElement("div");
+      var size = Math.random() * 12 + 8;
+      var left = Math.random() * 96 + 2;
+      var dur = Math.random() * 6 + 8;
+      var del = Math.random() * 1.8;
+      var col = petalColors[Math.floor(Math.random() * petalColors.length)];
+      var anim = anims[Math.floor(Math.random() * anims.length)];
+      var flowerType = flowerTypes[Math.floor(Math.random() * flowerTypes.length)].name;
+
+      var svg = createFlowerSVG(flowerType, col, Math.round(size));
+
+      el.style.cssText =
+        "position:absolute;left:" + left + "%;top:-30px;" +
+        "opacity:0.88;" +
+        "animation:" + anim + " " + dur + "s " + del + "s linear forwards;";
+
+      el.className = "petal";
+      el.appendChild(svg);
+
+      container.appendChild(el);
+      setTimeout(function () {
+        if (el.parentNode) el.parentNode.removeChild(el);
+        count--;
+      }, (dur + del) * 1000 + 300);
+    }
+
+    // Initial burst of petals
+    for (var i = 0; i < 12; i++) setTimeout(spawnPetal, i * 80);
+    // Continuous gentle shower
+    setInterval(spawnPetal, 580);
+
+    /* ── Language toggle ─────────────────────────────── */
+    function toggleLang() {
+      document.body.setAttribute("data-lang",
+        document.body.getAttribute("data-lang") === "en" ? "te" : "en");
+    }
+  </script>
+
+</body>
+
+</html>

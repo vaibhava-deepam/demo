@@ -2601,37 +2601,33 @@ body[data-lang="te"] #pradakshinaWidget .pw-prad-title-te {
       <div class="dev-marquee-group" aria-hidden="true">
 
         <span class="dev-marquee-item">
-           <span class="dev-marquee-sep">✦</span>
-          <span class="dev-marquee-badge">NEW</span>
-           <span class="dev-marquee-sep">✦</span>
-
-          <span class="lte te-font">
-            కొత్త సౌకర్యం: ప్రదక్షిణ శనివారాల సంఖ్యను ఇక్కడ గుర్తు పెట్టుకోండి
-          </span>
-
-          <span class="len">
-            Feature: Track your Pradakshina Weekly Count here
-          </span>
-
-          <!-- <span class="dev-marquee-badge">NEW</span>
-          <span class="dev-marquee-sep">✦</span> -->
-        </span>
-
-        <span class="dev-marquee-item">
-           <span class="dev-marquee-sep">✦</span>
-          <span class="dev-marquee-badge">NEW</span>
+          <span class="dev-marquee-sep">✦</span>
+           <span class="dev-marquee-badge">NEW</span>
           <span class="dev-marquee-sep">✦</span>
 
           <span class="lte te-font">
-            ప్రతి శనివారం మీరు వచ్చిన వివరాన్ని సులభంగా నమోదు చేసుకోండి
+            ప్రతి వారం మీరు వచ్చిన శనివారాలను సులభంగా గుర్తించండి
           </span>
 
           <span class="len">
             Easily mark your attended Saturdays every week
           </span>
 
-          <!-- <span class="dev-marquee-badge">NEW</span>
-          <span class="dev-marquee-sep">✦</span> -->
+        </span>
+
+        <span class="dev-marquee-item">
+          <span class="dev-marquee-sep">✦</span>
+          <span class="dev-marquee-badge">NEW</span>
+          <span class="dev-marquee-sep">✦</span>
+
+          <span class="lte te-font">
+            ఇక్కడ క్లిక్ చేయండి
+          </span>
+
+          <span class="len">
+            Click here
+          </span>
+
         </span>
 
       </div>
@@ -2640,35 +2636,33 @@ body[data-lang="te"] #pradakshinaWidget .pw-prad-title-te {
       <div class="dev-marquee-group" aria-hidden="true">
 
         <span class="dev-marquee-item">
-          <span class="dev-marquee-badge">NEW</span>
-          <!-- <span class="dev-marquee-icon">🪔</span> -->
-
-          <span class="lte te-font">
-            కొత్త సౌకర్యం: ప్రదక్షిణ శనివారాల సంఖ్యను ఇక్కడ గుర్తు పెట్టుకోండి
-          </span>
-
-          <span class="len">
-            Feature: Track your Pradakshina Weekly Count here
-          </span>
-
-          <span class="dev-marquee-badge">NEW</span>
           <span class="dev-marquee-sep">✦</span>
-        </span>
-
-        <span class="dev-marquee-item">
-          <span class="dev-marquee-badge">NEW</span>
+           <span class="dev-marquee-badge">NEW</span>
           <span class="dev-marquee-sep">✦</span>
 
           <span class="lte te-font">
-            ప్రతి శనివారం మీరు వచ్చిన వివరాన్ని సులభంగా నమోదు చేసుకోండి
+            ప్రతి వారం మీరు వచ్చిన శనివారాలను సులభంగా గుర్తించండి
           </span>
 
           <span class="len">
             Easily mark your attended Saturdays every week
           </span>
 
+        </span>
+
+        <span class="dev-marquee-item">
+          <span class="dev-marquee-sep">✦</span>
           <span class="dev-marquee-badge">NEW</span>
           <span class="dev-marquee-sep">✦</span>
+
+          <span class="lte te-font">
+            ఇక్కడ క్లిక్ చేయండి
+          </span>
+
+          <span class="len">
+            Click here
+          </span>
+
         </span>
 
       </div>
@@ -3800,7 +3794,7 @@ function buildSelector() {
   }
 
   /* Otherwise open current/present month if it is in the range */
-  if (!restored) {
+ /*  if (!restored) {
     var today = new Date();
     var currentMonthValue = today.getFullYear() + '-' + today.getMonth();
 
@@ -3811,13 +3805,14 @@ function buildSelector() {
         break;
       }
     }
-  }
+  } */
 
   /* If current month is outside the range, open first available month */
   if (!restored) {
     for (var k = 0; k < sel.options.length; k++) {
       if (!sel.options[k].disabled) {
         sel.selectedIndex = k;
+        restored = true;
         break;
       }
     }

@@ -1249,6 +1249,7 @@ text-shadow:
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  position: relative;
 }
 
 .site-header .toran svg {
@@ -2283,6 +2284,41 @@ body[data-lang="te"] #pradakshinaWidget .pw-prad-title-te {
     margin: 26px auto;
   }
 }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   AUDIO MUTE BUTTON
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+#pw-audio-btn {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  z-index: 20;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(212,175,55,0.45);
+  background: rgba(10,1,0,0.72);
+  color: #FFD700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.18s, border-color 0.18s;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0,0,0,0.55);
+}
+#pw-audio-btn:hover {
+  background: rgba(50,10,0,0.88);
+  border-color: rgba(255,215,0,0.7);
+}
+#pw-audio-btn svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex-shrink: 0;
+}
   </style>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dcffe6a87cd4112a67452301a457d98"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
@@ -2589,6 +2625,24 @@ body[data-lang="te"] #pradakshinaWidget .pw-prad-title-te {
 
     <!-- Header bottom shimmer -->
     <div class="gline"></div>
+
+    <!-- ══ AUDIO CONTROLLER ══ -->
+<audio id="pw-audio" src="https://pub-3b07bf9ba3e44f8a921369b87870b682.r2.dev/Chanting.mp3" loop preload="auto" muted></audio>
+
+<button id="pw-audio-btn" aria-label="Unmute audio" title="Unmute">
+  <!-- MUTED icon (shown by default) -->
+  <svg id="pw-icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <line x1="23" y1="9" x2="17" y2="15"/>
+    <line x1="17" y1="9" x2="23" y2="15"/>
+  </svg>
+  <!-- UNMUTED icon (hidden by default) -->
+  <svg id="pw-icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+  </svg>
+</button>
   </header>
 
 <!-- ══ DEVOTIONAL ANNOUNCEMENT MARQUEE ══ -->
@@ -3872,6 +3926,49 @@ function init() {
   /* wrap toggleLang so headers + dates re-render on language switch */
   var _orig = window.toggleLang;
   window.toggleLang = function() { _orig(); refresh(); };
+})();
+
+/* ── Audio autoplay ── */
+(function () {
+  var audio = document.getElementById('pw-audio');
+  var btn   = document.getElementById('pw-audio-btn');
+  var iconM = document.getElementById('pw-icon-muted');
+  var iconS = document.getElementById('pw-icon-sound');
+
+  if (!audio || !btn) return;
+
+  /* Always start muted so browser allows autoplay */
+  audio.muted  = true;
+  audio.volume = 1;
+
+  /* Try to play immediately */
+  var playPromise = audio.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch(function () {
+      /* If blocked, retry on first user interaction */
+      var unlock = function () {
+        audio.play().catch(function(){});
+        document.removeEventListener('touchstart', unlock);
+        document.removeEventListener('click', unlock);
+      };
+      document.addEventListener('touchstart', unlock, { once: true });
+      document.addEventListener('click', unlock, { once: true });
+    });
+  }
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    audio.muted = !audio.muted;
+    iconM.style.display = audio.muted ? 'block' : 'none';
+    iconS.style.display = audio.muted ? 'none'  : 'block';
+    btn.setAttribute('aria-label', audio.muted ? 'Unmute audio' : 'Mute audio');
+    btn.setAttribute('title',      audio.muted ? 'Unmute'       : 'Mute');
+    /* If audio was not playing (blocked), start it now */
+    if (!audio.muted && audio.paused) {
+      audio.play().catch(function(){});
+    }
+  });
 })();
   </script>
 
